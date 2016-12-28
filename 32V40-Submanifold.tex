@@ -1,0 +1,140 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Submanifold}
+\pmcreated{2013-03-22 14:47:20}
+\pmmodified{2013-03-22 14:47:20}
+\pmowner{jirka}{4157}
+\pmmodifier{jirka}{4157}
+\pmtitle{submanifold}
+\pmrecord{8}{36440}
+\pmprivacy{1}
+\pmauthor{jirka}{4157}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{32V40}
+\pmclassification{msc}{53C40}
+\pmclassification{msc}{53B25}
+\pmclassification{msc}{57N99}
+\pmrelated{Manifold}
+\pmrelated{Hypersurface}
+\pmdefines{real submanifold}
+\pmdefines{codimension of a manifold}
+\pmdefines{local defining functions}
+\pmdefines{real submanifold}
+\pmdefines{smooth submanifold}
+\pmdefines{real analytic submanifold}
+\pmdefines{regular submanifold}
+\pmdefines{imbedded submanifold}
+\pmdefines{embedded submanifold}
+\pmdefines{germ of a submanifold}
+\pmdefines{open submanifold}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\theoremstyle{theorem}
+\newtheorem*{thm}{Theorem}
+\newtheorem*{lemma}{Lemma}
+\newtheorem*{conj}{Conjecture}
+\newtheorem*{cor}{Corollary}
+\newtheorem*{example}{Example}
+\newtheorem*{prop}{Proposition}
+\theoremstyle{definition}
+\newtheorem*{defn}{Definition}
+\theoremstyle{remark}
+\newtheorem*{rmk}{Remark}
+\begin{document}
+There are several conflicting definitions of what a submanifold is, depending on which author you are reading.  All that agrees is that a submanifold is a subset of a manifold which is itself a manifold, however how structure is inherited from the ambient space is not generally agreed upon.
+So let's start with differentiable submanifolds of ${\mathbb{R}}^n$ as that's the most useful case.
+
+\begin{defn}
+Let $M$ be a subset of ${\mathbb{R}}^n$ such that for every point
+$p \in M$ there exists a neighbourhood $U_p$ of $p$ in ${\mathbb{R}}^n$
+and $m$ continuously differentiable functions $\rho_k \colon U \to {\mathbb{R}}$ where the differentials of $\rho_k$ are linearly independent,
+such that
+\begin{equation*}
+M \cap U = \{ x \in U \mid \rho_k(x) = 0 , 1 \leq k \leq m \} .
+\end{equation*}
+Then $M$ is called a {\em submanifold} of ${\mathbb{R}}^n$ of dimension $m$
+and of codimension $n-m$.
+\end{defn}
+
+If $\rho_k$ are in fact smooth then $M$ is a {\em smooth submanifold} and
+similarly if $\rho$ is real analytic then $M$ is a {\em real analytic
+submanifold}. If
+we identify ${\mathbb{R}}^{2n}$ with ${\mathbb{C}}^n$ and we have a
+submanifold there it is called a {\em real submanifold} in
+${\mathbb{C}}^n$.  $\rho_k$ are usually called the {\em local defining functions}.
+
+Let's now look at a more general definition.  Let $M$ be a manifold of dimension $m$.  A subset $N \subset M$ is said to have the {\em submanifold property} if there exists an integer $n \leq m$, such that for
+each
+$p \in N$ there is a coordinate neighbourhood $U$ and a coordinate function $\varphi \colon U \to {\mathbb{R}}^m$ of $M$ such that $\varphi(p) = (0,0,0,\ldots,0)$,
+$\varphi(U \cap N) = \{ x \in \varphi(U) \mid x_{n+1} = x_{n+2} = \ldots = x_m = 0 \}$ if $n < m$ or $N \cap U = U$ if $n=m$.
+
+\begin{defn}
+Let $M$ be a manifold of dimension $m$.
+A subset $N \subset M$ with the submanifold property
+for some $n \leq m$ is called a {\em submanifold} of $M$ of dimension $n$ and of codimension $m-n$.
+\end{defn}
+
+The ambiguity arises about what topology we require $N$ to have.  Some authors require $N$ to have the relative topology inherited from $M$, others don't.
+
+One could also mean that a subset is a submanifold if it is a disjoint
+union of submanifolds of different dimensions.  It is not hard to see that
+if $N$ is connected this is not an issue (whatever the topology on $N$ is).
+
+In case of differentiable manifolds,
+if we take $N$ to be a subspace of $M$ (the topology on $N$ is the relative topology inherited from $M$) and the differentiable structure of $N$ to
+be the one determined by
+the coordinate neighbourhoods above then we call $N$ a {\em regular submanifold}.
+
+If $N$ is a submanifold and the inclusion map $i \colon N \to M$ is an imbedding, then we
+say that $N$ is an {\em imbedded} (or {\em embedded}) {\em submanifold} of $M$.
+
+\begin{defn}
+Let $p \in M$ where $M$ is a manifold.  Then the equivalence class of all
+submanifolds $N \subset M$ such that $p \in N$ where we say $N_1$ is
+equivalent to $N_2$ if there is some open neighbourhood $U$ of $p$ such
+that $N_1 \cap U = N_2 \cap U$ is called the {\em germ of a submanifold} through the point $p$.
+\end{defn}
+
+If $N \subset M$ is an open subset of $M$, then $N$ is called the {\em open submanifold} of $M$.  This is the easiest class of examples of submanifolds.
+
+Example of a submanifold (a \PMlinkescapetext{regular and smooth submanifold} in fact) is the unit sphere in ${\mathbb{R}}^n$.  This is in fact a hypersurface
+as it is of codimension 1.
+
+\begin{thebibliography}{9}
+\bibitem{boothby}
+William M.\@ Boothby.
+{\em \PMlinkescapetext{An Introduction to Differentiable Manifolds and
+Riemannian Geometry}},
+Academic Press, San Diego, California, 2003.
+\bibitem{ber:submanifold}
+M.\@ Salah Baouendi,
+Peter Ebenfelt,
+Linda Preiss Rothschild.
+{\em \PMlinkescapetext{Real Submanifolds in Complex Space and Their Mappings}},
+Princeton University Press,
+Princeton, New Jersey, 1999.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

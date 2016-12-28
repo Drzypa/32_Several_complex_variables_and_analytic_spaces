@@ -1,0 +1,103 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{HolomorphicFunctionsOfSeveralVariables}
+\pmcreated{2013-03-22 15:33:42}
+\pmmodified{2013-03-22 15:33:42}
+\pmowner{jirka}{4157}
+\pmmodifier{jirka}{4157}
+\pmtitle{holomorphic functions of several variables}
+\pmrecord{7}{37465}
+\pmprivacy{1}
+\pmauthor{jirka}{4157}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{32A10}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\theoremstyle{theorem}
+\newtheorem*{thm}{Theorem}
+\newtheorem*{lemma}{Lemma}
+\newtheorem*{conj}{Conjecture}
+\newtheorem*{cor}{Corollary}
+\newtheorem*{example}{Example}
+\newtheorem*{prop}{Proposition}
+\theoremstyle{definition}
+\newtheorem*{defn}{Definition}
+\theoremstyle{remark}
+\newtheorem*{rmk}{Remark}
+\begin{document}
+\begin{defn}
+Let $\Omega \subset {\mathbb{C}}^n$ be a domain and let $f \colon \Omega \to
+{\mathbb{C}}$ be a function.  $f$ is called {\em \PMlinkescapetext{holomorphic}} if it is
+\PMlinkname{holomorphic}{Holomorphic} in each variable separately as a function of one variable.
+\end{defn}
+
+That means that the function $z_k \mapsto f(z_1,\ldots,z_k,\ldots,z_n)$
+is holomorphic as a function of one variable.  It is not at all obvious that
+such a function is even continuous and we must apply the Hartogs's theorem on separate
+analyticity which is not a trivial result.
+
+Historically and some authors today still continue to do so, the definition
+of being holomorphic in several variables did include the continuity or at
+least local boundedness requirement.
+
+Of course we can also characterize holomorphic functions by their power series.
+
+\begin{prop}
+$f$ is holomorphic in $\Omega$ if and only if near each point $\zeta \in \Omega$ there is a neighbourhood
+$U$ and a power series in several variables
+\begin{equation*}
+\sum_{\alpha} a_\alpha (z-\zeta)^\alpha ,
+\end{equation*}
+where $\alpha$ ranges over all the
+multi-indices, $a_\alpha \in {\mathbb{C}}$ and such that the series converges to $f(z)$ for $z \in U$.
+\end{prop}
+
+Another way to characterize holomorphic functions is by the use of the
+Cauchy-Riemann equations, which can be given in a very \PMlinkescapetext{simple} form by the
+\PMlinkname{$\bar{\partial}$-operator}{BarpartialOperator}.
+
+\begin{prop}
+$f$ is holomorphic if and only if $\bar{\partial} f = 0$.
+\end{prop}
+
+Despite the similarities,
+one should be careful about carelessly generalizing results about functions
+of one variable to functions of several variables as the theory is quite
+different.  See the topic entry on several complex variables for more
+\PMlinkescapetext{information}.
+
+\begin{thebibliography}{9}
+\bibitem{Hormander:several}
+Lars H\"ormander.
+{\em \PMlinkescapetext{An Introduction to Complex Analysis in Several
+Variables}},
+North-Holland Publishing Company, New York, New York, 1973.
+\bibitem{Krantz:several}
+Steven~G.\@ Krantz.
+{\em \PMlinkescapetext{Function Theory of Several Complex Variables}},
+AMS Chelsea Publishing, Providence, Rhode Island, 1992.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

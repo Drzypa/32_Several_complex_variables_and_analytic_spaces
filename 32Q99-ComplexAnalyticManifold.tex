@@ -1,0 +1,89 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ComplexAnalyticManifold}
+\pmcreated{2013-03-22 15:04:40}
+\pmmodified{2013-03-22 15:04:40}
+\pmowner{jirka}{4157}
+\pmmodifier{jirka}{4157}
+\pmtitle{complex analytic manifold}
+\pmrecord{6}{36800}
+\pmprivacy{1}
+\pmauthor{jirka}{4157}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{32Q99}
+\pmsynonym{complex manifold}{ComplexAnalyticManifold}
+\pmdefines{complex analytic submanifold}
+\pmdefines{complex submanifold}
+\pmdefines{analytic structure}
+\pmdefines{holomorphic structure}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\theoremstyle{theorem}
+\newtheorem*{thm}{Theorem}
+\newtheorem*{lemma}{Lemma}
+\newtheorem*{conj}{Conjecture}
+\newtheorem*{cor}{Corollary}
+\theoremstyle{definition}
+\newtheorem*{defn}{Definition}
+\begin{document}
+\begin{defn}
+A manifold $M$ is called a {\em complex analytic manifold} (or sometimes just
+a {\em complex manifold}) if the transition functions are holomorphic.
+\end{defn}
+
+\begin{defn}
+A subset $N \subset M$ is called a {\em complex analytic submanifold} of $M$
+if $N$ is closed in $M$ and if for every point $z \in N$ there is a coordinate neighbourhood $U$ in $M$ with coordinates $z_1,\ldots,z_n$ such that
+$U \cap N = \{ p \in U \mid z_{d+1}(p) = \ldots = z_n(p) \}$ for some integer $d \leq n$. 
+\end{defn}
+
+Obviously $N$ is now also a complex analytic manifold itself.
+
+For a complex analytic manifold, dimension always means the complex dimension,
+not the real dimension.  That is $M$ is of dimension $n$ when there are neighbourhoods of every point homeomorphic to ${\mathbb{C}}^n$.  Such a manifold is of real dimension $2n$ if we identify ${\mathbb{C}}^n$ with
+${\mathbb{R}}^{2n}$.
+Of course the tangent bundle is now also a complex vector space.
+
+A function $f$ is said to be holomorphic on $M$ if it is a holomorphic function when considered as a function of the local coordinates.
+
+Examples of complex analytic manifolds are for example the Stein manifolds or the Riemann surfaces.  Of course also any open set in ${\mathbb{C}}^n$ is also a complex analytic manifold.  Another example may be the set of regular points of an analytic set.
+
+Complex analytic manifolds can also be considered as a special case of CR manifolds where the CR dimension is maximal.
+
+Complex manifolds are sometimes described as manifolds carrying an {\em \PMlinkescapetext{analytic structure}} or {\em \PMlinkescapetext{holomorphic structure}}.  This refers to the atlas and transition functions defined on the manifold.
+
+\begin{thebibliography}{9}
+\bibitem{Hormander:several}
+Lars H\"ormander.
+{\em \PMlinkescapetext{An Introduction to Complex Analysis in Several
+Variables}},
+North-Holland Publishing Company, New York, New York, 1973.
+\bibitem{Krantz:several}
+Steven~G.\@ Krantz.
+{\em \PMlinkescapetext{Function Theory of Several Complex Variables}},
+AMS Chelsea Publishing, Providence, Rhode Island, 1992.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

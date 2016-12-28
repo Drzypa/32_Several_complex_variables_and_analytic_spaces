@@ -1,0 +1,90 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AnalyticDisc}
+\pmcreated{2013-03-22 14:30:49}
+\pmmodified{2013-03-22 14:30:49}
+\pmowner{jirka}{4157}
+\pmmodifier{jirka}{4157}
+\pmtitle{analytic disc}
+\pmrecord{8}{36052}
+\pmprivacy{1}
+\pmauthor{jirka}{4157}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{32T05}
+\pmdefines{closed analytic disc}
+\pmdefines{boundary of a closed analytic disc}
+\pmdefines{attached analytic disc}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\theoremstyle{theorem}
+\newtheorem*{thm}{Theorem}
+\newtheorem*{lemma}{Lemma}
+\newtheorem*{conj}{Conjecture}
+\newtheorem*{cor}{Corollary}
+\theoremstyle{definition}
+\newtheorem*{defn}{Definition}
+\begin{document}
+\begin{defn}
+Let $D := \{ z \in {\mathbb{C}} \mid \lvert z \rvert < 1 \}$ be the
+open unit disc.  A non-constant holomorphic mapping $\varphi \colon D \to
+{\mathbb{C}}^n$ is called an {\em analytic disc} in ${\mathbb{C}}^n$.  The
+\PMlinkescapetext{term} really refers to both the embedding and the image.
+If the mapping $\varphi$ extends continuously to the closed unit disc
+$\bar{D}$, then $\varphi(\bar{D})$ is called a {\em closed analytic disc}
+and $\varphi(\partial D)$ is called the {\em boundary of a closed analytic
+disc}.
+\end{defn}
+
+Analytic discs play in some sense a role of line segments in ${\mathbb{C}}^n$.
+For example they give another way to see that a domain
+$G \subset {\mathbb{C}}^n$ is pseudoconvex.  See the Hartogs Kontinuitatssatz
+theorem.
+
+Another use of analytic discs are as a technique for extending CR functions on generic manifolds \cite{ber:submanifold}.  The idea here is that you can always extend a function from the boundary of a disc to the inside of the disc by solving the Dirichlet problem.
+
+\begin{defn}
+A closed analytic disc $\varphi$ is said to be {\em attached}
+to a set $M \subset
+{\mathbb{C}}^n$ if $\varphi(\partial D) \subset M$, that is if $\varphi$
+maps the boundary of the unit disc to $M$.
+\end{defn}
+
+Analytic discs are also used for defining the Kobayashi metric and thus plays a role in the study of invariant metrics.
+
+\begin{thebibliography}{9}
+\bibitem{ber:submanifold}
+M.\@ Salah Baouendi,
+Peter Ebenfelt,
+Linda Preiss Rothschild.
+{\em \PMlinkescapetext{Real Submanifolds in Complex Space and Their Mappings}},
+Princeton University Press,
+Princeton, New Jersey, 1999.
+\bibitem{Krantz:several}
+Steven~G.\@ Krantz.
+{\em \PMlinkescapetext{Function Theory of Several Complex Variables}},
+AMS Chelsea Publishing, Providence, Rhode Island, 1992.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

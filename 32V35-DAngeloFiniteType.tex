@@ -1,0 +1,91 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DAngeloFiniteType}
+\pmcreated{2013-03-22 17:39:57}
+\pmmodified{2013-03-22 17:39:57}
+\pmowner{jirka}{4157}
+\pmmodifier{jirka}{4157}
+\pmtitle{D'Angelo finite type}
+\pmrecord{7}{40102}
+\pmprivacy{1}
+\pmauthor{jirka}{4157}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{32V35}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\theoremstyle{theorem}
+\newtheorem*{thm}{Theorem}
+\newtheorem*{lemma}{Lemma}
+\newtheorem*{conj}{Conjecture}
+\newtheorem*{cor}{Corollary}
+\newtheorem*{example}{Example}
+\newtheorem*{prop}{Proposition}
+\theoremstyle{definition}
+\newtheorem*{defn}{Definition}
+\theoremstyle{remark}
+\newtheorem*{rmk}{Remark}
+
+\begin{document}
+Let $M \subset {\mathbb{C}}^n$ be a smooth submanifold of real codimension 1.  Let $p \in M$
+and let $r_p$ denote the generator of the principal ideal of germs at $p$ of smooth functions vanishing on $M$.
+Define the number
+\begin{equation*}
+\Delta_1(M,p) = \sup_{z} \frac{v(z^* r_p)}{v(z)} ,
+\end{equation*}
+where $z$ ranges over all parametrized holomorphic curves $z \colon {\mathbb{D}} \to {\mathbb{C}}^n$ (where
+${\mathbb{D}}$ is the unit disc) such that $z(0) = 0$, $v$ is the order of vanishing at the origin, and
+$z^* r_p$ is the composition of $r_p$ and $z$.
+The order of vanishing $v(z)$ is $k$ if $k$ is the smallest integer such that the $k$th derivative of $z$ is nonzero at the origin and all derivatives of smaller order are zero at the origin.  Infinity is allowed for $v(z)$ if all derivatives vanish.
+
+We
+say $M$ is of \emph{\PMlinkescapetext{finite type}} (or finite 1-type)
+at $p \in M$ in the sense of D'Angelo if
+\begin{equation*}
+\Delta_1(M,p) < \infty .
+\end{equation*}
+
+If $M$ is real analytic, then $M$ is finite type at $p$ if and only if
+there does not exist any germ of a complex analytic subvariety at $p \in M$, that is contained in $M$.
+If $M$ is only smooth, then it is possible that $M$ is not finite type, but does not contain a germ of a holomorphic curve.  However, if $M$ is not finite type, then there exists a holomorphic curve which ``touches'' $M$ to infinite order.
+
+The Diederich-Fornaess theorem can be then restated to say that every compact real analytic
+subvariety of ${\mathbb{C}}^n$ is of D'Angelo finite type at every point.
+
+\begin{thebibliography}{9}
+\bibitem{ber:submanifold}
+M.\@ Salah Baouendi,
+Peter Ebenfelt,
+Linda Preiss Rothschild.
+{\em \PMlinkescapetext{Real Submanifolds in Complex Space and Their Mappings}},
+Princeton University Press,
+Princeton, New Jersey, 1999.
+\bibitem{DAngelo}
+D'Angelo, John~P.
+{\em \PMlinkescapetext{Several complex variables and the geometry of real
+hypersurfaces}},
+CRC Press, 1993.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

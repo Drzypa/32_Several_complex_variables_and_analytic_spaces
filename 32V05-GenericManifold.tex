@@ -1,0 +1,89 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{GenericManifold}
+\pmcreated{2013-03-22 14:56:03}
+\pmmodified{2013-03-22 14:56:03}
+\pmowner{jirka}{4157}
+\pmmodifier{jirka}{4157}
+\pmtitle{generic manifold}
+\pmrecord{5}{36623}
+\pmprivacy{1}
+\pmauthor{jirka}{4157}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{32V05}
+\pmsynonym{generic submanifold}{GenericManifold}
+\pmrelated{CRSubmanifold}
+\pmrelated{TotallyRealSubmanifold}
+\pmrelated{TangentialCauchyRiemannComplexOfCinftySmoothForms}
+\pmrelated{ACRcomplex}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\theoremstyle{theorem}
+\newtheorem*{thm}{Theorem}
+\newtheorem*{lemma}{Lemma}
+\newtheorem*{conj}{Conjecture}
+\newtheorem*{cor}{Corollary}
+\newtheorem*{example}{Example}
+\theoremstyle{definition}
+\newtheorem*{defn}{Definition}
+\begin{document}
+\begin{defn}
+Let $M \subset {\mathbb{C}}^N$ be a real submanifold of real dimension $n$.  We say that $M$ is a {\em generic manifold} if for every $x \in M$ we have
+\begin{equation*}
+T_x(M) + JT_x(M) = T_x({\mathbb{C}}^N), 
+\end{equation*}
+where $J$ denotes the operator of multiplication by the imaginary unit in
+$T_x({\mathbb{C}}^N)$.  That is every vector in
+$T_x({\mathbb{C}}^N)$ can be written as $X + JY$ where $X, Y \in T_x(M)$.
+\end{defn}
+
+For more details about the tangent spaces and the $J$ operator see the
+entry on
+\PMlinkname{CR manifolds}{CRSubmanifold}.  In fact every generic manifold is
+also CR manifold (the converse is not true however).  A basic important result
+about generic submanifolds is.
+
+\begin{thm}
+Let $M \subset {\mathbb{C}}^N$ be a generic submanifold and let
+$f \colon U \subset {\mathbb{C}}^N \to {\mathbb{C}}$ be a holomorphic function
+where $U$ is a connected open set such that $M \cap U \not= \emptyset$, and further
+suppose that $f(M \cap U) = \{ 0 \}$, that is $f$ is zero when restricted
+to $M$.  Then in fact $f \equiv 0$ on $U$.
+\end{thm}
+
+For example in ${\mathbb{C}}^1$ the real line is a generic submanifold, and any holomorphic function which is zero on the real line is zero everywhere (if the
+domain of the function is connected and intersects the real line of course).  There are of course much stronger uniqueness results for the complex plane so the above is mostly useful for higher dimensions.
+
+\begin{thebibliography}{9}
+\bibitem{ber:submanifold}
+M.\@ Salah Baouendi,
+Peter Ebenfelt,
+Linda Preiss Rothschild.
+{\em \PMlinkescapetext{Real Submanifolds in Complex Space and Their Mappings}},
+Princeton University Press,
+Princeton, New Jersey, 1999.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,105 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Hypersurface}
+\pmcreated{2013-03-22 14:32:56}
+\pmmodified{2013-03-22 14:32:56}
+\pmowner{jirka}{4157}
+\pmmodifier{jirka}{4157}
+\pmtitle{hypersurface}
+\pmrecord{8}{36099}
+\pmprivacy{1}
+\pmauthor{jirka}{4157}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{32V40}
+\pmclassification{msc}{14J70}
+\pmrelated{Submanifold}
+\pmdefines{smooth hypersurface}
+\pmdefines{real analytic hypersurface}
+\pmdefines{real hypersurface}
+\pmdefines{local defining function}
+\pmdefines{singular hypersurface}
+\pmdefines{non-singular hypersurface}
+\pmdefines{hypervariety}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\theoremstyle{theorem}
+\newtheorem*{thm}{Theorem}
+\newtheorem*{lemma}{Lemma}
+\newtheorem*{conj}{Conjecture}
+\newtheorem*{cor}{Corollary}
+\newtheorem*{example}{Example}
+\theoremstyle{definition}
+\newtheorem*{defn}{Definition}
+\begin{document}
+\begin{defn}
+Let $M$ be a subset of ${\mathbb{R}}^n$ such that for every point
+$p \in M$ there exists a neighbourhood $U_p$ of $p$ in ${\mathbb{R}}^n$
+and a continuously differentiable function $\rho \colon U \to {\mathbb{R}}$ with
+$\operatorname{grad} \rho \not= 0$ on $U$,
+such that
+\begin{equation*}
+M \cap U = \{ x \in U \mid \rho(x) = 0 \} .
+\end{equation*}
+Then $M$ is called a {\em hypersurface}.
+\end{defn}
+
+If $\rho$ is in fact smooth then $M$ is a {\em smooth hypersurface} and
+similarly if $\rho$ is real analytic then $M$ is a {\em real analytic
+hypersurface}.  If
+we identify ${\mathbb{R}}^{2n}$ with ${\mathbb{C}}^n$ and we have a
+hypersurface there it is called a {\em real hypersurface} in
+${\mathbb{C}}^n$.  $\rho$ is usually called the {\em local defining function}.
+Hypersurface is really special name for a submanifold of codimension 1.  In fact if $M$ is just a topological manifold of codimension 1, then it is often also called a hypersurface.
+
+A \PMlinkname{real}{RealAnalyticSubvariety} or complex analytic subvariety of codimension 1 (the zero set of a real or complex analytic function) is called a 
+{\em singular hypersurface}.  That is the definition is the same as above, but
+we do not require $\operatorname{grad} \rho \not= 0$.  Note that some authors leave out the word {\em singular} and then use {\em non-singular hypersurface} for a hypersurface which is also a manifold.  Some authors use the word {\em hypervariety} to describe a singular hypersurface.
+
+An example of a hypersurface is the hypersphere (of radius 1 for simplicity) which has the defining equation
+\begin{equation*}
+x_1^2 + x_2^2 + \ldots + x_n^2 = 1 .
+\end{equation*}
+
+Another example of a hypersurface would be the boundary of a domain in
+${\mathbb{C}}^n$ with smooth boundary.
+
+An example of a singular hypersurface in ${\mathbb{R}}^2$ is for example the zero set
+of $\rho(x_1,x_2) = x_1 x_2$ which is really just the two axis.  Note that this
+hypersurface fails to be a manifold at the origin.
+
+
+%FIXME: terrible reference (too specific)
+
+\begin{thebibliography}{9}
+\bibitem{ber:submanifold}
+M.\@ Salah Baouendi,
+Peter Ebenfelt,
+Linda Preiss Rothschild.
+{\em \PMlinkescapetext{Real Submanifolds in Complex Space and Their Mappings}},
+Princeton University Press,
+Princeton, New Jersey, 1999.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

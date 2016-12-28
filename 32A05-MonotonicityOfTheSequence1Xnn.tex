@@ -1,0 +1,89 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{MonotonicityOfTheSequence1Xnn}
+\pmcreated{2013-03-22 17:01:47}
+\pmmodified{2013-03-22 17:01:47}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{monotonicity of the sequence $(1 + x/n)^n$}
+\pmrecord{18}{39315}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{32A05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem{thm}{Theorem}
+\begin{document}
+\begin{thm}
+Let $x$ be a real number and let $n$ be an integer such that
+$n > 0$ and $n + x > 0$.  Then
+\[
+\left( {n + x \over n} \right)^n < 
+\left( {n + 1 + x \over n + 1} \right)^{n+1}.
+\]
+\end{thm}
+
+\begin{proof}
+We begin by dividing the two expressions to be compared:
+\begin{align*}
+{\left( {n + x + 1 \over n + 1} \right)^{n+1}  \over
+ \left( {n + x \over n} \right)^n} &=
+ {n + x + 1 \over n + 1} \cdot
+ \left( {n (n + x + 1) \over (n + x) (n + 1)} \right)^n \\ &=
+ {n + x + 1 \over n + 1} \cdot
+\left( {n^2 + nx + n \over n^2 + n x + n + x} \right)^n \\ &=
+ {n + x + 1 \over n + 1} \cdot
+\left( 1 - {x \over n^2 + n x + n + x} \right)^n
+\end{align*}
+Now, when $x > 0$, we have
+\[
+0 < {x \over n^2 + n x + n + x} < 1
+\]
+whilst, when $x < 0$ and $n + x > 0$, we have,
+\[
+{x \over n^2 + n x + n + x} < 0 .
+\]
+Therefore, we may apply an inequality for differences of powers to conclude
+\begin{align*}
+\left( 1 - { x \over n^2 + n x + n + x} \right)^n &>
+1 - { n x \over n^2 + n x + n + x} \\ &=
+{n^2 + n + x \over n^2 + n x + n + x}
+\end{align*}
+Hence, we have
+\begin{align*}
+{\left( {n + x + 1 \over n + 1} \right)^{n+1}  \over
+ \left( {n + x \over n} \right)^n} &>
+{(n + x + 1) (n^2 + n + x ) \over (n + 1) (n^2 + n x + n + x)} \\ &=
+{n^3 + 2 n^2 + n + n^2 x + 2 n x + x + x^2 \over
+n^3 + 2 n^2 + n + n^2 x + 2 n x + x}
+\end{align*}
+Note that the numerator is greater than the denominator because
+it contains every term contained in the denominator and an extra
+term $x^2$.  Hence this ratio is larger than $1$; multiplying out,
+we obtain the inequality which was to be demonstrated.
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

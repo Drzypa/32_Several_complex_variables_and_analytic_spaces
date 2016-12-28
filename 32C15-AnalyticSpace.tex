@@ -1,0 +1,84 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AnalyticSpace}
+\pmcreated{2013-03-22 17:41:43}
+\pmmodified{2013-03-22 17:41:43}
+\pmowner{jirka}{4157}
+\pmmodifier{jirka}{4157}
+\pmtitle{analytic space}
+\pmrecord{4}{40136}
+\pmprivacy{1}
+\pmauthor{jirka}{4157}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{32C15}
+\pmsynonym{complex analytic space}{AnalyticSpace}
+\pmrelated{LocallyCompactGroupoids}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\theoremstyle{theorem}
+\newtheorem*{thm}{Theorem}
+\newtheorem*{lemma}{Lemma}
+\newtheorem*{conj}{Conjecture}
+\newtheorem*{cor}{Corollary}
+\newtheorem*{example}{Example}
+\newtheorem*{prop}{Proposition}
+\theoremstyle{definition}
+\newtheorem*{defn}{Definition}
+\theoremstyle{remark}
+\newtheorem*{rmk}{Remark}
+
+\begin{document}
+A Hausdorff topological space $X$ is said to be an {\em analytic space} if:
+\begin{enumerate}
+\item There exists a countable number of open sets $V_j$ covering $X.$
+\item For each $V_j$ there exists a homeomorphism $\varphi_j \colon Y_j \to V_j ,$
+ where $Y_j$ is a local complex analytic subvariety in some ${\mathbb{C}}^n .$
+\item If $V_j$ and $V_k$ overlap, then $\varphi_j^{-1} \circ \varphi_k$ is a biholomorphism.
+\end{enumerate}
+
+Usually one attaches to $X$ a set of coordinate systems $\mathcal{G}$, which is a set (now uncountable)
+of triples $(V_\iota,\varphi_\iota,Y_\iota)$ as above, such that whenever $V$ is an open set, $Y$
+a local complex analytic subvariety, and a homeomorphism $\varphi \colon Y \to V$, such that
+$\varphi_\iota^{-1} \circ \varphi$ is a biholomorphism for some  $(V_\iota,\varphi_\iota,Y_\iota) \in \mathcal{G}$
+then $(V,\varphi,Y) \in \mathcal{G} .$  Basically $\mathcal{G}$ is the set of all possible coordinate systems
+for $X$.
+
+We can also define the singular set of an analytic space.  A point $p$ is
+\PMlinkescapetext{{\em simple}, {\em regular} or {\em nonsingular}}
+if there exists (at least one) a coordinate system $(V_\iota,\varphi_\iota,Y_\iota) \in \mathcal{G}$ with $p \in V_\iota$
+and $Y_\iota$ a complex manifold.  All other points are the singular points.
+
+Any local complex analytic subvariety is an analytic space, so this is a natural generalization of the concept of a subvariety.
+
+%FIXME: this needs more discussion I think
+
+\begin{thebibliography}{9}
+\bibitem{Whitney:varieties}
+Hassler Whitney.
+{\em \PMlinkescapetext{Complex Analytic Varieties}}.
+Addison-Wesley, Philippines, 1972.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

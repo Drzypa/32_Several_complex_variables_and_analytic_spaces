@@ -1,0 +1,78 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DomainOfHolomorphy}
+\pmcreated{2013-03-22 14:29:29}
+\pmmodified{2013-03-22 14:29:29}
+\pmowner{jirka}{4157}
+\pmmodifier{jirka}{4157}
+\pmtitle{domain of holomorphy}
+\pmrecord{7}{36026}
+\pmprivacy{1}
+\pmauthor{jirka}{4157}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{32T05}
+\pmclassification{msc}{32A10}
+\pmrelated{LeviPseudoconvex}
+\pmrelated{SolutionOfTheLeviProblem}
+\pmrelated{SteinManifold}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\theoremstyle{theorem}
+\newtheorem*{thm}{Theorem}
+\newtheorem*{lemma}{Lemma}
+\newtheorem*{conj}{Conjecture}
+\newtheorem*{cor}{Corollary}
+\newtheorem*{example}{Example}
+\theoremstyle{definition}
+\newtheorem*{defn}{Definition}
+\begin{document}
+\begin{defn}
+An open set $\Omega \subset {\mathbb{C}}^n$ is called a {\em domain of holomorphy}
+if there do not exist non-empty open sets $U \subset \Omega$ and $V \subset {\mathbb{C}}^n$ where $V$ is connected, $V \not\subset \Omega$ and $U \subset \Omega \cap V$ such that for every holomorphic function $f$ on $\Omega$ there exists
+a holomorphic function $g$ on $V$ such that $f = g$ on $U.$
+\end{defn}
+
+When $n=1$, then every open set is a domain of holomorphy.  For an example, assume that the boundary of $\Omega \subset {\mathbb{C}}$ is a Jordan curve for simplicity.  We can define a holomorphic function which has zeros which accumulate on the boundary of the domain and thus the function cannot be continued past any point in the boundary.
+If you could extend the function, it would be identically zero.
+
+Alternatively given any open set $\Omega \subset \mathbb{C}$ and any point $p \in \partial \Omega,$ the function $z \mapsto \frac{1}{z-p}$ is holomorphic in $\Omega$, but cannot be continued past $p$.
+
+For $n \geq 2$ many domains are not domains of holomorphy.  For example if you take ${\mathbb{C}}^2 \setminus \{0\},$
+this is no longer a domain of holomorphy by \PMlinkname{Hartogs's theorem}{HartogsTheorem}.  It turns out that a domain is a domain of holomorphy if and only if the boundary is pseudoconvex.  In particular, every convex (in the classical sense)
+domain is a domain of holomorphy.  \PMlinkescapetext{Simple} examples of domains of holomorphy are ${\mathbb{C}}^n,$ an open ball, or a polydisc.
+
+\begin{thebibliography}{9}
+\bibitem{Hormander:several}
+Lars H\"ormander.
+{\em \PMlinkescapetext{An Introduction to Complex Analysis in Several
+Variables}},
+North-Holland Publishing Company, New York, New York, 1973.
+\bibitem{Krantz:several}
+Steven~G.\@ Krantz.
+{\em \PMlinkescapetext{Function Theory of Several Complex Variables}},
+AMS Chelsea Publishing, Providence, Rhode Island, 1992.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

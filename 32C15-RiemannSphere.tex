@@ -1,0 +1,126 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{RiemannSphere}
+\pmcreated{2013-03-22 13:45:55}
+\pmmodified{2013-03-22 13:45:55}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{Riemann sphere}
+\pmrecord{19}{34469}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{32C15}
+%\pmkeywords{compactification}
+\pmrelated{StereographicProjection}
+\pmrelated{Complex}
+\pmrelated{ClosedComplexPlane}
+\pmrelated{CircumferentialAngle}
+\pmrelated{MercatorProjection}
+\pmdefines{geographic coordinates}
+\pmdefines{longitude}
+\pmdefines{latitude}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+\usepackage{mathrsfs}
+\usepackage{pstricks}
+\usepackage{pst-plot}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\sR}[0]{\mathbb{R}}
+\newcommand{\sC}[0]{\mathbb{C}}
+\newcommand{\sN}[0]{\mathbb{N}}
+\newcommand{\sZ}[0]{\mathbb{Z}}
+
+ \usepackage{bbm}
+ \newcommand{\Z}{\mathbbmss{Z}}
+ \newcommand{\C}{\mathbbmss{C}}
+ \newcommand{\F}{\mathbbmss{F}}
+ \newcommand{\R}{\mathbbmss{R}}
+ \newcommand{\Q}{\mathbbmss{Q}}
+\newcommand*{\norm}[1]{\lVert #1 \rVert}
+\newcommand*{\abs}[1]{| #1 |}
+
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+\begin{document}
+The Riemann sphere, denoted $\hat{\mathbb{C}}$, is the one-point compactification of the complex plane $\mathbb{C}$, obtained by identifying the limits of all infinitely extending rays from the origin as one single ``point at infinity.''  Heuristically, $\hat{\mathbb{C}}$ can be viewed as a 2-sphere with the top point corresponding to the point at infinity, and the bottom point corresponding the origin.  An atlas for the Riemann sphere is given by two charts:  
+\begin{align*}
+\hat{\mathbb{C}}\backslash\{\infty\}\rightarrow\mathbb{C}:z\mapsto z
+\end{align*}
+and
+\begin{align*}
+\hat{\mathbb{C}}\backslash\{0\}\rightarrow\mathbb{C}:z\mapsto \frac{1}{z}
+\end{align*}
+Any rational function on $\hat{\mathbb{C}}$ has a unique smooth extension to a map $\hat{p}:\hat{\mathbb{C}}\rightarrow\hat{\mathbb{C}}$.\\
+
+Concretely, the bijective correspondence of the points of the closed complex plane and the Riemann sphere is implemented by the stereographic projection.\, Think a sphere of radius $R$ being above the complex plane and having it as tangent plane with the origin as the point of tangency.\, Call this point the South Pole and the opposite point $N$ of the  sphere the North Pole.\, For an arbitrary point $P$ of the complex plane, set the line through it and $N$.\, The line intersects the sphere in another point $P'$.\, The mapping
+\begin{align}
+P \mapsto P'
+\end{align}
+is a bijection between the closed complex plane and the sphere.\, Especially, the origin is mapped onto the South Pole and $\infty$ onto the North Pole.
+
+\begin{center}
+\begin{pspicture}(-6,-4)(7.5,3)
+\psdot(0,0)
+\psdot[linecolor=blue](0,1.98)
+\rput(0,2.3){$N$}
+\rput(4.3,-3.1){$P$}
+\rput(1.2,1.1){$P'$}
+\pscircle[linecolor=blue](0,0){2.04}
+\psplot[linecolor=blue]{-0.6}{0}{3.33 0.36 x x mul sub sqrt mul}
+\psplot[linecolor=blue]{-0.6}{0}{-3.33 0.36 x x mul sub sqrt mul}
+\psplot[linestyle=dotted]{0}{0.6}{3.33 0.36 x x mul sub sqrt mul}
+\psplot[linestyle=dotted]{0}{0.6}{-3.33 0.36 x x mul sub sqrt mul}
+\psplot[linecolor=blue]{-2}{2}{-0.3 4 x x mul sub sqrt mul}
+\psplot[linestyle=dotted]{-2}{2}{0.3 4 x x mul sub sqrt mul}
+\psline[linewidth=0.06](-5.5,-3)(4,-3)
+\psline[linewidth=0.05](4,-3)(6.5,-1)
+\psline(-5.5,-3)(-3,-1)
+\psline(-3,-1)(-1.73,-1)
+\psline(1.73,-1)(2.3,-1)
+\psline(2.5,-1)(6.5,-1)
+\psline(-1.2,-3)(0,-2)
+\psline[linestyle=dashed](0,2)(0.89,0.89)
+\psline[linecolor=red](0.89,0.89)(4,-3)
+\psdot[linecolor=red](4,-3)
+\psdot[linecolor=blue](0.89,0.89)
+\rput(-6,-4){.}
+\rput(7.4,3){.}
+\end{pspicture}
+\end{center}
+
+
+If we equip the sphere with {\em geographic coordinates}, the {\em longitude} $\lambda$ ($-\pi < \lambda \leqq \pi$) and the {\em latitude} $\varphi$ ($-\frac{\pi}{2} \leqq \varphi \leqq \frac{\pi}{2}$) and fix that the points of the positive real axis are mapped onto the zero meridian\, $\lambda = 0$,\, then the polar coordinates (argument and modulus) $\theta$ and $r$ of $P$ in the mapping (1) are \PMlinkescapetext{connected} with the geographic coordinates of $P'$ by the equations
+   $$\theta \;\equiv\; \lambda \!\pmod{2\pi}, \quad r \;=\; 2R\tan\left(\frac{\varphi}{2}+\frac{\pi}{4}\right),$$
+as is easily checked.\, One can also state that the distance $h$ of $P'$ from the plane is given by
+              $$h \;=\; \frac{2Rr^2}{4R^2\!+\!r^2}.$$
+
+%%%%%
+%%%%%
+\end{document}

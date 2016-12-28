@@ -1,0 +1,85 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AnalyticPolyhedron}
+\pmcreated{2013-03-22 14:32:39}
+\pmmodified{2013-03-22 14:32:39}
+\pmowner{jirka}{4157}
+\pmmodifier{jirka}{4157}
+\pmtitle{analytic polyhedron}
+\pmrecord{7}{36091}
+\pmprivacy{1}
+\pmauthor{jirka}{4157}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{32T05}
+\pmclassification{msc}{32A07}
+\pmsynonym{analytic polyhedra}{AnalyticPolyhedron}
+\pmdefines{frame of an analytic polyhedron}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\theoremstyle{theorem}
+\newtheorem*{thm}{Theorem}
+\newtheorem*{lemma}{Lemma}
+\newtheorem*{conj}{Conjecture}
+\newtheorem*{cor}{Corollary}
+\theoremstyle{definition}
+\newtheorem*{defn}{Definition}
+\begin{document}
+\begin{defn}
+Suppose $G \subset {\mathbb{C}}^n$ is a domain and let $W \subset G$
+be an open set.  Let $f_1,\ldots,f_k \colon W \to {\mathbb{C}}$ be holomorphic 
+functions.  Then if the set
+\begin{equation*}
+\Omega := \{ z \in W \mid \lvert f_j (z) \rvert < 1 , j=1,\ldots,k \}
+\end{equation*}
+is relatively compact in $W$, we say that $\Omega$ is an
+{\em analytic polyhedron} in $G$.  Sometimes it is denoted
+$\Omega(f_1,\ldots,f_k)$.  Further $(W,f_1,\ldots,f_k)$ is called the
+{\em \PMlinkescapetext{frame} of the analytic polyhedron}.
+\end{defn}
+
+An analytic polyhedron is automatically a domain of holomorphy by using
+the functions that define it as $g(z) := \frac{1}{e^{i\theta}-f_j(z)}$ to
+show that $g$ cannot be extended beyond a point where $f_j(z) = e^{i\theta}$.
+Every boundary point of $\Omega$ is of that form for some $f_j$.
+
+Furthermore every domain of holomorphy can be exhausted by analytic polyhedra (that is, every compact subset is contained in an analytic polyhedron)
+and in fact only domains of holomorphy can be exhausted by analytic
+polyhedra, see the Behnke-Stein theorem.
+
+Note that sometimes $W$ is required to be homeomorphic to the unit ball.
+
+\begin{thebibliography}{9}
+\bibitem{Hormander:several}
+Lars H\"ormander.
+{\em \PMlinkescapetext{An Introduction to Complex Analysis in Several
+Variables}},
+North-Holland Publishing Company, New York, New York, 1973.
+\bibitem{Krantz:several}
+Steven~G.\@ Krantz.
+{\em \PMlinkescapetext{Function Theory of Several Complex Variables}},
+AMS Chelsea Publishing, Providence, Rhode Island, 1992.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

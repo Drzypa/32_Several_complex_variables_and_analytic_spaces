@@ -1,0 +1,150 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CRSubmanifold}
+\pmcreated{2013-03-22 14:49:04}
+\pmmodified{2013-03-22 14:49:04}
+\pmowner{jirka}{4157}
+\pmmodifier{jirka}{4157}
+\pmtitle{CR submanifold}
+\pmrecord{9}{36479}
+\pmprivacy{1}
+\pmauthor{jirka}{4157}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{32V05}
+\pmsynonym{CR manifold}{CRSubmanifold}
+\pmsynonym{Cauchy-Riemann submanifold}{CRSubmanifold}
+\pmrelated{GenericManifold}
+\pmrelated{TotallyRealSubmanifold}
+\pmrelated{TangentialCauchyRiemannComplexOfCinftySmoothForms}
+\pmrelated{ACRcomplex}
+\pmdefines{CR bundle}
+\pmdefines{CR vector field}
+\pmdefines{complex tangent space}
+\pmdefines{complex bundle}
+\pmdefines{space of antiholomorphic vectors}
+\pmdefines{antiholomorphic vector}
+\pmdefines{CR dimension}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\theoremstyle{theorem}
+\newtheorem*{thm}{Theorem}
+\newtheorem*{lemma}{Lemma}
+\newtheorem*{conj}{Conjecture}
+\newtheorem*{cor}{Corollary}
+\newtheorem*{example}{Example}
+\theoremstyle{definition}
+\newtheorem*{defn}{Definition}
+\begin{document}
+Suppose that $M \subset {\mathbb{C}}^N$ is a real submanifold of real dimension $n.$  Take $p \in M,$ then let $T_p({\mathbb{C}}^N)$ be the tangent vectors of ${\mathbb{C}}^N$ at the point $p.$  If we identify ${\mathbb{C}}^N$ with
+${\mathbb{R}}^{2N}$ by $z_j = x_j + i y_j,$ we can take the following vectors as our basis
+\begin{equation*}
+\frac{\partial}{\partial x_1} \Bigg\rvert_p,
+\frac{\partial}{\partial y_1} \Bigg\rvert_p,
+\ldots,
+\frac{\partial}{\partial x_N} \Bigg\rvert_p,
+\frac{\partial}{\partial y_N} \Bigg\rvert_p .
+\end{equation*} 
+
+We define a real linear mapping $J\colon T_p({\mathbb{C}}^N) \to T_p({\mathbb{C}}^N)$ such that for any $1 \leq j \leq N$ we have
+\begin{equation*}
+J \left(
+\frac{\partial}{\partial x_1} \Bigg\rvert_p
+\right)
+= \frac{\partial}{\partial y_1} \Bigg\rvert_p
+\qquad \text{ and }
+J \left(
+\frac{\partial}{\partial y_1} \Bigg\rvert_p
+\right)
+= - \frac{\partial}{\partial x_1} \Bigg\rvert_p .
+\end{equation*}
+Where $J$ is referred to as the complex structure on $T_p({\mathbb{C}}^N).$  Note that $J^2 = -I,$ that is applying $J$ twice we just negate the vector.
+
+Let $T_p(M)$ be the tangent space of $M$ at the point $p$ (that is, those vectors of $T_p({\mathbb{C}}^N)$ which are tangent to $M$).
+
+\begin{defn}
+The subspace $T_p^c(M)$ defined as
+\begin{equation*}
+T_p^c(M) := \{ X \in T_p(M) \mid J(X) \in T_p(M) \}
+\end{equation*}
+is called the {\em complex tangent space} of $M$ at the point $p,$ and if the dimension of $T_p(M)$ is constant for all
+$p \in M$ then the
+corresponding vector bundle $T^c(M) := \bigcup_{p\in M} T_p^c(M)$ is called the {\em complex bundle} of $M$.
+\end{defn}
+
+Do note that the complex tangent space is a real (not complex) vector space, despite its rather unfortunate name.
+
+Let ${\mathbb{C}} T_p(M)$ and ${\mathbb{C}} T_p({\mathbb{C}}^N)$ be the complexified vector spaces, by just allowing the coefficents of the vectors to
+be complex numbers.  That is for 
+$X = \sum a_j \frac{\partial}{\partial x_1} \Big\rvert_p + b_j \frac{\partial}{\partial x_1} \Big\rvert_p$ we allow $a_j$ and $b_j$ to be complex numbers.  Next we can extend the mapping $J$ to be ${\mathbb{C}}$-linear on these new vector spaces and still get that $J^2 = -I$ as before.  We notice
+that the operator $J$ has two eigenvalues, $i$ and $-i$.
+
+\begin{defn}
+Let ${\mathcal{V}}_p$ be the eigenspace of ${\mathbb{C}} T_p(M)$ corresponding to the eigenvalue $-i.$  That is
+\begin{equation*}
+{\mathcal{V}}_p := \{ X \in {\mathbb{C}} T_p(M) \mid J(X) = -iX \} .
+\end{equation*}
+If the dimension of ${\mathcal{V}}_p$ is constant for all $p \in M,$ then 
+we get a corresponding vector bundle ${\mathcal{V}}$ which we call the
+{\em CR bundle} of $M.$  A smooth section of the CR bundle is then called
+a {\em CR vector field}.
+\end{defn}
+
+\begin{defn}
+The submanifold $M$ is called a {\em CR submanifold} (or just {\em CR manifold}) if the dimension of ${\mathcal{V}}_p$ is constant for all $p \in M.$
+The complex dimension of ${\mathcal{V}}_p$ will then be called the
+{\em CR dimension} of $M.$
+\end{defn}
+
+An example of a CR submanifold is for example a hyperplane defined by
+$\operatorname{Im} z_N = 0$ where the CR dimension is $N-1.$  Another less trivial example is the Lewy hypersurface.
+
+Note that sometimes ${\mathcal{V}}_p$ is written as $T_p^{0,1} (M)$ and referred to as the {\em space of antiholomorphic vectors}, where an {\em antiholomorphic vector} is a tangent vector which can be written in terms of the basis
+\begin{equation*}
+\frac{\partial}{\partial \bar{z}_j} \Bigg\rvert_p := 
+\frac{1}{2}
+\left(
+\frac{\partial}{\partial x_j} \Bigg\rvert_p + i
+\frac{\partial}{\partial y_j} \Bigg\rvert_p
+\right) .
+\end{equation*}
+
+The CR in the name refers to Cauchy-Riemann and that is because the vector space
+${\mathcal{V}}_p$ corresponds to differentiating with respect to $\bar{z}_j.$
+
+\begin{thebibliography}{9}
+\bibitem{ber:submanifold}
+M.\@ Salah Baouendi,
+Peter Ebenfelt,
+Linda Preiss Rothschild.
+{\em \PMlinkescapetext{Real Submanifolds in Complex Space and Their Mappings}},
+Princeton University Press,
+Princeton, New Jersey, 1999.
+\bibitem{boggess}
+Albert Boggess.
+{\em \PMlinkescapetext{CR Manifolds and the Tangential Cauchy Riemann Complex}},
+CRC, 1991.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

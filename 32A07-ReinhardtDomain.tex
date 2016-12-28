@@ -1,0 +1,101 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ReinhardtDomain}
+\pmcreated{2013-03-22 14:29:37}
+\pmmodified{2013-03-22 14:29:37}
+\pmowner{jirka}{4157}
+\pmmodifier{jirka}{4157}
+\pmtitle{Reinhardt domain}
+\pmrecord{7}{36029}
+\pmprivacy{1}
+\pmauthor{jirka}{4157}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{32A07}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\theoremstyle{theorem}
+\newtheorem*{thm}{Theorem}
+\newtheorem*{lemma}{Lemma}
+\newtheorem*{conj}{Conjecture}
+\newtheorem*{cor}{Corollary}
+\newtheorem*{example}{Example}
+\newtheorem*{prop}{Proposition}
+\theoremstyle{definition}
+\newtheorem*{defn}{Definition}
+\begin{document}
+\begin{defn}
+We call an open set $G \subset {\mathbb{C}}^n$ a {\em Reinhardt domain}
+if $(z_1,\ldots,z_n) \in G$ implies that 
+$(e^{i\theta_1}z_1,\ldots,e^{i\theta_n}z_n) \in G$ for all real
+$\theta_1,\ldots,\theta_n$.
+\end{defn}
+
+The reason for studying these kinds of domains is that
+\PMlinkname{logarithmically convex}{LogarithmicallyConvexSet}
+Reinhardt domain are the domains of convergence of power series in
+several complex variables.  Note that in one complex variable, a 
+\PMlinkescapetext{logarithmically convex}
+Reinhardt domain is just a disc.
+
+Note that the intersection of
+\PMlinkescapetext{logarithmically convex}
+Reinhardt domains is still a
+\PMlinkescapetext{logarithmically convex}
+Reinhardt domain, so for every Reinhardt domain, there is a smallest
+\PMlinkescapetext{logarithmically convex}
+Reinhardt domain which contains it.
+
+\begin{thm}
+Suppose that $G$ is a Reinhardt domain which contains 0 and
+that $\tilde{G}$ is the smallest 
+\PMlinkescapetext{logarithmically convex}
+Reinhardt domain such that $G \subset \tilde{G}$.  Then
+any function holomorphic on $G$ has a holomorphic \PMlinkescapetext{extension}
+to $\tilde{G}$.
+\end{thm}
+
+It actually turns out that a 
+\PMlinkescapetext{logarithmically convex}
+Reinhardt domain is a domain of convergence.
+
+\PMlinkescapetext{Simple} examples of 
+\PMlinkescapetext{logarithmically convex}
+Reinhardt domains in ${\mathbb{C}}^n$ are polydiscs such as
+$\underbrace{{\mathbb{D}} \times \cdots \times {\mathbb{D}}}_n$
+where ${\mathbb{D}} \subset {\mathbb{C}}$ is the unit disc.
+
+\begin{thebibliography}{9}
+\bibitem{Hormander:several}
+Lars H\"ormander.
+{\em \PMlinkescapetext{An Introduction to Complex Analysis in Several
+Variables}},
+North-Holland Publishing Company, New York, New York, 1973.
+\bibitem{Krantz:several}
+Steven~G.\@ Krantz.
+{\em \PMlinkescapetext{Function Theory of Several Complex Variables}},
+AMS Chelsea Publishing, Providence, Rhode Island, 1992.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

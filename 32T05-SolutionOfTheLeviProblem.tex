@@ -1,0 +1,73 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SolutionOfTheLeviProblem}
+\pmcreated{2013-03-22 14:31:11}
+\pmmodified{2013-03-22 14:31:11}
+\pmowner{jirka}{4157}
+\pmmodifier{jirka}{4157}
+\pmtitle{solution of the Levi problem}
+\pmrecord{6}{36060}
+\pmprivacy{1}
+\pmauthor{jirka}{4157}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{32T05}
+\pmclassification{msc}{32E40}
+\pmrelated{Pseudoconvex}
+\pmrelated{DomainOfHolomorphy}
+\pmdefines{Levi problem}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\theoremstyle{theorem}
+\newtheorem*{thm}{Theorem}
+\newtheorem*{lemma}{Lemma}
+\newtheorem*{conj}{Conjecture}
+\newtheorem*{cor}{Corollary}
+\newtheorem*{example}{Example}
+\newtheorem*{prop}{Proposition}
+\theoremstyle{definition}
+\newtheorem*{defn}{Definition}
+\begin{document}
+The {\em Levi problem} is the problem of characterizing domains of
+holomorphy by a local condition on the boundary that does not involve
+holomorphic functions themselves.  This condition turned out to
+be pseudoconvexity.
+
+\begin{thm}
+An open set $G \subset {\mathbb{C}}^n$ is a domain of holomorphy if
+and only if $G$ is pseudoconvex.
+\end{thm}
+
+The forward direction (domain of holomorphy implies pseudoconvexity) is
+not hard to prove and was known for a long time.  The opposite direction
+is really what's called the solution to the Levi problem.
+
+\begin{thebibliography}{9}
+\bibitem{Krantz:several}
+Steven~G.\@ Krantz.
+{\em \PMlinkescapetext{Function Theory of Several Complex Variables}},
+AMS Chelsea Publishing, Providence, Rhode Island, 1992.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

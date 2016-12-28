@@ -1,0 +1,140 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AnalyticSet}
+\pmcreated{2013-03-22 14:59:28}
+\pmmodified{2013-03-22 14:59:28}
+\pmowner{jirka}{4157}
+\pmmodifier{jirka}{4157}
+\pmtitle{analytic set}
+\pmrecord{10}{36696}
+\pmprivacy{1}
+\pmauthor{jirka}{4157}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{32C25}
+\pmclassification{msc}{32A60}
+\pmsynonym{analytic variety}{AnalyticSet}
+\pmsynonym{complex analytic variety}{AnalyticSet}
+\pmrelated{IrreducibleComponent2}
+\pmdefines{regular point}
+\pmdefines{simple point}
+\pmdefines{top simple point}
+\pmdefines{singular point}
+\pmdefines{locally analytic}
+\pmdefines{dimension of a variety}
+\pmdefines{subvariety of a complex analytic variety}
+\pmdefines{complex analytic subvariety}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\theoremstyle{theorem}
+\newtheorem*{thm}{Theorem}
+\newtheorem*{lemma}{Lemma}
+\newtheorem*{conj}{Conjecture}
+\newtheorem*{cor}{Corollary}
+\theoremstyle{definition}
+\newtheorem*{defn}{Definition}
+\begin{document}
+Let $G \subset {\mathbb{C}}^N$ be an open set.
+
+\begin{defn}
+A set $V \subset G$ is said to be {\em locally analytic}
+if for every point $p \in V$ there exists a neighbourhood $U$ of $p$ in $G$
+and holomorphic functions $f_1,\cdots,f_m$ defined in $U$ such that
+$U \cap V = \{ z : f_k(z) = 0 \text{for all} 1\leq k \leq m \}.$
+\end{defn}
+
+This basically says that around each point of $V,$ the set $V$ is analytic.
+A stronger definition is required.
+
+\begin{defn}
+A set $V \subset G$ is said to be an {\em analytic variety} in $G$
+(or {\em analytic set} in $G$)
+if for every point $p \in G$ there exists a neighbourhood $U$ of $p$ in $G$
+and holomorphic functions $f_1,\cdots,f_m$ defined in $U$ such that
+$U \cap V = \{ z : f_k(z) = 0 \text{ for all } 1\leq k \leq m \}.$
+\end{defn}
+
+Note the change, now $V$ is analytic around each point of $G.$  Since the
+zero sets of holomorphic functions are closed, this for example implies that
+$V$ is relatively closed in $G,$ while a local variety need not be closed.
+Sometimes an analytic variety is called an {\em analytic set}.
+
+At most points an analytic variety $V$ will in fact be a complex
+analytic manifold.  So
+
+\begin{defn}
+A point $p \in V$ is called a {\em regular point} if there is a neighbourhood
+$U$ of $p$ such that $U \cap V$ is a complex analytic manifold.  Any other
+point is called a {\em singular point}.
+\end{defn}
+
+The set of regular points of $V$ is denoted by $V^-$ or sometimes $V^*.$
+
+For any regular point $p \in V$ we can define the dimension as
+\begin{equation*}
+\operatorname{dim}_p(V) = 
+\operatorname{dim}_{\mathbb{C}}(U \cap V)
+\end{equation*}
+where $U$ is as above and thus $U \cap V$ is a manifold with a well defined
+dimension.  Here we of course take the complex dimension of these manifolds.
+
+\begin{defn}
+Let $V$ be an analytic variety,
+we define the dimension of $V$ by
+\begin{equation*}
+\operatorname{dim}(V)
+=
+\sup \{ \operatorname{dim}_p(V) : p \text{ a regular point of } V \} .
+\end{equation*}
+\end{defn}
+
+\begin{defn}
+The regular point $p \in V$ such that $\dim_p(V) = \dim(V)$ is called a {\em top
+\PMlinkescapetext{simple} point} of $V$.
+\end{defn}
+
+Similarly as for manifolds we can also talk about subvarieties.  In this case we modify definition a little bit.
+
+\begin{defn}
+A set $W \subset V$ where $V \subset G$ is a local variety is said to be
+a {\em subvariety} of $V$
+if for every point $p \in V$ there exists a neighbourhood $U$ of $p$ in $G$
+and holomorphic functions $f_1,\cdots,f_m$ defined in $U$ such that
+$U \cap W = \{ z : f_k(z) = 0 \text{ for all } 1\leq k \leq m \}$.
+\end{defn}
+
+That is, a subset $W$ is a subvariety if it is definined by the vanishing of analytic functions near all points of $V$.
+
+\begin{thebibliography}{9}
+\bibitem{Chirka:CAS}
+E.\@ M.\@ Chirka.
+{\em \PMlinkescapetext{Complex Analytic Sets}}.
+Kluwer Academic Publishers, Dordrecht, The Netherlands, 1989.
+\bibitem{Whitney:varieties}
+Hassler Whitney.
+{\em \PMlinkescapetext{Complex Analytic Varieties}}.
+Addison-Wesley, Philippines, 1972.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,77 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{HolomorphicallyConvex}
+\pmcreated{2013-03-22 15:04:33}
+\pmmodified{2013-03-22 15:04:33}
+\pmowner{jirka}{4157}
+\pmmodifier{jirka}{4157}
+\pmtitle{holomorphically convex}
+\pmrecord{8}{36798}
+\pmprivacy{1}
+\pmauthor{jirka}{4157}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{32E05}
+\pmsynonym{holomorph-convex}{HolomorphicallyConvex}
+\pmrelated{PolynomiallyConvexHull}
+\pmrelated{SteinManifold}
+\pmdefines{holomorphically convex hull}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\theoremstyle{theorem}
+\newtheorem*{thm}{Theorem}
+\newtheorem*{lemma}{Lemma}
+\newtheorem*{conj}{Conjecture}
+\newtheorem*{cor}{Corollary}
+\newtheorem*{example}{Example}
+\theoremstyle{definition}
+\newtheorem*{defn}{Definition}
+\begin{document}
+Let $G \subset {\mathbb{C}}^n$ be a domain, or alternatively for a more general definition let $G$ be an $n$ dimensional complex analytic manifold.
+Further let ${\mathcal{O}}(G)$ stand for the set of holomorphic functions on $G$.
+
+\begin{defn}
+Let $K \subset G$ be a compact set.
+We define the {\em holomorphically \PMlinkescapetext{convex hull}} of $K$ as
+\begin{equation*}
+\hat{K}_G := \{ z \in G \mid \lvert f(z) \rvert \leq \sup_{w \in K} \lvert f(w) \rvert \text{ for all } f \in {\mathcal{O}}(G) \} .
+\end{equation*}
+The domain $G$ is called {\em holomorphically convex} if for every $K \subset G$ compact in $G$, $\hat{K}_G$ is also compact in $G$.  Sometimes this is just abbreviated as {\em holomorph-convex}.
+\end{defn}
+
+Note that when $n=1$, any domain $G$ is holomorphically convex since when $n=1$ $\hat{K}_G = K$ for all compact $K \subset G$.  Also note that this is the same as being a domain of holomorphy.
+
+\begin{thebibliography}{9}
+\bibitem{Hormander:several}
+Lars H\"ormander.
+{\em \PMlinkescapetext{An Introduction to Complex Analysis in Several
+Variables}},
+North-Holland Publishing Company, New York, New York, 1973.
+\bibitem{Krantz:several}
+Steven~G.\@ Krantz.
+{\em \PMlinkescapetext{Function Theory of Several Complex Variables}},
+AMS Chelsea Publishing, Providence, Rhode Island, 1992.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

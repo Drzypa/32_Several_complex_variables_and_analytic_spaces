@@ -1,0 +1,75 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ComplexLine}
+\pmcreated{2013-03-22 14:29:05}
+\pmmodified{2013-03-22 14:29:05}
+\pmowner{jirka}{4157}
+\pmmodifier{jirka}{4157}
+\pmtitle{complex line}
+\pmrecord{5}{36018}
+\pmprivacy{1}
+\pmauthor{jirka}{4157}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{32-00}
+\pmrelated{AffineTransformation}
+\pmdefines{complex affine space}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\theoremstyle{theorem}
+\newtheorem*{thm}{Theorem}
+\newtheorem*{lemma}{Lemma}
+\newtheorem*{conj}{Conjecture}
+\newtheorem*{cor}{Corollary}
+\theoremstyle{definition}
+\newtheorem*{defn}{Definition}
+\begin{document}
+\begin{defn}
+Let $a, b \in {\mathbb{C}}^n$.  The set
+$\ell := \{a + b z \mid z \in {\mathbb{C}} \}$ is called the {\em complex line}.
+\end{defn}
+
+A complex line is a holomorphic complex affine imbedding of ${\mathbb{C}}$
+into ${\mathbb{C}}^n$ so that if $f$ is holomorphic, then
+$z \mapsto f(a + b z)$ is also holomorphic.  That is the complex structures of $\ell$ and ${\mathbb{C}}^n$ are compatible.  Hence not every two dimensional real affine space is a complex line.
+
+\begin{defn}
+Let $a, b_1, \ldots, b_k \in {\mathbb{C}}^n$ such that
+$b_1, \ldots, b_k$ are linearly independent 
+over ${\mathbb{C}}$,
+then.  The set
+\begin{equation*}
+\{a + \sum_{j=1}^k b_k z_k \mid z_1,\ldots,z_k \in {\mathbb{C}} \}
+\end{equation*}
+is called the {\em complex affine space}.
+\end{defn}
+
+\begin{thebibliography}{9}
+\bibitem{Krantz:several}
+Steven~G.\@ Krantz.
+{\em \PMlinkescapetext{Function Theory of Several Complex Variables}},
+AMS Chelsea Publishing, Providence, Rhode Island, 1992.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

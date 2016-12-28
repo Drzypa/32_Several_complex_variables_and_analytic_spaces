@@ -1,0 +1,87 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{BergmanSpace}
+\pmcreated{2013-03-22 15:04:43}
+\pmmodified{2013-03-22 15:04:43}
+\pmowner{jirka}{4157}
+\pmmodifier{jirka}{4157}
+\pmtitle{Bergman space}
+\pmrecord{10}{36801}
+\pmprivacy{1}
+\pmauthor{jirka}{4157}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{32A36}
+\pmrelated{BergmanKernel}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\theoremstyle{theorem}
+\newtheorem*{thm}{Theorem}
+\newtheorem*{lemma}{Lemma}
+\newtheorem*{conj}{Conjecture}
+\newtheorem*{cor}{Corollary}
+\theoremstyle{definition}
+\newtheorem*{defn}{Definition}
+\begin{document}
+Let $G \subset {\mathbb{C}}^n$ be a domain and let
+$dV$ denote the Euclidean volume measure on $G$.
+
+\begin{defn}
+Let
+\begin{equation*}
+A^2(G) :=
+\Big\{ f \text{ holomorpic in } G ~\Big|~
+\sqrt{ \int_G \lvert f(z) \rvert^2 dV(z) } < \infty \Big\} .
+\end{equation*}
+$A^2(G)$ is called the {\em Bergman space} on $G$.  The norm on this space
+is defined as
+\begin{equation*}
+\lVert f \rVert :=
+\sqrt{ \int_G \lvert f(z) \rvert^2 dV(z) } .
+\end{equation*}
+Further we define an inner product on $A^2(G)$ as
+\begin{equation*}
+\langle f , g \rangle :=
+\int_G f(z) \overline{g(z)} dV(z) .
+\end{equation*}
+\end{defn}
+
+The inner product as defined above really is an inner product and further
+it can be shown that $A^2(G)$ is complete since convergence in the above norm implies normal convergence (uniform convergence on
+compact subsets).  The space $A^2(G)$ is therefore a Hilbert space.
+Sometimes this space is also denoted by $L_a^2(G)$.
+
+\begin{thebibliography}{9}
+\bibitem{DAngelo}
+D'Angelo, John~P.
+{\em \PMlinkescapetext{Several complex variables and the geometry of real
+hypersurfaces}},
+CRC Press, 1993.
+\bibitem{Krantz:several}
+Steven~G.\@ Krantz.
+{\em \PMlinkescapetext{Function Theory of Several Complex Variables}},
+AMS Chelsea Publishing, Providence, Rhode Island, 1992.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

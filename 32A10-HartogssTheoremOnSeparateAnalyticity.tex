@@ -1,0 +1,76 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{HartogssTheoremOnSeparateAnalyticity}
+\pmcreated{2013-03-22 14:29:24}
+\pmmodified{2013-03-22 14:29:24}
+\pmowner{jirka}{4157}
+\pmmodifier{jirka}{4157}
+\pmtitle{Hartogs's theorem on separate analyticity}
+\pmrecord{9}{36024}
+\pmprivacy{1}
+\pmauthor{jirka}{4157}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{32A10}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\theoremstyle{theorem}
+\newtheorem*{thm}{Theorem}
+\newtheorem*{lemma}{Lemma}
+\newtheorem*{conj}{Conjecture}
+\newtheorem*{cor}{Corollary}
+\newtheorem*{example}{Example}
+\theoremstyle{definition}
+\newtheorem*{defn}{Definition}
+\begin{document}
+\begin{thm}[Hartogs]
+Let $G \subset {\mathbb{C}}^n$ be an open set and write
+$z = (z_1,\ldots,z_n)$.  Let $f \colon G \to {\mathbb{C}}$ be a function 
+such that for each $k = 1,\ldots,n$ and fixed $z_1,\ldots,z_{k-1},z_{k+1},\ldots,z_n$ the function
+\begin{equation*}
+w \mapsto f(z_1,\ldots,z_{k-1},w,z_{k+1},\ldots,z_n)
+\end{equation*}
+is holomorphic on the set $\{ w \in {\mathbb{C}} \mid
+z_1,\ldots,z_{k-1},w,z_{k+1},\ldots,z_n \in G \}$.  Then
+$f$ is continuous on $G$.
+\end{thm}
+
+This is a \PMlinkescapetext{sort} of an analogue of Goursat's theorem for several complex variables.  That is if we just consider that a function is holomorphic in each
+variable separately, then it will turn out to be continuously differentiable.  Thus we can in fact define holomorphic functions of several complex variables to be just functions holomorphic in each variable separately.
+
+Note that there is no analogue of this theorem for real variables.  If we
+assume that a function $f \colon {\mathbb{R}}^n \to {\mathbb{R}}$ is 
+differentiable (or even analytic) in each variable separately, it is not true that $f$ will necessarily be continuous.  The standard example in ${\mathbb{R}}^2$ is given by $f(x,y) = \frac{xy}{x^2+y^2}$, then this function has well defined partial derivatives in $x$ and $y$ at 0, but it is not continuous at 0 (try approaching 0 along the line $x=y$ or $x=-y$).
+
+Even if we assume the function to be smooth ($C^\infty$), there is no analogue for real variables.  Consider $f(x,y) = xye^{-1/(x^2+y^2)},$ where we define $f(0,0) = 0.$  This function is smooth, real analytic in each variable
+separately, but it fails to be real analytic at the origin. 
+
+\begin{thebibliography}{9}
+\bibitem{Krantz:several}
+Steven~G.\@ Krantz.
+{\em \PMlinkescapetext{Function Theory of Several Complex Variables}},
+AMS Chelsea Publishing, Providence, Rhode Island, 1992.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

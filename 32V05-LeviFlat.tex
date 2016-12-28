@@ -1,0 +1,118 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LeviFlat}
+\pmcreated{2013-03-22 17:39:41}
+\pmmodified{2013-03-22 17:39:41}
+\pmowner{jirka}{4157}
+\pmmodifier{jirka}{4157}
+\pmtitle{Levi flat}
+\pmrecord{4}{40095}
+\pmprivacy{1}
+\pmauthor{jirka}{4157}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{32V05}
+\pmsynonym{Levi-flat}{LeviFlat}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\theoremstyle{theorem}
+\newtheorem*{thm}{Theorem}
+\newtheorem*{lemma}{Lemma}
+\newtheorem*{conj}{Conjecture}
+\newtheorem*{cor}{Corollary}
+\newtheorem*{example}{Example}
+\newtheorem*{prop}{Proposition}
+\theoremstyle{definition}
+\newtheorem*{defn}{Definition}
+\theoremstyle{remark}
+\newtheorem*{rmk}{Remark}
+
+\begin{document}
+Suppose $M \subset {\mathbb{C}}^n$ is at least a $C^2$ hypersurface.
+
+\begin{defn}
+$M$ is \emph{Levi-flat} if it is pseudoconvex from both sides, or equivalently if and only if the Levi form of $M$ vanishes identically.
+\end{defn}
+
+Suppose $M$ is locally defined by $\rho = 0$.
+The vanishing of the Levi form is equivalent to the complex
+Hessian of $\rho$ vanishing on all holomorphic vectors tangent to the hypersurface.
+Hence $M$ 
+is Levi-flat if and only if the complex bordered Hessian of $\rho$
+is of rank two on the hypersurface.  In other words, it is not hard to see that
+$M$ is Levi-flat if and only if
+\begin{equation*}
+\operatorname{rank}
+\left[
+\begin{matrix}
+\rho & \rho_z \\
+\rho_{\bar{z}} & \rho_{z\bar{z}}
+\end{matrix}
+\right]
+= 2
+\ \ \ \text{ for all points on $\{\rho = 0\}$. }
+\end{equation*}
+Here $\rho_z$ is the row vector
+$\left[ \frac{\partial \rho}{\partial z_1} ,\ldots,
+\frac{\partial \rho}{\partial z_n} \right] ,$ 
+$\rho_{\bar{z}}$ is the column vector
+$\left[ \frac{\partial \rho}{\partial z_1} ,\ldots,
+\frac{\partial \rho}{\partial z_n} \right]^T ,$
+and $\rho_{z\bar{z}}$ is the complex Hessian
+$\left[
+\frac{\partial^2 \rho}{\partial z_i \partial \bar{z}_j}
+\right]_{ij}.$
+
+Let $T^cM$ be the complex tangent space of $M,$ that is at each point $p \in M,$
+define 
+$T_p^cM = J(T_pM) \cap T_pM,$
+where $J$ is the complex structure.
+Since $M$ is a hypersurface the dimension
+of $T_p^cM$ is always $2n-2,$ and so $T^cM$ is a subbundle of $TM.$  $M$ is Levi-flat
+if and only if $T^cM$ is involutive.  Since the leaves are graphs of functions that satisfy
+the Cauchy-Riemann equations, the leaves are complex analytic.  Hence, $M$ is Levi-flat, if and only if it is foliated by complex hypersurfaces.
+
+The cannonical example of a Levi-flat hypersurface is the hypersurface defined in ${\mathbb{C}}^n$ by
+the equation $\operatorname{Im} z_1 = 0$.  In fact, locally, all real analytic Levi-flat hypersurfaces
+are biholomorphic to this example.
+
+\begin{thebibliography}{9}
+\bibitem{ber:submanifold}
+M.\@ Salah Baouendi,
+Peter Ebenfelt,
+Linda Preiss Rothschild.
+{\em \PMlinkescapetext{Real Submanifolds in Complex Space and Their Mappings}},
+Princeton University Press,
+Princeton, New Jersey, 1999.
+Lars H\"ormander.
+{\em \PMlinkescapetext{An Introduction to Complex Analysis in Several
+Variables}},
+North-Holland Publishing Company, New York, New York, 1973.
+\bibitem{Krantz:several}
+Steven~G.\@ Krantz.
+{\em \PMlinkescapetext{Function Theory of Several Complex Variables}},
+AMS Chelsea Publishing, Providence, Rhode Island, 1992.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

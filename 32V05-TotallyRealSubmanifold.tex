@@ -1,0 +1,74 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TotallyRealSubmanifold}
+\pmcreated{2013-03-22 14:56:05}
+\pmmodified{2013-03-22 14:56:05}
+\pmowner{jirka}{4157}
+\pmmodifier{jirka}{4157}
+\pmtitle{totally real submanifold}
+\pmrecord{5}{36624}
+\pmprivacy{1}
+\pmauthor{jirka}{4157}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{32V05}
+\pmsynonym{totally real manifold}{TotallyRealSubmanifold}
+\pmrelated{CRSubmanifold}
+\pmrelated{GenericManifold}
+\pmdefines{maximally totally real submanifold}
+\pmdefines{maximally totally real manifold}
+\pmdefines{maximally real manifold}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\theoremstyle{theorem}
+\newtheorem*{thm}{Theorem}
+\newtheorem*{lemma}{Lemma}
+\newtheorem*{conj}{Conjecture}
+\newtheorem*{cor}{Corollary}
+\newtheorem*{example}{Example}
+\newtheorem*{prop}{Proposition}
+\theoremstyle{definition}
+\newtheorem*{defn}{Definition}
+\theoremstyle{remark}
+\newtheorem*{rmk}{Remark}
+\begin{document}
+\begin{defn}
+Suppose that $M \subset {\mathbb{C}}^N$ is a CR submanifold.  If the CR dimension of $M$ is 0, we say that $M$ is {\em totally real}.  If in addition
+$M$ is \PMlinkname{generic}{GenericManifold}, then $M$ is said to be {\em maximally totally real} (or sometimes just {\em maximally real}).
+\end{defn}
+
+Note that if $M$ is maximally totally real, then the real dimension is automatically $N$, this is because $T_x^c(M) = T_x(M) \cap JT_x(M)$
+(the complex tangent space) is of dimension 0, and thus $T_x(M)$ must be of real dimension $N$ if $M$ is to be a generic manifold.
+
+\begin{thebibliography}{9}
+\bibitem{ber:submanifold}
+M.\@ Salah Baouendi,
+Peter Ebenfelt,
+Linda Preiss Rothschild.
+{\em \PMlinkescapetext{Real Submanifolds in Complex Space and Their Mappings}},
+Princeton University Press,
+Princeton, New Jersey, 1999.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

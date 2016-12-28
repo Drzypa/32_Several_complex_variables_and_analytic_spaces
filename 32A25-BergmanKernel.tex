@@ -1,0 +1,89 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{BergmanKernel}
+\pmcreated{2013-03-22 15:04:45}
+\pmmodified{2013-03-22 15:04:45}
+\pmowner{jirka}{4157}
+\pmmodifier{jirka}{4157}
+\pmtitle{Bergman kernel}
+\pmrecord{7}{36802}
+\pmprivacy{1}
+\pmauthor{jirka}{4157}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{32A25}
+\pmrelated{BergmanSpace}
+\pmrelated{BergmanMetric}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\theoremstyle{theorem}
+\newtheorem*{thm}{Theorem}
+\newtheorem*{lemma}{Lemma}
+\newtheorem*{conj}{Conjecture}
+\newtheorem*{cor}{Corollary}
+\theoremstyle{definition}
+\newtheorem*{defn}{Definition}
+\begin{document}
+Let $G \subset {\mathbb{C}}^n$ be a \PMlinkname{domain}{Domain2}.  And let $A^2(G)$ be the Bergman space.  For a fixed $z \in G$, the functional $f \mapsto f(z)$ is a bounded
+linear functional.  By the Riesz representation theorem (as $A^2(G)$ is a Hilbert space) there exists an element of $A^2(G)$ that represents it, and
+let's call that element $k_z \in A^2(G)$.  That is we have that
+$f(z) = \langle f, k_z \rangle$.  So we can define the {\em Bergman kernel}.
+
+\begin{defn}
+The function 
+\begin{equation*}
+K(z,w) := \overline{k_z(w)}
+\end{equation*}
+is called the {\em Bergman kernel}.
+\end{defn}
+
+By definition of the inner product in $A^2(G)$ we then have that
+for $f \in A^2(G)$
+\begin{equation*}
+f(z) =
+\int_G f(w) K(z,w) dV(w) ,
+\end{equation*}
+where $dV$ is the volume measure.
+
+As the $A^2(G)$ space is a subspace of $L^2(G,dV)$ which is a separable Hilbert space then $A^2(G)$ also has a countable orthonormal basis, say $\{ \varphi_j \}_{j=1}^\infty$.
+
+\begin{thm}
+We can compute the Bergman kernel as
+\begin{equation*}
+K(z,w) = \sum_{j=1}^\infty \varphi_j(z)\overline{\varphi_j(w)} ,
+\end{equation*}
+where the sum converges uniformly on compact subsets of $G \times G$.
+\end{thm}
+
+Note that integration against the Bergman kernel is just the orthogonal
+projection from $L^2(G,dV)$ to $A^2(G)$.  So not only is this kernel reproducing for holomorphic functions, but it will produce a holomorphic function when we just feed in any $L^2(G,dV)$ function.
+
+\begin{thebibliography}{9}
+\bibitem{Krantz:several}
+Steven~G.\@ Krantz.
+{\em \PMlinkescapetext{Function Theory of Several Complex Variables}},
+AMS Chelsea Publishing, Providence, Rhode Island, 1992.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

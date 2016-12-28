@@ -1,0 +1,76 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{BiholomorphicallyEquivalent}
+\pmcreated{2013-03-22 14:29:47}
+\pmmodified{2013-03-22 14:29:47}
+\pmowner{jirka}{4157}
+\pmmodifier{jirka}{4157}
+\pmtitle{biholomorphically equivalent}
+\pmrecord{7}{36032}
+\pmprivacy{1}
+\pmauthor{jirka}{4157}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{32H02}
+\pmsynonym{biholomorphic}{BiholomorphicallyEquivalent}
+\pmsynonym{biholomorphic equivalence}{BiholomorphicallyEquivalent}
+\pmdefines{biholomorphic mapping}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\theoremstyle{theorem}
+\newtheorem*{thm}{Theorem}
+\newtheorem*{lemma}{Lemma}
+\newtheorem*{conj}{Conjecture}
+\newtheorem*{cor}{Corollary}
+\theoremstyle{definition}
+\newtheorem*{defn}{Definition}
+\begin{document}
+\begin{defn}
+Let $U,V \subset {\mathbb{C}}^n$.  If there exists a one-to-one and onto
+holomorphic mapping $\phi \colon U \to V$ such that the inverse $\phi^{-1}$
+exists and is also holomorphic, then we say that
+$U$ and $V$ are {\em biholomorphically equivalent} or that they are
+{\em biholomorphic}.  The mapping $\phi$ is called a {\em biholomorphic mapping}.
+\end{defn}
+
+It is not an obvious fact, but if the source and target dimension are the same then every one-to-one holomorphic mapping is biholomorphic as a one-to-one holomorphic map has a nonvanishing jacobian.
+
+When $n=1$ biholomorphic equivalence is often called \PMlinkname{conformal equivalence}{ConformallyEquivalent}, since in one complex
+dimension, the one-to-one holomorphic mappings are conformal mappings.
+
+Further if $n=1$ then there are plenty of conformal (biholomorhic) equivalences,
+since for example every simply connected \PMlinkname{domain}{Domain2} other than the whole complex plane is conformally
+equivalent to the unit disc.  On the other hand,
+when $n > 1$ then the open unit ball and open unit polydisc
+are not biholomorphically equivalent.  In fact there does not exist
+a \PMlinkname{proper}{ProperMap} holomorphic mapping from one to the other.
+
+\begin{thebibliography}{9}
+\bibitem{Krantz:several}
+Steven~G.\@ Krantz.
+{\em \PMlinkescapetext{Function Theory of Several Complex Variables}},
+AMS Chelsea Publishing, Providence, Rhode Island, 1992.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

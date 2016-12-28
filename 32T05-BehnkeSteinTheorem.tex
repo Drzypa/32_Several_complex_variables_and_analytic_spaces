@@ -1,0 +1,64 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{BehnkeSteinTheorem}
+\pmcreated{2013-03-22 14:31:13}
+\pmmodified{2013-03-22 14:31:13}
+\pmowner{jirka}{4157}
+\pmmodifier{jirka}{4157}
+\pmtitle{Behnke-Stein theorem}
+\pmrecord{5}{36061}
+\pmprivacy{1}
+\pmauthor{jirka}{4157}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{32T05}
+\pmsynonym{increasing union of domains of holomorphy is a domain of holomorphy}{BehnkeSteinTheorem}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\theoremstyle{theorem}
+\newtheorem*{thm}{Theorem}
+\newtheorem*{lemma}{Lemma}
+\newtheorem*{conj}{Conjecture}
+\newtheorem*{cor}{Corollary}
+\theoremstyle{definition}
+\newtheorem*{defn}{Definition}
+\begin{document}
+\begin{thm}[Behnke-Stein]
+Suppose that $G_k \subset {\mathbb{C}}^n$ are domains of holomorphy
+such that $G_k \subset G_j$ whenever $k < j$.  Then
+$\bigcup_{k=1}^\infty G_k$ is a domain of holomorphy.
+\end{thm}
+
+This is related to the fact that an increasing union of pseudoconvex domains is pseudoconvex and so it can be proven using that fact and the solution of the
+Levi problem.  Though historically this theorem was in fact used to solve
+the Levi problem.
+
+\begin{thebibliography}{9}
+\bibitem{Krantz:several}
+Steven~G.\@ Krantz.
+{\em \PMlinkescapetext{Function Theory of Several Complex Variables}},
+AMS Chelsea Publishing, Providence, Rhode Island, 1992.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,130 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SubanalyticSet}
+\pmcreated{2013-03-22 16:46:16}
+\pmmodified{2013-03-22 16:46:16}
+\pmowner{jirka}{4157}
+\pmmodifier{jirka}{4157}
+\pmtitle{subanalytic set}
+\pmrecord{6}{38999}
+\pmprivacy{1}
+\pmauthor{jirka}{4157}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{32B20}
+\pmclassification{msc}{14P15}
+\pmrelated{TarskiSeidenbergTheorem}
+\pmrelated{SemialgebraicSet}
+\pmdefines{subanalytic}
+\pmdefines{semianalytic set}
+\pmdefines{semianalytic}
+\pmdefines{semianalytic function}
+\pmdefines{subanalytic function}
+\pmdefines{semianalytic mapping}
+\pmdefines{subanalytic mapping}
+\pmdefines{dimension of a subanalytic set}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\theoremstyle{theorem}
+\newtheorem*{thm}{Theorem}
+\newtheorem*{lemma}{Lemma}
+\newtheorem*{conj}{Conjecture}
+\newtheorem*{cor}{Corollary}
+\newtheorem*{example}{Example}
+\newtheorem*{prop}{Proposition}
+\theoremstyle{definition}
+\newtheorem*{defn}{Definition}
+\theoremstyle{remark}
+\newtheorem*{rmk}{Remark}
+
+\begin{document}
+Let $U \subset {\mathbb{R}}^n$.
+Suppose $\mathcal{A}(U)$ is any ring of real valued functions on
+$U$.
+Define $\mathcal{S}(\mathcal{A}(U))$ to be the smallest
+set of subsets of $U$, which contain the sets
+$\{ x\in U \mid f(x) > 0 \}$ for all $f \in \mathcal{A}(U)$,
+and is closed under finite union, finite intersection and complement.
+
+\begin{defn}
+A set $V \subset {\mathbb{R}}^n$ is {\em semianalytic}
+if and only if for each $x \in {\mathbb{R}}^n$, there exists a neighbourhood
+$U$ of $x$, such that $V \cap U \in \mathcal{S}(\mathcal{O}(U))$, where $\mathcal{O}(U)$
+denotes the real-analytic real valued functions.
+\end{defn}
+
+Unlike for semialgebraic sets, there is no Tarski-Seidenberg theorem for semianalytic sets, and projections of semianalytic sets are in general not semianalytic.
+
+\begin{defn}
+We say
+$V \subset {\mathbb{R}}^n$ is a {\em subanalytic} set if for
+each $x \in {\mathbb{R}}^n$, there exists a relatively compact semianalytic set
+$X \subset {\mathbb{R}}^{n+m}$ and a neighbourhood $U$ of $x$, such that
+$V \cap U$ is the projection of $X$ onto the first $n$ coordinates.
+\end{defn}
+
+In particular all semianalytic sets are subanalytic.
+On an open dense set
+subanalytic sets are submanifolds and hence we
+can define dimension.  Hence at a point $p$, where a set $A$ is a submanifold,
+the dimension $\dim_p A$ is the dimension of the submanifold.  The {\em dimension} of the subanalytic set is the maximum $\dim_p A$ for all
+$p$ where $A$ is a submanifold.
+Semianalytic sets are contained in a real-analytic subvariety of the same dimension.  However, subanalytic sets are not in general
+contained in any subvariety of the same dimension.  We do have however the
+following.
+
+\begin{thm}
+A subanalytic set $A$ can be written as a locally finite union of
+submanifolds.
+\end{thm}
+
+The set of subanalytic sets is still not completely closed under projections however.  Note that
+a real-analytic subvariety that is not relatively compact can have a
+projection which is not a locally finite union of submanifolds, and hence
+is not subanalytic.
+
+\begin{defn}
+Let $U \subset {\mathbb{R}}^n$.  A mapping $f \colon U \to {\mathbb{R}}^m$ is said to be subanalytic (resp.\@ semianalytic)
+if the graph of $f$ (i.e.\@ the set $\{ (x,y) \in U \times {\mathbb{R}}^m ~\mid~
+x, y=f(x) \}$) is subanalytic (resp.\@ semianalytic)
+\end{defn}
+
+
+
+
+
+
+
+
+
+
+\begin{thebibliography}{9}
+\bibitem{BM:semisub}
+Edward Bierstone and Pierre~D. Milman, \emph{Semianalytic and subanalytic
+  sets}, Inst. Hautes \'Etudes Sci. Publ. Math. (1988), no.~67, 5--42.
+  \PMlinkexternal{MR 89k:32011}{http://www.ams.org/mathscinet-getitem?mr=89k:32011}
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}

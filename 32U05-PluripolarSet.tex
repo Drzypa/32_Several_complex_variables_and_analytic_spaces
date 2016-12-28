@@ -1,0 +1,67 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PluripolarSet}
+\pmcreated{2013-03-22 14:29:15}
+\pmmodified{2013-03-22 14:29:15}
+\pmowner{jirka}{4157}
+\pmmodifier{jirka}{4157}
+\pmtitle{pluripolar set}
+\pmrecord{5}{36021}
+\pmprivacy{1}
+\pmauthor{jirka}{4157}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{32U05}
+\pmclassification{msc}{31C10}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\theoremstyle{theorem}
+\newtheorem*{thm}{Theorem}
+\newtheorem*{lemma}{Lemma}
+\newtheorem*{conj}{Conjecture}
+\newtheorem*{cor}{Corollary}
+\newtheorem*{example}{Example}
+\newtheorem*{prop}{Proposition}
+\theoremstyle{definition}
+\newtheorem*{defn}{Definition}
+\begin{document}
+\begin{defn}
+Let $G \subset {\mathbb{C}}^n$ and let
+$f \colon G \to {\mathbb{R}} \cup \{ - \infty \}$ be a plurisubharmonic
+function which is not identically $-\infty$.
+The set ${\mathcal{P}} := \{ z \in G \mid f(z) = - \infty \}$ is
+called a {\em pluripolar set}.
+\end{defn}
+
+If $f$ is a holomorphic function then $\log \lvert f \rvert$ is a plurisubharmonic function.  The zero set of $f$ is then
+a pluripolar set.
+
+\begin{thebibliography}{9}
+\bibitem{Krantz:several}
+Steven~G.\@ Krantz.
+{\em \PMlinkescapetext{Function Theory of Several Complex Variables}},
+AMS Chelsea Publishing, Providence, Rhode Island, 1992.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

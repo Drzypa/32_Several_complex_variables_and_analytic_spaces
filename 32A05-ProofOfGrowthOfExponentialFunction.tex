@@ -1,0 +1,85 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfGrowthOfExponentialFunction}
+\pmcreated{2013-03-22 15:48:36}
+\pmmodified{2013-03-22 15:48:36}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{proof of growth of exponential function}
+\pmrecord{11}{37774}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{32A05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+In this proof, we first restrict to when $x$ and $a$ are integers
+and only later lift this restricton.
+
+Let $a > 0$ be an integer, let $b > 1$ be real, and let $x$ be an
+integer.
+
+Consider the following inequality
+ \[ \left( 1 + {1 \over x} \right)^a \le 1 + {a \over x} \left( 1 + {1 \over x}
+ \right)^{a-1}  \]
+If $x \ge 2$, then we have
+ \[ \left( 1 + {1 \over x} \right)^a \le 1  + {a \over
+ x} \left( {3 \over 2} \right)^{a-1} . \]
+Define $X$ to be the greater of $2$ and $\lceil a
+(3/2)^{a-1} / (1 - \sqrt{b}) \rceil$; when $x > X$, we have 
+ \[ \left( 1 + {1 \over x} \right)^a \le \sqrt{b}. \] 
+
+Rewrite $x^a / b^x$ as follows when $x > X$:
+ \[ {x^a \over b^x} = {X^a \over b^X} \prod_{n=X}^x \left( 1 + {1 \over n} 
+ \right)^a {1 \over b} \] 
+By the inequality established above, each term in the product will be
+bounded by $1 / \sqrt{b}$, hence
+ \[  {x^a \over b^x} \le {X^a \over b^X} {1 \over (\sqrt{b})^{x - X}}
+ \]
+Since $b > 1$, it is also the case that $\sqrt{b} > 1$, hence we have
+the inequality
+ \[ (\sqrt{b})^n \ge 1 + n (\sqrt{b} - 1) \]
+Combining the last two inequalities yields the following:
+ \[ {x^a \over b^x} \le {X^a \over b^X} \le {1 \over 1 + (x - X)
+ (\sqrt{b} - 1)} \]
+From this, it follows that $\lim_{x \to \infty} x^a / b^x = 0$ when
+$a$ and $x$ are integers.
+
+Now we lift the restriction that $a$ be an integer.  Since the power
+function is increasing, $x^a / b^x \le x^{\lceil a \rceil} /
+b^x$, so we have  $\lim_{x \to \infty} x^a / b^x = 0$ for real values
+of $a$ as well.
+
+To lift the restriction on $x$, let us write $x = x_1 + x_2$ where
+$x_1$ is an integer and $0 \le x_2 < 1$.  Then we have \[ {x^a \over
+b^x} = {x_1^a \over b^{x_1}} \left( {x_1 + x_2 \over x_1} \right)^a
+b^{-x_2} \] If $x > 2$, then $(x_1 + x_2) / x_2 < 1.5$.  Since $x_2
+\ge 0, b^{-x_2} \le 1$.  Hence, for all real $x > 2$, we have \[ {x^a
+\over b^x} \le 1.5^a {x_1^a \over b^{x_1}}\] From this inequality, it
+follows that $\lim_{x \to \infty} x^a / b^x = 0$ for real values of
+$x$ as well.
+%%%%%
+%%%%%
+\end{document}

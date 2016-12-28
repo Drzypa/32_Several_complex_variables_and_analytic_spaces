@@ -1,0 +1,134 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{BaouendiTrevesApproximationTheorem}
+\pmcreated{2015-05-07 16:14:43}
+\pmmodified{2015-05-07 16:14:43}
+\pmowner{jirka}{4157}
+\pmmodifier{jirka}{4157}
+\pmtitle{Baouendi-Treves approximation theorem}
+\pmrecord{7}{40093}
+\pmprivacy{1}
+\pmauthor{jirka}{4157}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{32V25}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\theoremstyle{theorem}
+\newtheorem*{thm}{Theorem}
+\newtheorem*{lemma}{Lemma}
+\newtheorem*{conj}{Conjecture}
+\newtheorem*{cor}{Corollary}
+\newtheorem*{example}{Example}
+\newtheorem*{prop}{Proposition}
+\theoremstyle{definition}
+\newtheorem*{defn}{Definition}
+\theoremstyle{remark}
+\newtheorem*{rmk}{Remark}
+
+\begin{document}
+Suppose $M$ is a real smooth manifold.  Let $\mathcal{V}$ be a subbundle of the complexified tangent space $\mathbb{C} TM$
+(that is $\mathbb{C} \otimes TM$).  Let $n = \dim_{\mathbb{C}} \mathcal{V}$ and $d = \dim_{\mathbb{R}} M .$  We will say that $\mathcal{V}$ is \emph{integrable}, if it is integrable in the following sense.   Suppose that for any
+point $p \in M,$
+there exist $m = d-n$ smooth complex valued functions
+$z_1,\ldots,z_m$ defined in a neighbourhood of $p$, such that the differentials $dz_1,\ldots,dz_m$ are $\mathbb{C}$-linearly independent and for all sections $L \in \Gamma(M,\mathcal{V})$ we have $Lz_k = 0$ for
+$k = 1,\ldots,m.$  We say  $z=(z_1,\ldots,z_m)$ are \emph{\PMlinkescapetext{basic solutions}} near $p.$
+
+We say $f$ is a \emph{\PMlinkescapetext{continuous solution}} if $Lf = 0$ for every $L \in \Gamma(M,\mathcal{V})$ in the sense
+of distributions (or classically if $f$ is in fact smooth).
+
+\begin{thm}[Baouendi-Treves]
+Suppose $M$ is a smooth manifold of real dimension $d$ and $\mathcal{V}$ an integrable subbundle as above.
+Let $p \in M$ be fixed and let $z=(z_1,\ldots,z_m)$ be basic solutions near $p$.  Then there exists a compact
+neighbourhood $K$ of $p$, such that for any continuous solution $f \colon M \to \mathbb{C},$
+there exists a sequence $p_j$ of polynomials in $m$ variables with complex coefficients such that
+\begin{equation*}
+p_j(z_1,\ldots,z_m) \to f
+\text{ ~~~~ uniformly in $K.$}
+\end{equation*}
+\end{thm}
+
+In particular we have the following corollary for CR submanifolds.  A real smooth CR submanifold
+that is embedded in ${\mathbb{C}}^N$ has the CR vector fields as the integrable subbundle $\mathcal{V}$.
+Also the coordinate functions $z_1,\ldots,z_N$ can be taken as the basic solutions.  We will require that
+$M$ be a generic submanifold
+rather than just any CR submanifold to make sure that ${\mathbb{C}}^N$ is of the minimal dimension.
+
+\begin{cor}
+Let $M \subset {\mathbb{C}}^N$ be an embedded real smooth generic submanifold and $p \in M$.  Then there exists a
+compact neighbourhood $K \subset M$ of $p$ such that any continuous CR function $f$ is uniformly approximated on $K$ by polynomials
+in $N$ variables.
+\end{cor}
+
+This result can be used to extend CR functions from CR submanifolds.  For example, if we can fill a certain set
+with analytic discs attached to $M$, we can approximate $f$ on $K \subset M$ and by the maximum principle we will
+be able to use the fact that uniform limits of holomorphic functions (in this case polynomials) are holomorphic.
+A key point is that while $K$ is not arbitrary, it does not depend on $f$, it only depends on $M$ and $p$.
+
+\begin{example}
+Suppose $M \subset {\mathbb{C}}^2$ is given in coordinates $(z,w)$ by $\operatorname{Im} w = \lvert z \rvert^2 .$
+Note that for
+some $t > 0,$
+the map $\xi \mapsto (t \xi, t)$ is an attached analytic disc.  By taking different $t > 0,$
+we can fill the set $\{ (z,w) \mid \operatorname{Im} w \geq \lvert z \rvert^2 \}$ by analytic discs attached to $M.$
+If $f$
+is a continuous CR function on $M$, then there exists some compact neighbourhood $K$ of $(0,0)$ such that $f$
+is uniformly approximated on $K$ by holomorphic polynomials.  By maximum principle we get that this sequence
+of holomorphic polynomials converges uniformly on all the discs for $t < \epsilon$ for some $\epsilon > 0$ (such that the boundary of the disc lies in $K$).
+Hence $f$ extends to a holomorphic function on $\epsilon > \operatorname{Im} w > \lvert z \rvert^2$, and which is
+continuous on $\epsilon > \operatorname{Im} w \geq \lvert z \rvert^2$.
+\end{example}
+
+Using methods of the example it is possible (among many other results) to prove the following.
+
+\begin{cor}
+Suppose $M \subset {\mathbb{C}}^N$ be a smooth strongly pseudoconvex hypersurface and $f$ a continuous
+CR function on $M.$  Then $f$ extends to a small neighbourhood on the pseudoconvex side of $M$ as a
+holomorphic function.
+\end{cor}
+
+Using the above corollary we can prove the Hartogs phenomenon for hypersurfaces by reducing to the standard
+Hartogs phenomenon (although the theorem also holds without pseudoconvexity with a different proof).
+
+\begin{cor}
+Let $U \subset {\mathbb{C}}^N$ be a domain with smooth strongly pseudoconvex boundary.
+Suppose $f$ is a continuous CR function on $\partial U$.  Then there exists a function $f$
+holomorphic in $U$ and continuous on $\bar{U},$ such that $F|_{\partial U} = f .$
+\end{cor}
+
+\begin{thebibliography}{9}
+\bibitem{ber:submanifold}
+M.\@ Salah Baouendi,
+Peter Ebenfelt,
+Linda Preiss Rothschild.
+{\em \PMlinkescapetext{Real Submanifolds in Complex Space and Their Mappings}},
+Princeton University Press,
+Princeton, New Jersey, 1999.
+\bibitem{boggess}
+Albert Boggess.
+{\em \PMlinkescapetext{CR Manifolds and the Tangential Cauchy Riemann Complex}},
+CRC, 1991.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

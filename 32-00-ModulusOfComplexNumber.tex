@@ -1,0 +1,104 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ModulusOfComplexNumber}
+\pmcreated{2013-03-22 13:36:39}
+\pmmodified{2013-03-22 13:36:39}
+\pmowner{matte}{1858}
+\pmmodifier{matte}{1858}
+\pmtitle{modulus of complex number}
+\pmrecord{17}{34242}
+\pmprivacy{1}
+\pmauthor{matte}{1858}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{32-00}
+\pmclassification{msc}{30-00}
+\pmclassification{msc}{12D99}
+\pmsynonym{complex modulus}{ModulusOfComplexNumber}
+\pmsynonym{modulus}{ModulusOfComplexNumber}
+\pmsynonym{absolute value of complex number}{ModulusOfComplexNumber}
+\pmsynonym{absolute value}{ModulusOfComplexNumber}
+\pmsynonym{modulus of a complex number}{ModulusOfComplexNumber}
+\pmrelated{AbsoluteValue}
+\pmrelated{Subadditive}
+\pmrelated{SignumFunction}
+\pmrelated{ComplexConjugate}
+\pmrelated{PotentialOfHollowBall}
+\pmrelated{ConvergenceOfRiemannZetaSeries}
+\pmrelated{RealPartSeriesAndImaginaryPartSeries}
+\pmrelated{ArgumentOfProductAndSum}
+\pmrelated{ArgumentOfProductAndQuotient}
+\pmrelated{EqualityOfComplexNumbers}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\sR}[0]{\mathbb{R}}
+\newcommand{\sC}[0]{\mathbb{C}}
+\newcommand{\sN}[0]{\mathbb{N}}
+\newcommand{\sZ}[0]{\mathbb{Z}}
+\begin{document}
+\newcommand{\ccj}[1]{\overline{#1}}
+{\bf Definition} 
+Let $z$ be a complex number, and let 
+$\ccj{z}$ be the complex conjugate of $z$. 
+Then the \emph{modulus}, or \emph{absolute value}, of $z$ is defined as 
+\[
+  |z| := \sqrt{z\ccj{z}}.
+\]
+There is also the notation
+$$\mod{z}$$
+for the modulus of $z$.
+
+If we write $z$ in polar form as\, $z = re^{i\phi}$\, with\, $r\ge 0,\; \phi\in[0,\,2\pi)$,\,
+then\, $|z| = r$.  It follows that the modulus is a positive real number or zero.  
+Alternatively, if $a$ is the real part of $z$, and $b$ the imaginary part, then 
+\begin{eqnarray}
+\label{eq100}
+|z| &=& \sqrt{a^2+b^2},
+\end{eqnarray}
+which is simply the Euclidean norm of the point \,$(a,\,b)\in \sR^2$. 
+It follows that the modulus satisfies the triangle inequality
+\[
+   |z_1+z_2| \le |z_1|+|z_2|, 
+\]
+also
+$$|\Re{z}| \le |z|,\quad |\Im{z}| \le |z|,\quad |z| \le |\Re{z}|+|\Im{z}|.$$
+
+Modulus is \PMlinkescapetext{multiplicative}:
+$$|z_1z_2| = |z_1|\cdot|z_2|, \quad 
+\left|\frac{z_1}{z_2}\right| = \frac{|z_1|}{|z_2|}$$
+
+
+
+Since $\sR\subset\sC$, the definition of modulus includes the real numbers.  Explicitly, if we write\, $x\in\sR$\, in polar form,\, $x = re^{i\phi}$,\, $r > 0$,\, $\phi\in[0,2\pi)$,\, then\, $\phi = 0$\, or\, $\phi=\pi$, so\, $e^{i\phi}=\pm 1$.  Thus,
+\[
+  |x| = \sqrt{x^2} =
+  \begin{cases}
+    x  & x>0 \\
+    0  & x=0 \\
+    -x & x<0
+  \end{cases}
+.\]
+%%%%%
+%%%%%
+\end{document}

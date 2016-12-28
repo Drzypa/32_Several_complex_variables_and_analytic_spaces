@@ -1,0 +1,98 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SymmetricPower}
+\pmcreated{2013-03-22 17:42:05}
+\pmmodified{2013-03-22 17:42:05}
+\pmowner{jirka}{4157}
+\pmmodifier{jirka}{4157}
+\pmtitle{symmetric power}
+\pmrecord{5}{40143}
+\pmprivacy{1}
+\pmauthor{jirka}{4157}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{32A12}
+\pmclassification{msc}{05E05}
+\pmrelated{Multifunction}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\theoremstyle{theorem}
+\newtheorem*{thm}{Theorem}
+\newtheorem*{lemma}{Lemma}
+\newtheorem*{conj}{Conjecture}
+\newtheorem*{cor}{Corollary}
+\newtheorem*{example}{Example}
+\newtheorem*{prop}{Proposition}
+\theoremstyle{definition}
+\newtheorem*{defn}{Definition}
+\theoremstyle{remark}
+\newtheorem*{rmk}{Remark}
+
+\begin{document}
+Let $X$ be a set and let 
+\begin{equation*}
+X^m := \underbrace{X \times \cdots \times X}_{m-\text{times}} .
+\end{equation*}
+Denote an element of $X^m$ by $x = (x_1,\ldots,x_m).$
+ Define an equivalence relation
+by $x \sim x'$ if and only if there exists a 
+permutation $\sigma$ of $(1,\ldots,m),$ such that
+$x_i = x'_{\sigma{i}}$.
+
+\begin{defn}
+The $m^{\text{th}}$ symmetric power of $X$ is
+the set $X^m_{sym} := X^m / \sim.$  That is, the set of equivalence classes of $X^m$ under the
+relation $\sim.$
+\end{defn}
+
+Let $\pi$ be the natural projection of $X^m$ onto $X^m_{sym}$.
+
+\begin{prop}
+$f \colon X^m \to Y$ is a symmetric function if and only if there exists a function
+$g \colon X^m_{sym} \to Y$ such that $f = g \circ \pi.$
+\end{prop}
+
+From now on let $R$ be an integral domain.  Let $\tau' \colon X^m \to X^m$ be the map
+$\tau'(x) := (\tau_1(x),\ldots,\tau_m(x)),$ where $\tau_k$ is the $k^\text{th}$ elementary symmetric
+polynomial.  By the above lemma, we have a function $\tau \colon X^m_{sym} \to X^m$, where
+$\tau' = \tau \circ \pi .$
+
+\begin{prop}
+$\tau$ is one to one.  If $R$ is algebraically closed, then $\tau$ is onto.
+\end{prop}
+
+% FIXME: topology and other structure.
+
+A very useful case is when $R = \mathbb{C}.$  In this case, when we put on the natural complex manifold structure
+onto ${\mathbb{C}}^m_{sym},$ the map $\tau$ is a biholomorphism of ${\mathbb{C}}^m_{sym}$ and
+${\mathbb{C}}^m .$
+
+\begin{thebibliography}{9}
+\bibitem{Whitney:varieties}
+Hassler Whitney.
+{\em \PMlinkescapetext{Complex Analytic Varieties}}.
+Addison-Wesley, Philippines, 1972.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

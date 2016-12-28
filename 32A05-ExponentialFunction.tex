@@ -1,0 +1,133 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExponentialFunction}
+\pmcreated{2013-03-22 12:26:25}
+\pmmodified{2013-03-22 12:26:25}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{exponential function}
+\pmrecord{16}{32541}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{32A05}
+\pmsynonym{logarithm function}{ExponentialFunction}
+\pmrelated{FourExponentialsConjecture}
+\pmrelated{ComplexExponentialFunction}
+\pmrelated{ExampleOfTaylorPolynomialsForTheExponentialFunction}
+\pmrelated{ProofOfEquivalenceOfFormulasForExp}
+\pmrelated{GroupsOfRealNumbers}
+\pmrelated{FunctionXx}
+\pmrelated{ExampleOfJumpDiscontinuity}
+\pmrelated{ExponentialFunctionDefinedAsLimitOfPowers}
+\pmrelated{Deriva}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{pstricks}
+\usepackage{pst-plot}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\mc}{\mathcal}
+\newcommand{\mb}{\mathbb}
+\newcommand{\mf}{\mathfrak}
+\newcommand{\ol}{\overline}
+\newcommand{\ra}{\rightarrow}
+\newcommand{\la}{\leftarrow}
+\newcommand{\La}{\Leftarrow}
+\newcommand{\Ra}{\Rightarrow}
+\newcommand{\nor}{\vartriangleleft}
+\newcommand{\Gal}{\text{Gal}}
+\newcommand{\GL}{\text{GL}}
+\newcommand{\Z}{\mb{Z}}
+\newcommand{\R}{\mb{R}}
+\newcommand{\Q}{\mb{Q}}
+\newcommand{\C}{\mb{C}}
+\newcommand{\<}{\langle}
+\renewcommand{\>}{\rangle}
+\begin{document}
+We begin by defining the exponential function $\exp:\mb{R}\ra\mb{R}^+$ for all real values of $x$ by the power series
+
+$$\exp(x) = \sum_{k = 0}^{\infty}\frac{x^k}{k!}$$
+
+The graph of the exponential function is as follows:
+
+\begin{center}
+\psset{yunit=8pt}
+\begin{pspicture}(-4,-5)(4,25)
+\psaxes[Dx=1,Dy=2]{->}(0,0)(-3.5,-1.5)(3.5,24)
+\rput(0.3,24){$y$}
+\rput(3.4,1.4){$x$}
+\psplot[linecolor=blue]{-3.3}{3.2}{2.7 x exp}
+\end{pspicture}
+\end{center}
+
+It has a few elementary properties, which can be easily shown.
+
+\begin{itemize}
+\item The radius of convergence is infinite
+\item $\exp(0) = 1$
+\item It is infinitely differentiable, and the derivative is the exponential function itself
+\item $\exp(x) \ge 1 + x$ so it is positive and unbounded on the non-negative reals
+\end{itemize}
+
+Now consider the function $f:\mathbb{R}\rightarrow\mathbb{R}$ with
+
+$$f(x) = \exp(x)\exp(y-x)$$
+
+so, by the product rule and property 3
+
+$$f'(x) = 0.$$
+
+Since the only continuous functions that have a derivative of 0 are constant functions, and since $f(0)=\exp(y)$, we get
+
+$$\exp(x)\exp(y-x) = \exp(y) \quad \forall y,x \in \mathbb{R}.$$
+
+With a suitable change of variables, we have
+
+$$\exp(x+y) = \exp(x)\exp(y),$$
+$$\exp(x)\exp(-x) = 1.$$
+
+Consider just the non-negative reals. Since it is unbounded, by the intermediate value theorem, it can take any value on the interval $[1,\infty)$. We have that the derivative is strictly positive so by the mean-value theorem, $\exp(x)$ is strictly increasing. This gives surjectivity and injectivity i.e. it is a bijection from $[0,\infty) \rightarrow [1,\infty)$.
+
+Now $\exp(-x) = \frac{1}{\exp(x)}$, so it is also a bijection from $(-\infty,0) \rightarrow (0, 1)$. Therefore we can say that $\exp(x)$ is a bijection onto $\mathbb{R}^+.$
+
+We can now naturally define the logarithm function, as the inverse of the exponential function. It is usually denoted by $\operatorname{ln}(x)$, and it maps $\mathbb{R}^+$ to $\mathbb{R}.$
+
+Similarly, the natural log base, $e$ may be defined by $e = \exp(1).$
+
+Since the exponential function obeys the rules normally associated with powers, it is often denoted by $e^x$. In fact it is now possible to define powers in terms of the exponential function by
+
+$$a^x = e^{x\operatorname{ln}(a)} \quad a > 0.$$
+
+Note the domain may be extended to the complex plane with all the same properties as before, except the bijectivity and ordering properties.
+
+Comparison with the power series expansions for sine and cosine yields the following identity, with the famous corollary attributed to Euler:
+
+$$e^{ix} = \cos(x) + i\sin(x)$$
+$$e^{i\pi}+1=0,$$
+
+the last of which often being considered one of the most beautiful identities in all of mathematics, relating the important numbers $e$, $\pi$, $i$, $1$, and $0$ all in one equation.
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,58 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LimitOfdisplaystylefracax1xAsXApproaches0}
+\pmcreated{2013-03-22 17:40:21}
+\pmmodified{2013-03-22 17:40:21}
+\pmowner{Wkbj79}{1863}
+\pmmodifier{Wkbj79}{1863}
+\pmtitle{limit of $\displaystyle \frac{a^x-1}{x}$ as $x$ approaches 0}
+\pmrecord{5}{40111}
+\pmprivacy{1}
+\pmauthor{Wkbj79}{1863}
+\pmtype{Corollary}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{32A05}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{pstricks}
+\usepackage{psfrag}
+\usepackage{graphicx}
+\usepackage{amsthm}
+%%\usepackage{xypic}
+
+\newtheorem*{cor*}{Corollary}
+\begin{document}
+\begin{cor*}
+For $a>0$, we have
+\[
+\lim_{x\to 0}\frac{a^x-1}{x}=\ln a.
+\]
+\end{cor*}
+
+\begin{proof}
+Recall that $a^x=e^{x\ln a}$.  Thus,
+\begin{align*}
+\lim_{x\to 0}\frac{a^x-1}{x} & =\lim_{x\to 0}\frac{e^{x\ln a}-1}{x} \\
+                             & =\lim_{x\to 0}\frac{(e^{x\ln a}-1)\ln a}{x\ln a} \\
+                             & =(\ln a)\lim_{x\to 0}\frac{e^{x\ln a}-1}{x\ln a}.
+\end{align*}
+Let $t=x\ln a$.  Then $t\to 0$ as $x\to 0$.  Therefore,
+\begin{align*}
+\lim_{x\to 0}\frac{a^x-1}{x} & =(\ln a)\lim_{t\to 0}\frac{e^t-1}{t} \\
+                             & =(\ln a)1 \\
+                             & =\ln a.  \qedhere
+\end{align*}
+\end{proof}
+
+The formula from the corollary is useful for proving that $\displaystyle \frac{d}{dx}a^x=a^x\ln a$.  On the other hand, once this fact is known, the corollary is easily proven via \PMlinkname{l'H\^{o}pital's rule}{LHpitalsRule}:
+
+\begin{align*}
+\lim_{x\to 0}\frac{a^x-1}{x} & =\lim_{x\to 0}\frac{a^x\ln a}{1} \\
+                             & =a^0\ln a \\
+                             & =\ln a.
+\end{align*}
+%%%%%
+%%%%%
+\end{document}

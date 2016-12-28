@@ -1,0 +1,72 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExponentialFunctionNeverVanishes}
+\pmcreated{2014-11-22 21:23:32}
+\pmmodified{2014-11-22 21:23:32}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{exponential function never vanishes}
+\pmrecord{8}{41924}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{32A05}
+\pmclassification{msc}{30D20}
+\pmsynonym{real exponential function is positive}{ExponentialFunctionNeverVanishes}
+\pmrelated{ExponentialFunction}
+\pmrelated{ExponentialFunctionDefinedAsLimitOfPowers}
+\pmrelated{PeriodicityOfExponentialFunction}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+In the entry \PMlinkname{exponential function}{ExponentialFunction} one defines for real variable $x$ the real exponential function \,$\exp{x}$, i.e. $e^x$, as the sum of power series:
+$$e^x \;=\; \sum_{k=0}^\infty\frac{x^k}{k!}$$
+The series form implies immediately that the real exponential 
+function attains only positive values when\, $x \geqq 0$.\, Also 
+for\, $-1 \leqq x < 0$\, the positiveness is easy to see by 
+grouping the series terms pairwise.
+
+In \PMlinkescapetext{order} to study the sign of $e^x$ for 
+arbitrary real $x$, we may multiply the series of $e^x$ and 
+$e^{-x}$ using \PMlinkname{Abel's multiplication rule for series}{AbelsMultiplicationRuleForSeries}.\, We obtain
+$$e^xe^{-x} \;=\; \sum_{n=0}^\infty\frac{x^n}{n!}\!\sum_{k=0}^\infty(-1)^k\frac{x^k}{k!} 
+\;=\; \sum_{n=0}^\infty\!\sum_{j=0}^n(-1)^j\frac{x^n}{j!(n\!-\!j)!} 
+\;=\; \sum_{n=0}^\infty\frac{x^n}{n!}\!\sum_{j=0}^n\!{n\choose j}(-1)^j \;=\; \sum_{n=0}^\infty\frac{x^n}{n!}\cdot0^n.$$
+The last sum equals 1.\, So, if\, $-x > 0$,\, then\, $e^{-x} > 0$,\, whence $e^x$ must be positive.\\
+
+Let us now consider arbitrary complex value\, $z = x\!+\!iy$\, where $x$ and $y$ are real.\, Using the addition formula of complex exponential function and the Euler relation, we can write
+$$e^z \;=\; e^{x+iy} \;=\; e^xe^{iy} \;=\; e^x(\cos{y}+i\sin{y}).$$
+From this we see that the absolute value of $e^z$ is $e^x$, which we above have proved to be positive.\, Accordingly, we may write the
+
+\textbf{Theorem.}\, The complex exponential function never vanishes.
+
+
+
+%%%%%
+%%%%%
+\end{document}

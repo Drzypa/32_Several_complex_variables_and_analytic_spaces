@@ -1,0 +1,98 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{WeierstrassPreparationTheorem}
+\pmcreated{2013-03-22 15:04:28}
+\pmmodified{2013-03-22 15:04:28}
+\pmowner{jirka}{4157}
+\pmmodifier{jirka}{4157}
+\pmtitle{Weierstrass preparation theorem}
+\pmrecord{6}{36796}
+\pmprivacy{1}
+\pmauthor{jirka}{4157}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{32B05}
+\pmsynonym{Weierstrass division theorem}{WeierstrassPreparationTheorem}
+\pmrelated{WeierstrassPolynomial}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\theoremstyle{theorem}
+\newtheorem*{thm}{Theorem}
+\newtheorem*{lemma}{Lemma}
+\newtheorem*{conj}{Conjecture}
+\newtheorem*{cor}{Corollary}
+\newtheorem*{example}{Example}
+\newtheorem*{prop}{Proposition}
+\theoremstyle{definition}
+\newtheorem*{defn}{Definition}
+\theoremstyle{remark}
+\newtheorem*{rmk}{Remark}
+\begin{document}
+The following theorem is known as the Weierstrass preparation theorem, though sometimes that name is reserved for the corollary and this theorem is then known as the Weierstrass division theorem.
+
+In the following we use the standard notation for coordinates in ${\mathbb{C}}^n$ that $z = (z_1,\ldots,z_n) = (z',z_n)$.  That is $z'$ is the first $n-1$ coordinates.
+
+\begin{thm}
+Let $f\colon {\mathbb{C}}^n \to {\mathbb{C}}$ be a function analytic in a neighbourhood $U$ of the origin such that
+$\frac{f(0,z_n)}{z_n^m}$ extends to be analytic at the origin and is not zero
+at the origin for some positive integer $m$ (in other words, as a function of $z_n$, the function has a zero of order $m$ at the origin).  Then there exists
+a polydisc $D \subset U$ such that every function $g$ holomorphic and bounded in $D$ can be written as
+\begin{equation*}
+g =  qf + r ,
+\end{equation*}
+where $q$ is an analytic function and $r$ is a polynomial in the $z_n$ variable
+of degree less then $m$ with the coefficients being holomorphic functions in $z'$.  Further there exists a constant $C$ independent of $g$ such that
+\begin{equation*}
+\sup_{z \in D} \lvert q(z) \rvert \leq C \sup_{z \in D} \lvert g(z) \rvert .
+\end{equation*}
+The representation $g = qf +r$ is unique.
+Finally the coefficients of the power series expansions of $q$ and $r$ are
+finite linear combinations of the coefficients of the power series of $g$.
+\end{thm}
+
+Note that $r$ is not necessarily a Weierstrass polynomial.
+
+\begin{cor}
+Let $f$ be as above, then there is a unique representation of $f$ as
+$f = h W$, where $h$ is analytic in a neighbourhood of the origin and $h(0) \not= 0$ and $W$ being a Weierstrass polynomial.
+\end{cor}
+
+It should be noted that the condition that $\frac{f(0,z_n)}{z_n^m}$ extends to be analytic, which is equivalent to
+saying that $f(0,z_n) \not\equiv 0$, is not an essential restriction.
+In fact $f(0,z_n) \equiv 0$, then there exists a linear change of coordinates, arbitrarily close to the identity, 
+such that the condition of the theorem is satisfied in the new set of coordinates.
+
+\begin{thebibliography}{9}
+\bibitem{Hormander:several}
+Lars H\"ormander.
+{\em \PMlinkescapetext{An Introduction to Complex Analysis in Several
+Variables}},
+North-Holland Publishing Company, New York, New York, 1973.
+\bibitem{Krantz:several}
+Steven~G.\@ Krantz.
+{\em \PMlinkescapetext{Function Theory of Several Complex Variables}},
+AMS Chelsea Publishing, Providence, Rhode Island, 1992.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

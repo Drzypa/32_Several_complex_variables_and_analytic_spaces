@@ -1,0 +1,81 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CRFunction}
+\pmcreated{2013-03-22 14:57:10}
+\pmmodified{2013-03-22 14:57:10}
+\pmowner{jirka}{4157}
+\pmmodifier{jirka}{4157}
+\pmtitle{CR function}
+\pmrecord{5}{36647}
+\pmprivacy{1}
+\pmauthor{jirka}{4157}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{32V10}
+\pmdefines{CR distribution}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\theoremstyle{theorem}
+\newtheorem*{thm}{Theorem}
+\newtheorem*{lemma}{Lemma}
+\newtheorem*{conj}{Conjecture}
+\newtheorem*{cor}{Corollary}
+\newtheorem*{example}{Example}
+\theoremstyle{definition}
+\newtheorem*{defn}{Definition}
+\begin{document}
+\begin{defn}
+Let $M \subset {\mathbb{C}}^N$ be a CR submanifold and let $f$ be a 
+$C^k(M)$ ($k$ times continuously differentiable) function to ${\mathbb{C}}$
+where $k \geq 1$.  Then $f$ is a {\em CR function} if for every CR vector
+field $L$ on $M$ we have $Lf \equiv 0$.  A
+\PMlinkname{distribution}{Distribution4}
+$f$ on $M$ is called a
+{\em CR distribution} if similarly every CR vector field annihilates $f$.
+\end{defn}
+
+For example restrictions of holomorphic functions in ${\mathbb{C}}^N$ to
+$M$ are CR functions.  The converse is not always true and is not easy to
+see.  For example the following basic theorem is very useful when you have
+real analytic submanifolds.
+
+\begin{thm}
+Let $M \subset {\mathbb{C}}^N$ be a generic submanifold which is real
+analytic (the defining function is real analytic).  And let $f \colon M \to
+{\mathbb{C}}$ be a real analytic function.  Then $f$ is a CR function if
+and only if $f$ is a restriction to $M$ of a holomorphic function
+defined in an open neighbourhood of $M$ in ${\mathbb{C}}^N$.
+\end{thm}
+
+\begin{thebibliography}{9}
+\bibitem{ber:submanifold}
+M.\@ Salah Baouendi,
+Peter Ebenfelt,
+Linda Preiss Rothschild.
+{\em \PMlinkescapetext{Real Submanifolds in Complex Space and Their Mappings}},
+Princeton University Press,
+Princeton, New Jersey, 1999.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,85 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Pseudoconvex}
+\pmcreated{2013-03-22 14:30:58}
+\pmmodified{2013-03-22 14:30:58}
+\pmowner{jirka}{4157}
+\pmmodifier{jirka}{4157}
+\pmtitle{pseudoconvex}
+\pmrecord{5}{36056}
+\pmprivacy{1}
+\pmauthor{jirka}{4157}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{32T15}
+\pmclassification{msc}{32T05}
+\pmsynonym{Hartogs pseudoconvex}{Pseudoconvex}
+\pmrelated{LeviPseudoconvex}
+\pmrelated{SolutionOfTheLeviProblem}
+\pmrelated{ExhaustionFunction}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\theoremstyle{theorem}
+\newtheorem*{thm}{Theorem}
+\newtheorem*{lemma}{Lemma}
+\newtheorem*{conj}{Conjecture}
+\newtheorem*{cor}{Corollary}
+\newtheorem*{example}{Example}
+\newtheorem*{prop}{Proposition}
+\theoremstyle{definition}
+\newtheorem*{defn}{Definition}
+\begin{document}
+\begin{defn}
+Let $G \subset {\mathbb{C}}^n$ be a domain (open connected subset).
+We say $G$ is {\em pseudoconvex} (or {\em Hartogs pseudoconvex}) if there exists a continuous plurisubharmonic function $\varphi$ on $G$ such that
+the sets $\{ z \in G \mid \varphi(z) < x \}$ are relatively compact
+subsets of $G$ for all $x \in {\mathbb{R}}$.  That is we say that
+$G$ has a continuous plurisubharmonic exhaustion function.
+\end{defn}
+
+When $G$ has a $C^2$ (twice continuously differentiable) boundary then this
+notion is the same as \PMlinkname{Levi pseudoconvexity}{LeviPseudoconvex}, which
+is easier to work with if you have such nice boundaries.  If you don't have
+nice boundaries then the following approximation result can come in useful.
+
+\begin{prop}
+If $G \subset {\mathbb{C}}^n$ is pseudoconvex then there exist bounded,
+strongly Levi pseudoconvex domains $G_k \subset G$ with $C^\infty$ (smooth)
+boundary which are relatively compact
+in $G$, such that $G = \bigcup_{k=1}^\infty G_k$.
+\end{prop}
+
+This is because once we have a $\varphi$ as in the definition we can actually find a $C^\infty$ exhaustion function.
+
+The reason for the definition of pseudoconvexity is that it classifies domains of holomorphy.  One thing to note then is that every open domain in one complex
+dimension (in the complex plane ${\mathbb{C}}$) is then pseudoconvex.
+
+\begin{thebibliography}{9}
+\bibitem{Krantz:several}
+Steven~G.\@ Krantz.
+{\em \PMlinkescapetext{Function Theory of Several Complex Variables}},
+AMS Chelsea Publishing, Providence, Rhode Island, 1992.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

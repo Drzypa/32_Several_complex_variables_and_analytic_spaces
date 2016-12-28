@@ -1,0 +1,82 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PuiseuxParametrization}
+\pmcreated{2013-03-22 15:20:32}
+\pmmodified{2013-03-22 15:20:32}
+\pmowner{jirka}{4157}
+\pmmodifier{jirka}{4157}
+\pmtitle{Puiseux parametrization}
+\pmrecord{6}{37162}
+\pmprivacy{1}
+\pmauthor{jirka}{4157}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{32B10}
+\pmsynonym{Puiseux series parametrization}{PuiseuxParametrization}
+\pmsynonym{Puiseux normalization}{PuiseuxParametrization}
+\pmsynonym{Puiseux series normalization}{PuiseuxParametrization}
+\pmsynonym{Puiseux parameterization}{PuiseuxParametrization}
+\pmsynonym{Puiseux series parameterization}{PuiseuxParametrization}
+\pmrelated{PuiseuxSeries}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\theoremstyle{theorem}
+\newtheorem*{thm}{Theorem}
+\newtheorem*{lemma}{Lemma}
+\newtheorem*{conj}{Conjecture}
+\newtheorem*{cor}{Corollary}
+\newtheorem*{example}{Example}
+\newtheorem*{prop}{Proposition}
+\theoremstyle{definition}
+\newtheorem*{defn}{Definition}
+\theoremstyle{remark}
+\newtheorem*{rmk}{Remark}
+\begin{document}
+\begin{thm}
+Suppose that $V \subset U \subset {\mathbb{C}}^2$ is an irreducible complex analytic subset of (complex) dimension 1 where $U$ is a domain.  Suppose that $0 \in V$.  Then there exists an analytic (holomorphic) map $f \colon {\mathbb{D}} \to V$, where ${\mathbb{D}}$ is the unit disc,
+such that $f(0) = 0$ and $f({\mathbb{D}}) = N$ where $N \subset V$ is a neighbourhood of $0$ in $V$, $f$ is one to one, and further $f |_{{\mathbb{D}}\backslash \{0\}}$ is a biholomorphism onto $N \backslash \{0\}$.
+In fact there exist suitable local coordinates $(z,w)$ in ${\mathbb{C}}^2$ such that $f$ is then given by $\xi \mapsto (z,w)$ where $z = \xi^k$,
+$w = \sum_{n=m}^\infty a_n \xi^n$ where $m > k$.
+\end{thm} 
+
+This is sometimes written as
+\begin{equation*}
+w = \sum_{n=m}^\infty a_n z^{n/k}
+\end{equation*}
+and hence the name {\em Puiseux series parametrization}.  If you do however write it like this, it must be properly interpreted, as the Puiseux series is in general not single valued.
+
+A similar result for arbitrary complex analytic sets with singularities of codimension 1 in higher dimensional spaces under further conditions on the singular set was obtained by Stutz, see Chirka \cite{Chirka:CAS} page 98.
+
+\begin{thebibliography}{9}
+\bibitem{Chirka:CAS}
+E.\@ M.\@ Chirka.
+{\em \PMlinkescapetext{Complex Analytic Sets}}.
+Kluwer Academic Publishers, Dordrecht, The Netherlands, 1989.
+\bibitem{Dimca:singu}
+Alexandru Dimca.
+{\em \PMlinkescapetext{Topics on Real and Complex Singularities}}.
+Vieweg, Braunschweig, Germany, 1987.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

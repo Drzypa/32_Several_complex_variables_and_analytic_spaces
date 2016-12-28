@@ -1,0 +1,212 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExponentialFunctionDefinedAsLimitOfPowers}
+\pmcreated{2013-03-22 17:01:35}
+\pmmodified{2013-03-22 17:01:35}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{exponential function defined as limit of powers}
+\pmrecord{27}{39312}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{32A05}
+\pmrelated{ExponentialFunction}
+\pmrelated{ComplexExponentialFunction}
+\pmrelated{ExponentialFunctionNeverVanishes}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem{dfn}{Definition}
+\newtheorem{thm}{Theorem}
+\begin{document}
+It is possible to define the exponential function and the natural logarithm 
+in terms of a limit of powers.  In this entry, we shall present these
+definitions after some background information and demonstrate the basic
+properties of these functions from these definitions.
+
+Two basic results which are needed to make this development possible
+are the following:
+
+\begin{thm}
+Let $x$ be a real number and let $n$ be an integer such that
+$n > 0$ and $n + x > 0$.  Then
+\[
+\left( {n + x \over n} \right)^n < 
+\left( {n + 1 + x \over n + 1} \right)^{n+1}.
+\]
+\end{thm}
+
+\begin{thm}
+Suppose that $\{s_n\}_{n=1}^\infty$ is a sequence such that
+$\lim_{n \to \infty} n s_n = 0$.  Then $\lim_{n \to \infty} 
+(1 + s_n)^n = 1$,
+\end{thm}
+
+For proofs, see the attachments.  From them, we first conclude
+that a sequence converges.
+
+\begin{thm}
+Let $x$ be any real number.  Then the sequence
+\[
+\left\{ \left( {n + x \over n} \right)^n \right\}_{n=1}^\infty
+\]
+is convergent.
+\end{thm}
+
+The foregoing results show that the limit in the following
+definition converges, and hence defines a bona fide function.
+
+\begin{dfn}
+Let $x$ be a real number.  Then we define
+\[
+\exp (x) = \lim_{n \to \infty}
+\left( {n + x \over n} \right)^n .
+\]
+\end{dfn}
+
+We may now derive some of the chief properties of this function.
+starting with the addition formula.
+
+\begin{thm}
+For any two real numbers $x$ and $y$, we have $\exp (x+y) = \exp(x) \exp (y)$.
+\end{thm}
+
+\begin{proof}
+Since
+\[
+ {n (n + x + y) \over (n + x) (n + y)} =
+ 1 - {xy \over (n + x) (n + y)}
+\]
+and
+\[
+ \lim_{n \to \infty} {n \over (n + x) (n + y)} = 0 ,
+\]
+theorem 2 above implies that
+\[
+ \lim_{n \to \infty}
+ \left(
+  {n (n + x + y) \over (n + x) (n + y)}
+ \right)^n = 1 .
+\]
+Since it permissible to multiply convergent sequences termwise, we have
+\begin{align*}
+ \exp (x) \exp (y) &=
+ \lim_{n \to \infty} \left( {n + x \over n} \right)^n
+                     \left( {n + y \over n} \right)^n
+                     \left(
+                      {n (n + x + y) \over (n + x) (n + y)}
+                     \right)^n \\ &=
+ \lim_{n \to \infty} \left( {n + x + y \over n} \right)^n = 
+ \exp (x+y)
+\end{align*}
+\end{proof}
+
+\begin{thm}
+The function $\exp$ is strictly increasing.
+\end{thm}
+
+\begin{proof}
+Suppose that $x$ is a strictly positive real number.  By theorem 1 and 
+the definition of the exponential as a limit, we have $1 + x < \exp (x)$,
+so we conclude that $0 < x$ implies $1 < \exp (x)$.
+
+Now, suppose that $x$ and $y$ are two real numbers with $x > y$.  Since
+$x - y > 0$, we have $\exp (x-y) > 1$.  Using theorem 4, we have $\exp (x) 
+= \exp (x-y) \exp (y) > \exp (y)$, so the function is strictly increasing.
+\end{proof}
+
+\begin{thm}
+ The function $\exp$ is continuous.
+\end{thm}
+
+\begin{proof}
+Suppose that $0 < x < 1$.  By theorem 1 and the definition of the exponential 
+as a limit, we have $1 - x < \exp (-x)$ and $1 + x < \exp (x)$.  By theorem 4,
+$\exp (x) \exp (-x) = \exp (0) = 0$.  Hence, we have the bounds $1 + x < \exp (x)
+< 1/(1-x)$ and $1-x < \exp (-x) < 1/(1+x)$.  From the former bound, we conclude
+that $\lim_{x \to 0-} \exp (x) = 1$ and, from the latter, that $\lim_{x \to 0+} 
+\exp (x) = 1$, so $\lim_{x \to 0} \exp (x) = 1$.
+
+Suppose that $y$ is any real number.  By theorem 4, $\exp (x + y) = \exp (x)
+\exp (y)$.  Hence, $\lim_{x \to 0} \exp (x + y) = \exp (y) \lim_{x \to 0}
+\exp (x) = \exp (y)$.  In other words, for all real $y$, we have $\lim_{ x
+\to y} \exp (x) = \exp (y)$, so the exponential function is continuous.
+\end{proof}
+
+\begin{thm}
+ The function $\exp$ is one-to-one and maps onto the positive real axis.
+\end{thm}
+
+\begin{proof}
+The one-to-one property follows readily from monotonicity --- if $\exp (x) =
+\exp (y)$, then we must have $x = y$, because otherwise, either $x < y$ or
+$x > y$, which would imply $\exp (x) < \exp (y)$ or $\exp (x) > \exp (y)$,
+respectively.  Next, suppose that $x$ is a real number greater than $1$.  
+By theorem 1 and the definition of the exponential as a limit, we have 
+$1 + x < \exp (x)$.  Thus, $1 < x < \exp (x)$; since $\exp$ is continuous,
+the intermediate value theorem asserts that there must exist a real
+number $y$ between $0$ and $x$ such that $\exp (y) = x$.  If, instead,
+$0 < x < 1$, then $1/x > 1$ so we have a real number $y$ such that $\exp (y)
+= 1/x$.  By theorem 4, we then have $\exp (-y) = x$.  So, given any real 
+number $x > 0$, there exists a real number $y$ such that $\exp (y) = x$, 
+hence the function maps onto the positive real axis.
+\end{proof}
+
+\begin{thm}
+The function $\exp$ is convex.
+\end{thm}
+
+\begin{proof}
+Since the function is already known to be continuous, it suffices to show
+that $\exp ((x + y)/2) \le (\exp(x) + \exp (y))/2$ for all real numbers $x$ 
+and $y$.  Changing variables, this is equivalent to showing that $2 \exp
+(a + b) \le \exp (a) + \exp (a + 2b)$ for all real numbers $a$ and $b$.
+By theorem 4, we have
+\begin{align}
+ \exp (a + b) &= \exp (a) \exp (b) \\
+ \exp (a + 2b) &= \exp (a) \exp (b)^2 .
+\end{align}
+Using the inequality $2x \le 1 + x^2$ with $x = \exp (b)$ and multiplying
+by $\exp (a)$, we conclude that $2 \exp (a + b) \le \exp (a) + \exp (a + 2b)$,
+hence the exponential function is convex.
+\end{proof}
+
+Defining the constant $e$ as $\exp (1)$, we find that the exponential
+function gives powers of this number.
+
+\begin{thm}
+For every real number $x$, we have $\exp (x) = e^x$.
+\end{thm}
+
+\begin{proof}
+Applying an induction argument to theorem 4, it can be shown that $\exp (nx) =
+\exp(x)^n$ for every real number $x$ and every integer $n$.  Hence, given a
+rational number $m/n$, we have $\exp (m/n)^n = \exp (m) = \exp(1)^m = e^m$.
+Thus, $exp(m/n) = e^{m/n}$ so we see that $\exp (x) = e^x$ when $x$ is a
+rational number.  By continuity, it follows that $\exp (x) = e^x$ for every
+real number $x$.
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

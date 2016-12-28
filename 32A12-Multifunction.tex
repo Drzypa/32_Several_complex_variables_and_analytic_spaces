@@ -1,0 +1,92 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Multifunction}
+\pmcreated{2013-03-22 17:42:08}
+\pmmodified{2013-03-22 17:42:08}
+\pmowner{jirka}{4157}
+\pmmodifier{jirka}{4157}
+\pmtitle{multifunction}
+\pmrecord{4}{40144}
+\pmprivacy{1}
+\pmauthor{jirka}{4157}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{32A12}
+\pmsynonym{m-function}{Multifunction}
+\pmrelated{SymmetricPower}
+\pmrelated{WeierstrassPolynomial}
+\pmrelated{MultivaluedFunction}
+\pmdefines{multigraph}
+\pmdefines{multiple valued function}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\theoremstyle{theorem}
+\newtheorem*{thm}{Theorem}
+\newtheorem*{lemma}{Lemma}
+\newtheorem*{conj}{Conjecture}
+\newtheorem*{cor}{Corollary}
+\newtheorem*{example}{Example}
+\newtheorem*{prop}{Proposition}
+\theoremstyle{definition}
+\newtheorem*{defn}{Definition}
+\theoremstyle{remark}
+\newtheorem*{rmk}{Remark}
+
+\begin{document}
+It is common practice among complex analysts to speak of {\em multiple valued functions} in contexts of ``functions'' such as $\sqrt{z}.$  This somewhat informal notion can be made very precise when the ``function'' has finitely many values (as the $\sqrt{z}$ does).
+
+Let $X$ and $Y$ be sets and denote by
+$Y^m_{sym}$ the $m^{\text{th}}$ symmetric power of $Y.$
+
+\begin{defn}
+A function $f \colon X \to Y^m_{sym}$ is called a {\em multifunction},
+or an $m$-function from $X$ to $Y$, where $m$ is the multiplicity.
+\end{defn}
+
+We can think of the value of $f$ at any point as a set of $m$ (or fewer) elements.
+Let $Y$ be a topological space (resp. ${\mathbb{C}}$)
+A multifunction is said to be continuous (resp. holomorphic) if all the elementary symmetric polynomials of
+the elements of $f$ are continuous (resp. holomorphic).  Equivalently, $f$ is continuous (resp. holomorphic)
+if it is continuous (resp. holomorphic) as functions to $Y^m_{sym} \cong Y^m$
+(resp. ${\mathbb{C}}^m_{sym} \cong {\mathbb{C}}^m$).
+
+With this definition $\sqrt{z}$ is a holomorphic multifunction (or a 2-function), into ${\mathbb{C}}^2_{sym} .$
+
+Define the {\em multigraph} of $f$ to be the set:
+\begin{equation*}
+\{ (x,y) \mid X \times Y \mid y \in f(x) \} .
+\end{equation*}
+
+The multigraph of $\sqrt{z}$ is the corresponding Riemann surface imbedded in ${\mathbb{C}}^2.$  In general, with the  aid of the Weierstrass preparation theorem we can realize any codimension 1 analytic set in ${\mathbb{C}}^n$ as a multigraph over ${\mathbb{C}}^{n-1} .$
+The roots of any Weierstrass polynomial (or in general of any monic polynomial with holomorphic coefficients) are a holomorphic multifunction.
+
+
+\begin{thebibliography}{9}
+\bibitem{Whitney:varieties}
+Hassler Whitney.
+{\em \PMlinkescapetext{Complex Analytic Varieties}}.
+Addison-Wesley, Philippines, 1972.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

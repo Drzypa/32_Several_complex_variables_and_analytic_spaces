@@ -1,0 +1,78 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{WeierstrassPolynomial}
+\pmcreated{2013-03-22 15:04:25}
+\pmmodified{2013-03-22 15:04:25}
+\pmowner{jirka}{4157}
+\pmmodifier{jirka}{4157}
+\pmtitle{Weierstrass polynomial}
+\pmrecord{7}{36795}
+\pmprivacy{1}
+\pmauthor{jirka}{4157}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{32A17}
+\pmclassification{msc}{32B05}
+\pmsynonym{W-polynomial}{WeierstrassPolynomial}
+\pmrelated{Multifunction}
+\pmrelated{WeierstrassPreparationTheorem}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\theoremstyle{theorem}
+\newtheorem*{thm}{Theorem}
+\newtheorem*{lemma}{Lemma}
+\newtheorem*{conj}{Conjecture}
+\newtheorem*{cor}{Corollary}
+\newtheorem*{example}{Example}
+\newtheorem*{prop}{Proposition}
+\theoremstyle{definition}
+\newtheorem*{defn}{Definition}
+\theoremstyle{remark}
+\newtheorem*{rmk}{Remark}
+\begin{document}
+\begin{defn}
+A function $W\colon {\mathbb{C}}^n \to {\mathbb{C}}$ of the form
+\begin{equation*}
+W(z_1,\ldots,z_n) = z_n^m + \sum_{j=1}^{m-1}a_j(z_1,\ldots,z_{n-1})z_n^j ,
+\end{equation*}
+where the $a_j$ are holomorphic functions in a neighbourhood of the origin, which vanish at the origin,
+is called a {\em Weierstrass polynomial}.
+\end{defn}
+
+Any codimension 1 complex analytic subvariety of ${\mathbb{C}}^n$ can be written as the zero set
+of a Weierstrass polynomial using the Weierstrass preparation theorem.  This in general cannot be done for higher codimension.
+
+\begin{thebibliography}{9}
+\bibitem{Hormander:several}
+Lars H\"ormander.
+{\em \PMlinkescapetext{An Introduction to Complex Analysis in Several
+Variables}},
+North-Holland Publishing Company, New York, New York, 1973.
+\bibitem{Krantz:several}
+Steven~G.\@ Krantz.
+{\em \PMlinkescapetext{Function Theory of Several Complex Variables}},
+AMS Chelsea Publishing, Providence, Rhode Island, 1992.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

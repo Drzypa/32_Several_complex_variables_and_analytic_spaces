@@ -1,0 +1,240 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfHartogsTheorem}
+\pmcreated{2013-03-22 17:46:48}
+\pmmodified{2013-03-22 17:46:48}
+\pmowner{jirka}{4157}
+\pmmodifier{jirka}{4157}
+\pmtitle{proof of Hartogs' theorem}
+\pmrecord{5}{40238}
+\pmprivacy{1}
+\pmauthor{jirka}{4157}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{32H02}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\theoremstyle{theorem}
+\newtheorem*{thm}{Theorem}
+\newtheorem*{lemma}{Lemma}
+\newtheorem*{conj}{Conjecture}
+\newtheorem*{cor}{Corollary}
+\newtheorem*{example}{Example}
+\newtheorem*{prop}{Proposition}
+\theoremstyle{definition}
+\newtheorem*{defn}{Definition}
+\theoremstyle{remark}
+\newtheorem*{rmk}{Remark}
+
+\begin{document}
+\begin{lemma} \label{lemma1}
+Suppose that $g$ is a smooth differential $(0,1)$-form with compact support
+in ${\mathbb C}^n .$  Then there exists a smooth function $\psi$ such that
+\begin{equation} \label{dbareq}
+\bar{\partial} \psi = g ,
+\end{equation}
+and $\psi$ has compact support if $n \geq 2.$
+\end{lemma}
+
+Let $z = (z_1,\ldots,z_n) \in {\mathbb C}^n$ be our coordinates.
+We note that $(0,1)$-form means a differential form given by
+\begin{equation*}
+\sum_{k=1}^n g_k(z) d \bar{z}_k .
+\end{equation*}
+The operator $\bar{\partial}$ is the
+so-called
+d-bar operator and we are looking for a smooth function $\phi$ solving the
+equation inhomogeneous $\bar{\partial}$ equation.
+It is important that $g$ has compact support, otherwise solutions
+to \eqref{dbareq} are much harder to obtain.
+
+\begin{proof}
+Written out in detail we can think of $g$ as $n$ different functions
+$g_1,\ldots,g_n,$
+where are date $g_k$ satisfy the compatibility condition
+\begin{equation*}
+\frac{\partial g_k}{\partial \bar{z}_l} =
+\frac{\partial g_l}{\partial \bar{z}_k} \text{ for all $k$, $l$}.
+\end{equation*}
+Then we write equation \eqref{dbareq} as
+\begin{equation*}
+\frac{\partial \psi}{\partial \bar{z}_k} = g_k \text{ for all $k$.}
+\end{equation*}
+We assume also that $g_k$ have compact support.
+
+This system of equations has a solution (many equations in fact).  We can
+obtain an explicit solution as follows.
+\begin{equation*}
+\psi(z)
+=
+\frac{1}{2\pi i}
+\int_{\mathbb C}
+\frac{
+ g_1(\zeta,z_2,\ldots,z_n)
+}{\zeta - z_1}
+d\zeta \wedge d\bar{\zeta} .
+\end{equation*}
+$\psi$ is smooth by differentiating under the integral.
+When $n \geq 2,$
+this solution will also have compact support since $g_1$
+has compact support and as $z$
+tends to infinity $(\zeta,z_2,\ldots,z_n)$ also tends to infinity
+no matter what $\zeta$ is.  The reader should notice that there is one
+direction which does not work.  But if $\psi$ has bounded support
+except for the line defined by $z_2 = z_3 = \cdots = z_n = 0,$ then 
+the support must be compact by continuity of $\psi$.
+It
+should also be clear why $\psi$ does not have compact support
+if $n=1.$
+
+One might be wondering why
+we picked $z_1$ and $g_1$ in the construction of $\psi.$  It does not matter,
+we will get different solutions we we use $z_k$ and $g_k,$ but it will
+still have compact support.
+Further one might wonder why we only
+use one part of the data, and still get an actual solution.
+The answer here is that the compatibility condition relates all the data,
+so we only need to look at one.
+
+
+We still must
+check that this really is a solution.
+We apply the compatibility condition.  Let $k \geq 2$.
+\begin{equation*}
+\begin{split}
+\frac{\partial \psi}{\partial \bar{z}_k}(z_1,z_2,\ldots,z_n)
+& =
+\frac{1}{2\pi i}
+\int_{\mathbb C}
+\frac{
+ \frac{\partial g_1}{\partial \bar{z}_k}(\zeta,z_2,\ldots,z_n)
+}{\zeta - z_1}
+d\zeta \wedge d\bar{\zeta}
+\\
+& =
+\frac{1}{2\pi i}
+\int_{\mathbb C}
+\frac{
+ \frac{\partial g_k}{\partial \bar{z}_1}(\zeta,z_2,\ldots,z_n)
+}{\zeta - z_1}
+d\zeta \wedge d\bar{\zeta} .
+\end{split}
+\end{equation*}
+Note that the integral can be taken over a large ball $B$
+that contains
+the support of $g_k$.
+We apply the generalized Cauchy formula, where the
+boundary part of the integral is obviously zero since it is over
+a set where $g_k$ is zero.
+\begin{equation*}
+\begin{split}
+\frac{1}{2\pi i}
+\int_{\mathbb C}
+\frac{
+ \frac{\partial g_k}{\partial \bar{z}_1}(\zeta,z_2,\ldots,z_n)
+}{\zeta - z_1}
+d\zeta \wedge d\bar{\zeta}
+& =
+\frac{1}{2\pi i}
+\int_B
+\frac{
+ \frac{\partial g_k}{\partial \bar{z}_1}(\zeta,z_2,\ldots,z_n)
+}{\zeta - z_1}
+d\zeta \wedge d\bar{\zeta}
+\\
+& =
+g_k(z_1,\ldots,z_n) .
+\end{split}
+\end{equation*}
+Hence $\frac{\partial \psi}{\partial \bar{z}_k} = g_k$.
+
+When $k=1$, change coordinates to see that
+\begin{equation*}
+\frac{1}{2\pi i}
+\int_{\mathbb C}
+\frac{
+ g_1(\zeta,z_2,\ldots,z_n)
+}{\zeta - z_1}
+d\zeta \wedge d\bar{\zeta}
+=
+\frac{1}{2\pi i}
+\int_{\mathbb C}
+\frac{
+ g_1(\zeta+z_1,z_2,\ldots,z_n)
+}{\zeta}
+d\zeta \wedge d\bar{\zeta} .
+\end{equation*}
+Next differentiate in $\bar{z}_k$ and change coordinates back and apply
+the generalized Cauchy formula as before to get that
+$\frac{\partial \psi}{\partial \bar{z}_1} = g_1 .$
+\end{proof}
+
+\begin{proof}[Proof of Theorem]
+Let $U \subset {\mathbb C}^n$, $K$ a compact subset of $U$ and $f$ be a
+holomorphic function defined on $U \setminus K$ and $U \setminus K$ to
+be connected.
+By the smooth version of Urysohn's lemma we can
+find a smooth function $\varphi$ which is 1 in a neighbourhood of
+$K$ and is compactly supported in $U.$  Let
+$f_0 := (1-\varphi)f,$ which is identically zero on $K$ and holomorphic
+near the boundary of $U$ (since there $\varphi$ is 0).
+We let $g = \bar{\partial} f_0$, that is $g_k = \frac{\partial
+f_0}{\partial \bar{z}_k}$.  Let us see why $g_k$ is compactly supported.  The
+only place to check is on $U \setminus K$ as elsewhere we have 0
+automatically,
+\begin{equation*}
+\frac{\partial f_0}{\partial \bar{z}_k}
+=
+\frac{\partial }{\partial \bar{z}_k}
+((1-\varphi)f)
+=
+- f \frac{\partial \varphi}{\partial \bar{z}_k} .
+\end{equation*}
+By Lemma \ref{lemma1} we find a compactly supported solution $\psi$
+to $\bar{\partial}\psi = g$.
+
+Set $\tilde{f} := f_0 - \psi$.  Let us check that this is the desired
+extention.  Firstly let us check it is holomorphic,
+\begin{equation*}
+\frac{\partial \tilde{f}}{\partial \bar{z}_k}
+=
+\frac{\partial f_0}{\partial \bar{z}_k}
+-
+\frac{\partial \psi}{\partial \bar{z}_k}
+=
+g_k
+-
+g_k
+= 0 .
+\end{equation*}
+
+It is not hard to see that $\psi$ is compactly supported in $U.$  This follows
+by the fact that $U \setminus K$ is connected and the fact
+that $\psi$
+is holomorphic on the set where $g$ is identically zero.  By unique continuation
+of holomorphic functions, support of $\psi$ is no larger than that of $g.$
+\end{proof}
+
+%%%%%
+%%%%%
+\end{document}

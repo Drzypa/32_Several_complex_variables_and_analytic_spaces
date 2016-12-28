@@ -1,0 +1,91 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{BergmanMetric}
+\pmcreated{2013-03-22 15:04:49}
+\pmmodified{2013-03-22 15:04:49}
+\pmowner{jirka}{4157}
+\pmmodifier{jirka}{4157}
+\pmtitle{Bergman metric}
+\pmrecord{6}{36803}
+\pmprivacy{1}
+\pmauthor{jirka}{4157}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{32F45}
+\pmrelated{BergmanKernel}
+\pmdefines{Bergman distance}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\theoremstyle{theorem}
+\newtheorem*{thm}{Theorem}
+\newtheorem*{lemma}{Lemma}
+\newtheorem*{conj}{Conjecture}
+\newtheorem*{cor}{Corollary}
+\theoremstyle{definition}
+\newtheorem*{defn}{Definition}
+\begin{document}
+\begin{defn}
+Let $G \subset {\mathbb{C}}^n$ be a domain and let $K(z,w)$ be the Bergman kernel
+on $G$.  We define a Hermitian metric on the tangent bundle $T_z {\mathbb{C}}^n$ by
+\begin{equation*}
+g_{ij} (z)
+:=
+\frac{\partial^2}{\partial z_i \partial \bar{z}_j}
+\log K(z,z) ,
+\end{equation*}
+for $z \in G$.  Then the length of a tangent vector $\xi \in T_z{\mathbb{C}}^n$ is then
+given by
+\begin{equation*}
+\lvert \xi \rvert_{B,z}
+:=
+\sqrt{\sum_{i,j=1}^n g_{ij}(z) \xi_i \bar{\xi}_j }.
+\end{equation*} 
+This metric is called the {\em Bergman metric} on $G$.
+\end{defn}
+
+The length of a (piecewise) $C^1$ curve $\gamma \colon [0,1] \to {\mathbb{C}}^n$ is
+then computed as
+\begin{equation*}
+\ell (\gamma) =
+\int_0^1 \big\lvert \frac{\partial \gamma}{\partial t}(t) \big\rvert_{B,\gamma(t)} dt .
+\end{equation*}
+The distance $d_G(p,q)$ of two points $p,q \in G$ is then defined as
+\begin{equation*}
+d_G(p,q):=
+\inf \{ \ell (\gamma) \mid \text{ all piecewise $C^1$ curves $\gamma$ such that $\gamma(0)=p$ and $\gamma(1)=q$} \} .
+\end{equation*}
+The distance $d_G$ is called the {\em Bergman distance}.
+
+The Bergman metric is in fact a positive definite matrix at each point if $G$ is a bounded domain.  More importantly, the distance $d_G$ is invariant under
+biholomorphic mappings of $G$ to another domain $G'$.  That is if $f$
+is a biholomorphism of $G$ and $G'$, then $d_G(p,q) = d_{G'}(f(p),f(q))$.
+
+\begin{thebibliography}{9}
+\bibitem{Krantz:several}
+Steven~G.\@ Krantz.
+{\em \PMlinkescapetext{Function Theory of Several Complex Variables}},
+AMS Chelsea Publishing, Providence, Rhode Island, 1992.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

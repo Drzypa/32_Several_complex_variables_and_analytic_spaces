@@ -1,0 +1,73 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PeriodicityOfExponentialFunction}
+\pmcreated{2014-02-20 14:29:59}
+\pmmodified{2014-02-20 14:29:59}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{periodicity of exponential function}
+\pmrecord{16}{37107}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{32A05}
+\pmclassification{msc}{30D20}
+\pmsynonym{period of exponential function}{PeriodicityOfExponentialFunction}
+\pmrelated{PeriodicFunctions}
+\pmrelated{AnalyticContinuationOfRiemannZetaUsingIntegral}
+\pmrelated{ExamplesOfPeriodicFunctions}
+\pmrelated{ExponentialFunctionNeverVanishes}
+\pmdefines{one-periodic}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+\begin{document}
+\begin{thmplain}
+\, The only periods of the complex exponential function \,$z\mapsto e^z$\, are the multiples of $2\pi i$.\, Thus the function is {\em one-periodic}.
+\end{thmplain}
+
+{\em Proof.}\, Let $\omega$ be any period of the exponential function, i.e.\, $e^{z+\omega} = e^ze^\omega = e^z$\, for all\, $z\in\mathbb{C}$.\, Because $e^z$ is always $\neq 0$, we have
+\begin{align}
+e^\omega \;=\; 1.
+\end{align}
+If we set\, $\omega =: a\!+\!ib$\, with $a$ and $b$ reals, (1) gets the form
+\begin{align}
+e^a\cos{b}+ie^a\sin{b} \;=\; 1,
+\end{align}
+which implies (see equality of complex numbers)
+$$e^a\cos{b} \;=\; 1,\qquad e^a\sin{b} \;=\; 0.$$
+As these equations are squared and added, we obtain\, $e^{2a} = 1$\, which \PMlinkescapetext{means}, since $a$ is real, that\, $a = 0$.\, Thus the preceding equations get the form 
+$$\cos{b} \;=\; 1,\qquad \sin{b} \;=\; 0.$$
+These result that\, $b = n\!\cdot\!2\pi$\, and therefore
+$$\omega \;=\; n\!\cdot\! 2\pi i \qquad (n \;=\; 0,\,\pm 1,\,\pm 2,\,\pm 3,\,\ldots)$$
+Q.E.D.
+
+\begin{thebibliography}{8}
+\bibitem{lindelof}{\sc Ernst Lindel\"of}: {\em Johdatus funktioteoriaan} (`Introduction to function theory').\, Mercatorin kirjapaino, Helsinki (1936).
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

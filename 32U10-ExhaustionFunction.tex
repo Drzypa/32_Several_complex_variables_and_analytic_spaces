@@ -1,0 +1,87 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExhaustionFunction}
+\pmcreated{2013-03-22 14:32:41}
+\pmmodified{2013-03-22 14:32:41}
+\pmowner{jirka}{4157}
+\pmmodifier{jirka}{4157}
+\pmtitle{exhaustion function}
+\pmrecord{5}{36092}
+\pmprivacy{1}
+\pmauthor{jirka}{4157}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{32U10}
+\pmclassification{msc}{32T35}
+\pmrelated{Pseudoconvex}
+\pmdefines{bounded exhaustion function}
+\pmdefines{hyperconvex}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\theoremstyle{theorem}
+\newtheorem*{thm}{Theorem}
+\newtheorem*{lemma}{Lemma}
+\newtheorem*{conj}{Conjecture}
+\newtheorem*{cor}{Corollary}
+\newtheorem*{example}{Example}
+\theoremstyle{definition}
+\newtheorem*{defn}{Definition}
+\begin{document}
+\begin{defn}
+Let $G \subset {\mathbb{C}}^n$ be a domain and let $f \colon G \to
+{\mathbb{R}}$ is called an {\em exhaustion function} whenever
+\begin{equation*}
+\{ z \in G \mid f(z) < r \}
+\end{equation*}
+is relatively compact in $G$ for all $r \in {\mathbb{R}}$.
+\end{defn}
+
+For example $G$ is pseudoconvex if and only if $G$ has a continuous
+plurisubharmonic exhaustion function.
+
+We can also define a bounded version.
+
+\begin{defn}
+Let $G \subset {\mathbb{C}}^n$ be a domain and let $f \colon G \to
+(-\infty,c]$ for some $c \in {\mathbb{R}}$,
+is called a {\em bounded exhaustion function} whenever
+\begin{equation*}
+\{ z \in G \mid f(z) < r \}
+\end{equation*}
+is relatively compact in $G$ for all $r < c$.
+\end{defn}
+
+A domain which has a bounded plurisubharmonic exhaustion function is usually
+referred to as a {\em hyperconvex} domain.  Note that not all pseudoconvex
+domains have a bounded plurisubharmonic exhaustion function.  For example
+the Hartogs's triangle does not, though it does have an unbounded one.
+
+\begin{thebibliography}{9}
+\bibitem{Krantz:several}
+Steven~G.\@ Krantz.
+{\em \PMlinkescapetext{Function Theory of Several Complex Variables}},
+AMS Chelsea Publishing, Providence, Rhode Island, 1992.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

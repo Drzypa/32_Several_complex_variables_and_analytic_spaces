@@ -1,0 +1,92 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Polydisc}
+\pmcreated{2013-03-22 14:29:41}
+\pmmodified{2013-03-22 14:29:41}
+\pmowner{jirka}{4157}
+\pmmodifier{jirka}{4157}
+\pmtitle{polydisc}
+\pmrecord{9}{36030}
+\pmprivacy{1}
+\pmauthor{jirka}{4157}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{32A07}
+\pmclassification{msc}{32-00}
+\pmsynonym{open polydisc}{Polydisc}
+\pmdefines{bidisc}
+\pmdefines{distinguished boundary}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\theoremstyle{theorem}
+\newtheorem*{thm}{Theorem}
+\newtheorem*{lemma}{Lemma}
+\newtheorem*{conj}{Conjecture}
+\newtheorem*{cor}{Corollary}
+\newtheorem*{example}{Example}
+\newtheorem*{prop}{Proposition}
+\theoremstyle{definition}
+\newtheorem*{defn}{Definition}
+\begin{document}
+\begin{defn}
+We denote the set
+\begin{equation*}
+D^n(z,r) := \{ w \in {\mathbb{C}}^n \mid \lvert z_k - w_k \rvert < r
+\text{ for all } k = 1,\ldots,n \}
+\end{equation*}
+an {\em open polydisc}.  We can also have {\em polydiscs} of the form
+\begin{equation*}
+D^1(z_1,r_1) \times \ldots \times D^1(z_n,r_n) .
+\end{equation*}
+The set $\partial D^1(z_1,r_1) \times \ldots \times \partial D^1(z_n,r_n)$ is called the {\em distinguished boundary} of the polydisc.
+\end{defn}
+
+Be careful not to confuse this with the open ball in ${\mathbb{C}}^n$
+as that is defined as
+\begin{equation*}
+B(z,r) := \{ w \in {\mathbb{C}}^n \mid \lvert z - w \rvert < r \} .
+\end{equation*}
+When $n > 1$ then open balls and open polydiscs are not biholomorphically
+equivalent (there is no 1-1 biholomorphic mapping between the two).
+
+It is common to write $\bar{D}^n(z,r)$ for the closure of the polydisc.
+Be careful with this notation however as some texts outside of
+complex analysis use $D(x,r)$ and
+the \PMlinkescapetext{term} ``disc'' to represent a closed ball in two real dimensions.
+
+Also note that when $n=2$ the \PMlinkescapetext{term} {\em bidisc} is sometimes used.
+
+\begin{thebibliography}{9}
+\bibitem{Hormander:several}
+Lars H\"ormander.
+{\em \PMlinkescapetext{An Introduction to Complex Analysis in Several
+Variables}},
+North-Holland Publishing Company, New York, New York, 1973.
+\bibitem{Krantz:several}
+Steven~G.\@ Krantz.
+{\em \PMlinkescapetext{Function Theory of Several Complex Variables}},
+AMS Chelsea Publishing, Providence, Rhode Island, 1992.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,79 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LandausConstant}
+\pmcreated{2013-03-22 15:58:07}
+\pmmodified{2013-03-22 15:58:07}
+\pmowner{alozano}{2414}
+\pmmodifier{alozano}{2414}
+\pmtitle{Landau's constant}
+\pmrecord{4}{37984}
+\pmprivacy{1}
+\pmauthor{alozano}{2414}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{32H02}
+\pmrelated{BlochsConstant}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newtheorem{thm}{Theorem}
+\newtheorem*{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+
+\theoremstyle{definition}
+\newtheorem{exa}{Example}
+
+% Some sets
+\newcommand{\Nats}{\mathbb{N}}
+\newcommand{\Ints}{\mathbb{Z}}
+\newcommand{\Reals}{\mathbb{R}}
+\newcommand{\Complex}{\mathbb{C}}
+\newcommand{\Rats}{\mathbb{Q}}
+\newcommand{\Gal}{\operatorname{Gal}}
+\newcommand{\Cl}{\operatorname{Cl}}
+\begin{document}
+We suggest that the reader reads first the entry on Bloch's constant. Let $\mathcal{F}$ be the set of all functions $f$ holomorphic on a region containing the
+closure of the disk $D=\{z\in\mathbb{C}:|z|<1\}$ and satisfying
+$f(0)=0$ and $f'(0)=1$. For each $f\in\mathcal{F}$ let $\lambda(f)$
+be the supremum of all numbers $r$ such that there is a disk
+$S\subset D$ such that $f(S)$ contains a disk of radius $r$ (notice that here we don't require $f$ to be injective on $S$).
+
+\begin{defn}
+Landau's constant $L$ is defined by 
+$$L=\inf \{ \lambda(f) : f\in \mathcal{F}\}.$$
+\end{defn}
+
+Let $B$ be Bloch's constant. Then, clearly, $L\geq B$. The exact value of $L$ (as that of $B$) is not known but it has been shown that $0.5 \leq L \leq 0.56$. In particular, it is known that $L$ is strictly greater than $B$.
+
+\begin{thebibliography}{00}
+
+\bibitem{conway} John B. Conway, {\em Functions of One Complex
+Variable I}, Second Edition, 1978, Springer-Verlag, New York.
+
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

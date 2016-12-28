@@ -1,0 +1,60 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{GeneratingFunctionForTheReciprocalAlternatingCentralBinomialCoefficients}
+\pmcreated{2013-03-22 18:58:12}
+\pmmodified{2013-03-22 18:58:12}
+\pmowner{juanman}{12619}
+\pmmodifier{juanman}{12619}
+\pmtitle{generating function for  the reciprocal alternating central binomial coefficients}
+\pmrecord{14}{41830}
+\pmprivacy{1}
+\pmauthor{juanman}{12619}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{32A05}
+\pmclassification{msc}{11B65}
+\pmclassification{msc}{05A19}
+\pmclassification{msc}{05A15}
+\pmclassification{msc}{05A10}
+%\pmkeywords{sum of reciprocals}
+%\pmkeywords{alternanting series}
+%\pmkeywords{sequence of inverses of integers}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+It is also not very well known this relation:
+
+$$\frac{
+4\,\left(\,{\sqrt{x+4}}-{\sqrt{x}}\,{\rm{arcsinh}}(\frac{{\sqrt{x}}}{2})\right)
+}
+{
+\sqrt{(x+4)^3}
+}
+=1-\frac{x}{2}+\frac{x^2}{6}-\frac{x^3}{20}+\frac{x^4}{70}-\frac{x^5}{252}+\frac{x^6}{924}-...$$
+where one clearly appreciate that the function on LHS generates the sequence $(-1)^n{2n\choose n}^{-1}$.
+
+To obtain the relation above one should use some kind of software because for the function is ``terrible'' to calculate derivatives of any order. It is a little challenge to give a recursive formula that gives the inverses of these alternating central binomial numbers, when evaluated at $x=0$ at those derivatives.
+%%%%%
+%%%%%
+\end{document}

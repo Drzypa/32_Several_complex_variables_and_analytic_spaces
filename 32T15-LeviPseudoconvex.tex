@@ -1,0 +1,134 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LeviPseudoconvex}
+\pmcreated{2013-03-22 14:30:37}
+\pmmodified{2013-03-22 14:30:37}
+\pmowner{jirka}{4157}
+\pmmodifier{jirka}{4157}
+\pmtitle{Levi pseudoconvex}
+\pmrecord{10}{36048}
+\pmprivacy{1}
+\pmauthor{jirka}{4157}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{32T15}
+\pmclassification{msc}{32T05}
+\pmrelated{DomainOfHolomorphy}
+\pmrelated{Pseudoconvex}
+\pmrelated{BiholomorphismsOfStronglyPseudoconvexDomainsExtendToTheBoundary}
+\pmdefines{Levi form}
+\pmdefines{strongly Levi pseudoconvex}
+\pmdefines{strongly pseudoconvex}
+\pmdefines{strictly pseudoconvex}
+\pmdefines{weakly pseudoconvex}
+\pmdefines{weakly Levi pseudoconvex}
+\pmdefines{holomorphic tangent vector}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\theoremstyle{theorem}
+\newtheorem*{thm}{Theorem}
+\newtheorem*{lemma}{Lemma}
+\newtheorem*{conj}{Conjecture}
+\newtheorem*{cor}{Corollary}
+\newtheorem*{example}{Example}
+\theoremstyle{definition}
+\newtheorem*{defn}{Definition}
+\begin{document}
+Let $G \subset {\mathbb{C}}^n$ be a \PMlinkname{domain}{Domain2} (open connected subset) with $C^2$
+boundary, that is the boundary is locally the graph of a twice continuously
+differentiable function.  Let $\rho \colon {\mathbb{C}}^n \to {\mathbb{R}}$
+be a defining function of $G$,
+that is $\rho$ is a twice continuously differentiable function such that
+$\operatorname{grad} \rho (z) \not= 0$ for $z \in \partial G$ and $G =
+\{ z \in {\mathbb{C}}^n \mid \rho(z) < 0 \}$ (such a function always exists).
+
+\begin{defn}
+Let $p \in \partial G$ (boundary of $G$).
+We call the space of vectors $w = (w_1,\ldots,w_n) \in {\mathbb{C}}^n$
+such that
+\begin{equation*}
+\sum_{k=1}^n \frac{\partial \rho}{\partial z_k} (p) w_k = 0 ,
+\end{equation*}
+the space of {\em holomorphic tangent vectors}
+at $p$ and denote it
+$T^{1,0}_p(\partial G)$.
+\end{defn}
+
+$T^{1,0}_p(\partial G)$ is an $n-1$ dimensional complex vector space
+and is a subspace of the complexified \PMlinkname{real tangent space}{TangentSpace}, that is ${\mathbb{C}} \otimes_{\mathbb{R}} T_p(\partial G)$.
+
+Note that when $n=1$ then the complex
+tangent space contains just the zero vector.
+
+\begin{defn}
+The point $p \in \partial G$
+is called {\em Levi pseudoconvex} (or just {\em pseudoconvex})
+if
+\begin{equation*}
+\sum_{j,k=1}^n
+\frac{\partial^2 \rho}{\partial z_j \partial \bar{z}_k} (p) w_j \bar{w}_k
+\geq 0 ,
+\end{equation*}
+for all $w \in T^{1,0}_p(\partial G)$.  The point is
+called {\em strongly Levi pseudoconvex} (or just {\em strongly pseudoconvex} or also {\em strictly pseudoconvex})
+if the inequality above is strict.  The expression on the left is
+called the {\em Levi form}.
+\end{defn}
+
+Note that if a point is not strongly Levi pseudoconvex then it is sometimes called a {\em weakly Levi pseudoconvex} point.
+
+The Levi form really acts on an $n-1$ dimensional space, so the expression above may be confusing as it only acts on $T^{1,0}_p(\partial G)$ and not on all
+of ${\mathbb{C}}^n$.
+
+\begin{defn}
+The domain $G$
+is called Levi pseudoconvex
+if every boundary point is
+Levi pseudoconvex.  Similarly
+$G$ is called strongly Levi pseudoconvex
+if every boundary point is
+strongly Levi pseudoconvex.
+\end{defn}
+
+Note that in particular all convex domains are pseudoconvex.
+
+It turns out that $G$ with $C^2$ boundary is a domain of holomorphy
+if and only if
+$G$ is Levi pseudoconvex.
+
+\begin{thebibliography}{9}
+\bibitem{ber:submanifold}
+M.\@ Salah Baouendi,
+Peter Ebenfelt,
+Linda Preiss Rothschild.
+{\em \PMlinkescapetext{Real Submanifolds in Complex Space and Their Mappings}},
+Princeton University Press,
+Princeton, New Jersey, 1999.
+\bibitem{Krantz:several}
+Steven~G.\@ Krantz.
+{\em \PMlinkescapetext{Function Theory of Several Complex Variables}},
+AMS Chelsea Publishing, Providence, Rhode Island, 1992.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

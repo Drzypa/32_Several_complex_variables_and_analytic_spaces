@@ -1,0 +1,71 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TubeDomain}
+\pmcreated{2013-03-22 14:32:44}
+\pmmodified{2013-03-22 14:32:44}
+\pmowner{jirka}{4157}
+\pmmodifier{jirka}{4157}
+\pmtitle{tube domain}
+\pmrecord{6}{36093}
+\pmprivacy{1}
+\pmauthor{jirka}{4157}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{32A07}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\theoremstyle{theorem}
+\newtheorem*{thm}{Theorem}
+\newtheorem*{lemma}{Lemma}
+\newtheorem*{conj}{Conjecture}
+\newtheorem*{cor}{Corollary}
+\newtheorem*{example}{Example}
+\newtheorem*{prop}{Proposition}
+\theoremstyle{definition}
+\newtheorem*{defn}{Definition}
+\theoremstyle{remark}
+\newtheorem*{rmk}{Remark}
+\begin{document}
+\begin{defn}
+Suppose $S \subset {\mathbb{R}}^n$ is an open set (usually connected),
+then we define 
+\begin{equation*}
+T_S := \{ z \in {\mathbb{C}}^n \mid \operatorname{Re} z \in S \} .
+\end{equation*}
+We call $T_S$ the {\em tube domain} associated to $S$.
+\end{defn}
+
+Basically the idea is that these domains give you complete freedom in the
+imaginary coordinates.  An interesting fact about these domains is that
+$T_S$ is pseudoconvex if and only if $T_S$ is convex in the geometric sense,
+and this is true if and only if $S$ itself is convex.
+
+\begin{thebibliography}{9}
+\bibitem{Krantz:several}
+Steven~G.\@ Krantz.
+{\em \PMlinkescapetext{Function Theory of Several Complex Variables}},
+AMS Chelsea Publishing, Providence, Rhode Island, 1992.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

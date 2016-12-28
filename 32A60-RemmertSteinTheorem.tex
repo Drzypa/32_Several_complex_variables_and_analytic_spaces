@@ -1,0 +1,83 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{RemmertSteinTheorem}
+\pmcreated{2013-03-22 15:04:55}
+\pmmodified{2013-03-22 15:04:55}
+\pmowner{jirka}{4157}
+\pmmodifier{jirka}{4157}
+\pmtitle{Remmert-Stein theorem}
+\pmrecord{9}{36805}
+\pmprivacy{1}
+\pmauthor{jirka}{4157}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{32A60}
+\pmclassification{msc}{32C25}
+\pmsynonym{Remmert-Stein extension theorem}{RemmertSteinTheorem}
+\pmrelated{ChowsTheorem}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\theoremstyle{theorem}
+\newtheorem*{thm}{Theorem}
+\newtheorem*{lemma}{Lemma}
+\newtheorem*{conj}{Conjecture}
+\newtheorem*{cor}{Corollary}
+\newtheorem*{example}{Example}
+\newtheorem*{prop}{Proposition}
+\theoremstyle{definition}
+\newtheorem*{defn}{Definition}
+\begin{document}
+For a complex analytic subvariety $V$ and $p \in V$ a regular point, let $\dim_p V$ denote the complex dimension of $V$ near the point $p.$
+
+\begin{thm}[Remmert-Stein]
+Let $U \subset {\mathbb{C}}^n$ be a \PMlinkname{domain}{Domain2} and let $S$ be a complex analytic subvariety of $U$ of
+dimension $m < n.$  Let $V$ be a complex analytic subvariety of $U \backslash S$ such that $\dim_p V > m$ for all
+regular points $p \in V.$  Then the closure of $V$ in $U$ is an analytic variety in $U.$
+\end{thm}
+
+The condition that $\dim_p V > m$ for all regular $p$ is the same as saying that all the irreducible
+components of $V$ are of dimension strictly greater than $m.$  To show that the restriction on the dimension
+of $S$ is ``sharp,''
+consider the following example where the dimension of $V$ equals the dimension of $S$.
+Let $(z,w) \in {\mathbb C}^2$ be our coordinates and let $V$ be defined by $w = e^{1/z}$ in ${\mathbb C}^2 \setminus S,$ where $S$ is defined by $z = 0.$  The closure of $V$ in ${\mathbb C}^2$ cannot possibly be
+analytic.  To see this look for example at $W = \overline{V} \cap \{ w = 1 \}.$
+If $\overline{V}$ is analytic then $W$ ought to be a zero dimensional
+complex analytic set and thus a set of isolated points, but it has a limit point $(0,1)$ by Picard's theorem. 
+
+Finally note that there are various generalizations of this theorem where the set $S$ need not be a variety,
+as long as it is of small enough dimension.  Alternatively, if $V$ is of finite volume, we can weaken the
+restrictions on $S$ even further.
+
+\begin{thebibliography}{9}
+\bibitem{holtoman}
+Klaus Fritzsche, Hans Grauert.
+{\em \PMlinkescapetext{From Holomorphic Functions to Complex Manifolds}},
+Springer-Verlag, New York, New York, 2002.
+\bibitem{Whitney:varieties}
+Hassler Whitney.
+{\em \PMlinkescapetext{Complex Analytic Varieties}}.
+Addison-Wesley, Philippines, 1972.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

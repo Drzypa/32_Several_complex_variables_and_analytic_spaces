@@ -1,0 +1,88 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SteinManifold}
+\pmcreated{2013-03-22 15:04:37}
+\pmmodified{2013-03-22 15:04:37}
+\pmowner{jirka}{4157}
+\pmmodifier{jirka}{4157}
+\pmtitle{Stein manifold}
+\pmrecord{7}{36799}
+\pmprivacy{1}
+\pmauthor{jirka}{4157}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{32E10}
+\pmrelated{HolomorphicallyConvex}
+\pmrelated{DomainOfHolomorphy}
+\pmdefines{holomorphically separable}
+\pmdefines{holomorphically spreadable}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\theoremstyle{theorem}
+\newtheorem*{thm}{Theorem}
+\newtheorem*{lemma}{Lemma}
+\newtheorem*{conj}{Conjecture}
+\newtheorem*{cor}{Corollary}
+\newtheorem*{example}{Example}
+\newtheorem*{prop}{Proposition}
+\theoremstyle{definition}
+\newtheorem*{defn}{Definition}
+\theoremstyle{remark}
+\newtheorem*{rmk}{Remark}
+\begin{document}
+\begin{defn}
+A complex manifold $M$ of complex dimension $n$ is a {\it Stein manifold} if it satisfies the following properties
+\begin{enumerate}
+\item $M$ is holomorphically convex,
+\item if $z,w \in M$ and $z \not= w$ then $f(z) \not= f(w)$
+for some function $f$ holomorphic on $M$ (i.e. $M$ is {\it holomorphically separable}),
+\item for every $z \in M$ there are holomorphic functions $f_1,\ldots,f_n$
+which form a coordinate system at $z$ (i.e. $M$ is {\it holomorphically spreadable}).
+\end{enumerate}
+\end{defn}
+
+Stein manifold is a generalization of the concept of the domain of holomorphy to manifolds.  Furthermore, Stein manifolds are the generalizations of Riemann surfaces in higher dimensions.  Every noncompact Riemann surface is a Stein manifold
+by a theorem of Behnke and Stein.
+Note that every domain of holomorphy in ${\mathbb{C}}^n$ is a Stein manifold.
+It is not hard to see that every closed complex submanifold of a Stein manifold is Stein.
+
+\begin{thm}[Remmert, Narasimhan, Bishop]
+If $M$ is a Stein manifold of dimension $n$.  There exists a \PMlinkname{proper}{ProperMap} holomorphic embedding of $M$ into ${\mathbb{C}}^{2n+1}$.
+\end{thm}
+
+Note that no compact complex manifold can be Stein since compact complex manifolds have no holomorphic functions.  On the other hand, every compact complex manifold is holomorphically convex.
+
+\begin{thebibliography}{9}
+\bibitem{Hormander:several}
+Lars H\"ormander.
+{\em \PMlinkescapetext{An Introduction to Complex Analysis in Several
+Variables}},
+North-Holland Publishing Company, New York, New York, 1973.
+\bibitem{Krantz:several}
+Steven~G.\@ Krantz.
+{\em \PMlinkescapetext{Function Theory of Several Complex Variables}},
+AMS Chelsea Publishing, Providence, Rhode Island, 1992.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

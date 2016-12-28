@@ -1,0 +1,84 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{BlochsConstant}
+\pmcreated{2013-03-22 15:58:04}
+\pmmodified{2013-03-22 15:58:04}
+\pmowner{alozano}{2414}
+\pmmodifier{alozano}{2414}
+\pmtitle{Bloch's constant}
+\pmrecord{5}{37983}
+\pmprivacy{1}
+\pmauthor{alozano}{2414}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{32H02}
+\pmrelated{LandausConstant}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+\newtheorem*{thmnn}{Bloch's Theorem}
+
+\theoremstyle{definition}
+\newtheorem{exa}{Example}
+
+% Some sets
+\newcommand{\Nats}{\mathbb{N}}
+\newcommand{\Ints}{\mathbb{Z}}
+\newcommand{\Reals}{\mathbb{R}}
+\newcommand{\Complex}{\mathbb{C}}
+\newcommand{\Rats}{\mathbb{Q}}
+\newcommand{\Gal}{\operatorname{Gal}}
+\newcommand{\Cl}{\operatorname{Cl}}
+\begin{document}
+Bloch's theorem can be stated in the following way:
+
+\begin{thmnn} Let $\mathcal{F}$ be the set of all functions $f$ holomorphic on a region containing the
+closure of the disk $D=\{z\in\mathbb{C}:|z|<1\}$ and satisfying
+$f(0)=0$ and $f'(0)=1$. For each $f\in\mathcal{F}$ let $\beta(f)$
+be the supremum of all numbers $r$ such that there is a disk
+$S\subset D$ on which $f$ is injective and $f(S)$ contains a disk
+of radius $r$. Let $B$ be the infimum of all $\beta(f)$, for $f\in
+\mathcal{F}$. Then $B\geq 1/72$.
+\end{thmnn}
+
+The constant $B$ is usually referred to as Bloch's constant.
+Nowadays, better bounds are known and, in fact, it has been
+conjectured that $B$ has the following tantalizing form
+$$B=\frac{\Gamma(1/3)\cdot \Gamma(11/12)}{\left(\sqrt{1+\sqrt{3}}\right)\cdot \Gamma(1/4)}$$
+where $\Gamma(x)$ is the gamma function.
+
+\begin{thebibliography}{00}
+
+\bibitem{conway} John B. Conway, {\em Functions of One Complex
+Variable I}, Second Edition, 1978, Springer-Verlag, New York.
+
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

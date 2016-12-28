@@ -1,0 +1,98 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ComplexHessianMatrix}
+\pmcreated{2013-03-22 14:31:16}
+\pmmodified{2013-03-22 14:31:16}
+\pmowner{jirka}{4157}
+\pmmodifier{jirka}{4157}
+\pmtitle{complex Hessian matrix}
+\pmrecord{7}{36062}
+\pmprivacy{1}
+\pmauthor{jirka}{4157}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{32-00}
+\pmrelated{HessianMatrix}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Suppose that $f \colon {\mathbb{C}}^n \to \mathbb{C}$ be twice differentiable
+and let
+\begin{equation*}
+\frac{\partial}{\partial z_k} :=
+\frac{1}{2}\left(
+  \frac{\partial}{\partial x_k} - i \frac{\partial}{\partial y_k}
+\right)
+\quad \text{ and } \quad
+\frac{\partial}{\partial \bar{z}_k} :=
+\frac{1}{2}\left(
+  \frac{\partial}{\partial x_k} + i \frac{\partial}{\partial y_k}
+\right) .
+\end{equation*}
+
+Then the {\em \PMlinkescapetext{complex Hessian}} is the matrix
+\begin{equation*}
+\begin{bmatrix}
+\frac{\partial^2 f}{\partial z_1 \partial \bar{z}_1} &
+  \frac{\partial^2 f}{\partial z_1 \partial \bar{z}_2} &
+    \ldots &
+      \frac{\partial^2 f}{\partial z_1 \partial \bar{z}_n}
+\\
+\frac{\partial^2 f}{\partial z_2 \partial \bar{z}_1} &
+  \frac{\partial^2 f}{\partial z_2 \partial \bar{z}_2} &
+    \ldots &
+      \frac{\partial^2 f}{\partial z_2 \partial \bar{z}_n}
+\\
+\vdots &
+  \vdots &
+    \ddots &
+      \vdots
+\\
+\frac{\partial^2 f}{\partial z_n \partial \bar{z}_1} &
+  \frac{\partial^2 f}{\partial z_n \partial \bar{z}_2} &
+    \ldots &
+      \frac{\partial^2 f}{\partial z_n \partial \bar{z}_n}
+\end{bmatrix}
+.
+\end{equation*}
+
+When applied to tangent vectors of the zero set of $f$,
+it is called the Levi form and used to define a Levi
+pseudoconvex point of a boundary of a domain.  Note that the \PMlinkescapetext{complex Hessian}
+matrix is not the same as the \PMlinkescapetext{normal} (real) Hessian.  A twice continuously
+differentiable real valued
+function with a
+positive semidefinite real Hessian matrix at every point is convex, but a function with
+positive semidefinite \PMlinkescapetext{complex Hessian} matrix at every point is
+plurisubharmonic (since it's
+continuous it's also called a pseudoconvex function).
+
+\begin{thebibliography}{9}
+\bibitem{Krantz:several}
+Steven~G.\@ Krantz.
+{\em \PMlinkescapetext{Function Theory of Several Complex Variables}},
+AMS Chelsea Publishing, Providence, Rhode Island, 1992.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

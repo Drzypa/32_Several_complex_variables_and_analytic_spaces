@@ -1,0 +1,92 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CauchyIntegralFormulaInSeveralVariables}
+\pmcreated{2013-03-22 15:33:46}
+\pmmodified{2013-03-22 15:33:46}
+\pmowner{jirka}{4157}
+\pmmodifier{jirka}{4157}
+\pmtitle{Cauchy integral formula in several variables}
+\pmrecord{7}{37466}
+\pmprivacy{1}
+\pmauthor{jirka}{4157}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{32A07}
+\pmclassification{msc}{32A10}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\theoremstyle{theorem}
+\newtheorem*{thm}{Theorem}
+\newtheorem*{lemma}{Lemma}
+\newtheorem*{conj}{Conjecture}
+\newtheorem*{cor}{Corollary}
+\newtheorem*{example}{Example}
+\newtheorem*{prop}{Proposition}
+\theoremstyle{definition}
+\newtheorem*{defn}{Definition}
+\theoremstyle{remark}
+\newtheorem*{rmk}{Remark}
+\begin{document}
+Let $D = D_1 \times \ldots \times D_n \subset {\mathbb{C}}^n$ be a polydisc.
+
+\begin{thm}
+Let $f$ be a function continuous in $\bar{D}$ (the closure of $D$).  Then
+$f$ is
+\PMlinkname{holomorphic}{HolomorphicFunctionsOfSeveralVariables} in $D$
+if and only if
+for all $z = (z_1,\ldots,z_n) \in D$ we have
+\begin{equation*}
+f(z_1,\ldots,z_n)
+=
+\frac{1}{{(2 \pi i)}^n}
+\int_{\partial D_1}
+\cdots
+\int_{\partial D_n}
+\frac{f(\zeta_1,\ldots,\zeta_n)}
+{(\zeta_1 - z_1)
+\ldots
+(\zeta_n - z_n)}
+d\zeta_1 \ldots d\zeta_n .
+\end{equation*}
+\end{thm}
+
+As in the case of one variable this theorem can be in fact used as a
+definition of holomorphicity.  Note that when $n > 1$ then we are no longer
+integrating over the \PMlinkescapetext{entire} boundary of the polydisc but over the
+distinguished boundary, that is over $\partial D_1 \times \ldots \times
+\partial D_n$.
+
+\begin{thebibliography}{9}
+\bibitem{Hormander:several}
+Lars H\"ormander.
+{\em \PMlinkescapetext{An Introduction to Complex Analysis in Several
+Variables}},
+North-Holland Publishing Company, New York, New York, 1973.
+\bibitem{Krantz:several}
+Steven~G.\@ Krantz.
+{\em \PMlinkescapetext{Function Theory of Several Complex Variables}},
+AMS Chelsea Publishing, Providence, Rhode Island, 1992.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

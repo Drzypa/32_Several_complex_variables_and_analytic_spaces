@@ -1,0 +1,79 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{WeaklyHolomorphic}
+\pmcreated{2013-03-22 17:41:46}
+\pmmodified{2013-03-22 17:41:46}
+\pmowner{jirka}{4157}
+\pmmodifier{jirka}{4157}
+\pmtitle{weakly holomorphic}
+\pmrecord{4}{40137}
+\pmprivacy{1}
+\pmauthor{jirka}{4157}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{32C15}
+\pmclassification{msc}{32C20}
+\pmsynonym{w-holomoprhic}{WeaklyHolomorphic}
+\pmrelated{NormalComplexAnalyticVariety}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\theoremstyle{theorem}
+\newtheorem*{thm}{Theorem}
+\newtheorem*{lemma}{Lemma}
+\newtheorem*{conj}{Conjecture}
+\newtheorem*{cor}{Corollary}
+\newtheorem*{example}{Example}
+\newtheorem*{prop}{Proposition}
+\theoremstyle{definition}
+\newtheorem*{defn}{Definition}
+\theoremstyle{remark}
+\newtheorem*{rmk}{Remark}
+
+\begin{document}
+Let $V$ be a local complex analytic variety.
+A function $f \colon U \subset V \to \mathbb{C}$ (where $U$ is open in $V$)
+is said to be {\em weakly holomorphic} through $U$
+if there exists a nowhere dense complex analytic subvariety $W \subset V$
+and $W$ contains the singular points of $V$ and $V \setminus W \subset U$,
+and such that $f$ is holomorphic on $V \setminus W$ and
+$f$ is locally bounded on $V$.
+
+It is not hard to show that we can then just take $W$ to be the set of singular
+points of $V$ and have $U = V \setminus W$ as we can extend $f$ to all the
+nonsingular points of $V$.
+
+Usually we denote by ${\mathcal{O}}^w(V)$ the ring of weakly holomorphic functions
+through $V$.  Since any neighbourhood of a point $p$ in $V$ is a local analytic subvariety,
+we can define germs of weakly holomorphic functions at $p$ in the obvious way.  We usually
+denote by ${\mathcal{O}}_p^w(V)$ the ring of germs at $p$ of weakly holomorphic
+functions.
+
+\begin{thebibliography}{9}
+\bibitem{Whitney:varieties}
+Hassler Whitney.
+{\em \PMlinkescapetext{Complex Analytic Varieties}}.
+Addison-Wesley, Philippines, 1972.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

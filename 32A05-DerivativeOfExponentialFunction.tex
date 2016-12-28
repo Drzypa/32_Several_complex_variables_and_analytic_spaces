@@ -1,0 +1,147 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DerivativeOfExponentialFunction}
+\pmcreated{2013-03-22 17:01:39}
+\pmmodified{2013-03-22 17:01:39}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{derivative of exponential function}
+\pmrecord{15}{39313}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{32A05}
+\pmrelated{ExponentialFunction}
+\pmrelated{ComplexExponentialFunction}
+\pmrelated{DerivativeOfTheNaturalLogarithmFunction}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem{thm}{Theorem}
+\begin{document}
+In this entry, we shall compute the derivative of the exponential
+function from its definition as a limit of powers.
+
+\begin{thm}
+If $0 \le x < 1$, then
+\[
+1 + x \le \exp x \le {1 \over 1-x}
+\]
+\end{thm}
+
+\begin{proof}
+By the inequalities for differences of powers, we have
+\[
+x \le 
+\left( 1 + {x \over n} \right)^n - 1 \le 
+{x \over 1 - \left( {n-1 \over n} \right) x} .
+\]
+Since $n-1 < n$, and $x > 0$, we have $0 < (n-1 / n) x < x$.  Because
+$x < 1$, this implies $1 - (n-1 / n) x > 1 - x$, so
+\[
+{x \over 1 - \left( {n-1 \over n} \right) x} <
+{x \over 1 - x}.
+\]
+Hence 
+\[
+1 + x \le \left( 1 + {x \over n} \right)^n \le {1 \over 1 - x}.
+\]
+Taking the limit as $n \to \infty$, we obtain our result.
+\end{proof}
+
+\begin{thm}
+\[
+\lim_{x \to 0} {\exp (x) - 1 \over x} = 1
+\]
+\end{thm}
+
+\begin{proof}
+Assume $0 < x < 1$.  By our bound, we have
+\[
+1 \le
+{\exp (x) - 1 \over x} \le
+{1 \over 1 - x} .
+\]
+Suppose that $-1 < x < 0$.  Then, since $\exp (x) = 1 / \exp (-x)$, we have
+\[
+{\exp (x) - 1 \over x} =
+{1 \over \exp (-x)} \cdot {1 - \exp (-x) \over x} .
+\]
+From the inequality above, we have
+\[
+1 \le
+{1 - \exp (-x) \over x} \le
+{1 \over 1+x} .
+\]
+Hence
+\[
+{1 \over \exp (-x)} \le
+{\exp (x) - 1 \over x} \le
+{1 \over (1+x) \exp (-x)}.
+\]
+By theorem 1, we have $1 - x \le \exp (-x) \le 1 / (1 + x)$, so
+\[
+1+x \le
+{1 - \exp (-x) \over x} \le
+{1 \over (1 + x)(1-x)} =
+{1 \over 1 - x^2} .
+\]
+By the squeeze rule, we conclude that 
+\[
+\lim_{x \to 0} {1 - \exp (-x) \over x} = 1 
+\]
+whether we approach the limit from the left or the right.
+\end{proof}
+
+\begin{thm}
+\[
+{d \over dx} \exp (x) = \exp (x)
+\]
+\end{thm}
+
+\begin{proof}
+By definition,
+\[
+{d \over dx} \exp (x) = 
+\lim_{y \to x} {\exp (y) - \exp (x) \over y - x} .
+\]
+By the addition theorem for the exponential, we have
+\[
+{\exp (y) - \exp (x) \over y - x} =
+\exp (x) \cdot {\exp (y-x) - 1 \over y - x} ,
+\]
+so
+\[
+\lim_{y \to x} {\exp (y) - \exp (x) \over y - x} =
+\exp (x) \lim_{y \to x}
+{\exp (y-x) - 1 \over y - x} =
+\exp (x) \lim_{y \to 0} {\exp y - 1 \over y} .
+\]
+By theorem 2, the limit on the right-hand side equals $1$, so we have
+\[
+\lim_{y \to x} {\exp (y) - \exp (x) \over y - x} = \exp (x) .
+\]
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

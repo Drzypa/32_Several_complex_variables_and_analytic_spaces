@@ -1,0 +1,112 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LewyExtensionTheorem}
+\pmcreated{2013-03-22 17:39:44}
+\pmmodified{2013-03-22 17:39:44}
+\pmowner{jirka}{4157}
+\pmmodifier{jirka}{4157}
+\pmtitle{Lewy extension theorem}
+\pmrecord{4}{40096}
+\pmprivacy{1}
+\pmauthor{jirka}{4157}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{32V25}
+\pmsynonym{Lewy extension}{LewyExtensionTheorem}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\theoremstyle{theorem}
+\newtheorem*{thm}{Theorem}
+\newtheorem*{lemma}{Lemma}
+\newtheorem*{conj}{Conjecture}
+\newtheorem*{cor}{Corollary}
+\newtheorem*{example}{Example}
+\newtheorem*{prop}{Proposition}
+\theoremstyle{definition}
+\newtheorem*{defn}{Definition}
+\theoremstyle{remark}
+\newtheorem*{rmk}{Remark}
+
+\begin{document}
+Let $M \subset {\mathbf{C}}^n$ be a smooth real hypersurface.
+Let $\rho$ be a defining function for $M$ near $p.$  That is, for some neighbourhood
+of $p,$ the submanifold $M$ is defined by $\rho = 0 .$
+For a neighbourhood $U \subset {\mathbb{C}}^n,$ define the set
+$U_+$ to be the set $U \cap \{ \rho > 0 \} .$  We will say that 
+$M$ has at least one negative eigenvalue if the Levi form defined by $\rho$ has at least one negative
+eigenvalue.  That is, if
+\begin{equation*}
+\sum_{j,k=1}^n \frac{\partial^2 \rho (p)}{\partial z_j \partial \bar{z}_k} w_j \bar{w}_k < 0
+~\text{ for some }~
+w \in {\mathbb{C}}^n
+~\text{ such that }~
+\sum_{j=1}^n w_j \frac{\partial \rho(p)}{\partial z_j} = 0 .
+\end{equation*}
+
+\begin{thm}
+Let $f$ be a smooth CR function on $M.$  Suppose that
+near $p \in M$ the Levi form of $M$ has at least one positive eigenvalue at $p.$  Then there exists a
+neighbourhood $U$ of $p,$ such that for every smooth CR function $f$ on $M,$ there exists a
+function $F$ holomorphic in $U_+$ and $C^1$ up to $M,$ such that $F|_{U \cap M} = f|_{U \cap M}.$
+\end{thm}
+
+By considering $-\rho$ instead of $\rho$ as a defining function, we get the corresponding result for
+at least one negative eigenvalue. 
+If the Levi form of $M$ has both positive and negative eigenvalues at a point, then $f$ extends to both sides
+of $M$ and is then a restriction of a holomorphic function.
+
+A \PMlinkescapetext{key} point is the fact that $U$ is fixed and does not depend on $f.$  To see why this is necessary, imagine a Levi flat example.  Let $M$ be defined in ${\mathbb{C}}^2$ in coordinates $(z,w)$ by $\operatorname{Im} w = 0.$  The domains
+$U_\epsilon := \{ \lvert \operatorname{Im} w \rvert < \epsilon \},$ for $\epsilon > 0,$ are pseudoconvex and hence
+there exist functions
+holomorphic on $\Omega_\epsilon$ (and hence CR on $M$) that do not extend past any point of the boundary.  No neighbourhood of a point on $M$ fits in all $U_\epsilon .$  So at least one nonzero eigenvalue of the Levi form
+is needed.
+
+The statement of this theorem is not exactly the theorem that Lewy formulated\cite{lewy}, but this is generally called the Lewy extension.  There have been many results
+in this direction since Lewy's original paper, but this is the most \PMlinkescapetext{basic} result.
+
+\begin{thebibliography}{9}
+\bibitem{ber:submanifold}
+M.\@ Salah Baouendi,
+Peter Ebenfelt,
+Linda Preiss Rothschild.
+{\em \PMlinkescapetext{Real Submanifolds in Complex Space and Their Mappings}},
+Princeton University Press,
+Princeton, New Jersey, 1999.
+\bibitem{boggess}
+Albert Boggess.
+{\em \PMlinkescapetext{CR Manifolds and the Tangential Cauchy Riemann Complex}},
+CRC, 1991.
+\bibitem{Hormander:several}
+Lars H\"ormander.
+{\em \PMlinkescapetext{An Introduction to Complex Analysis in Several
+Variables}},
+North-Holland Publishing Company, New York, New York, 1973.
+\bibitem{lewy}
+Hans Lewy.
+{\em \PMlinkescapetext{On the local character of the solutions of an atypical linear differential equation in three variables and a related theorem for regular functions of two complex variables.}}
+{\it Ann. of Math.} (2) {\bf 64} (1956), 514--522. 
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}

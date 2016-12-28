@@ -1,0 +1,61 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ComplexLogarithm}
+\pmcreated{2013-03-22 14:43:11}
+\pmmodified{2013-03-22 14:43:11}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{complex logarithm}
+\pmrecord{10}{36342}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{32A05}
+\pmclassification{msc}{30D20}
+\pmsynonym{natural logarithm}{ComplexLogarithm}
+\pmrelated{Logarithm}
+\pmrelated{NaturalLogarithm2}
+\pmrelated{ValuesOfComplexCosine}
+\pmrelated{EqualityOfComplexNumbers}
+\pmrelated{SomeValuesCharacterisingI}
+\pmrelated{UsingResidueTheoremNearBranchPoint}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+The \PMlinkescapetext{{\em logarithm} of a complex number} $z$ is defined as every complex number $w$ which satisfies the equation
+\begin{align}
+                              e^w = z.
+\end{align}
+This is is denoted by 
+                      $$\log{z} := w.$$
+
+The solution of (1) is obtained by using the form \,$e^w = re^{i\varphi}$\,, where\, $r = |z|$\, and \,$\varphi = \arg{z}$;\, the result is
+            $$w = \log{z} = \ln{|z|}+i\arg{z}.$$
+Here, the $\ln|z|$ means the usual Napierian or \PMlinkname{natural logarithm}{NaturalLogarithm2} (`{\em logarithmus naturalis}') of the real number $|z|$.\, If we fix the phase angle $\varphi$ of $|z|$ so that \,$0 \leqq \varphi < 2\pi$, we can write
+    $$\log{z} = \ln{r}+i\varphi+n\cdot 2\pi i\quad(n = 0,\,\pm1,\,\pm2,\,...).$$
+
+The complex logarithm $\log{z}$ is defined for all \,$z \neq 0$\, and it is infinitely multivalued $-$ e.g.\, $\log{(-1)} = (2n+1)\pi i$\, where $n$ is an arbitrary integer.\, The values with\, $n = 0$\, are called the \PMlinkescapetext{{\em principal values}} of the \PMlinkescapetext{logarithm}; if $z$ is real, the \PMlinkescapetext{principal} value of $\log{z}$ coincides with $\ln{z}$.
+%%%%%
+%%%%%
+\end{document}

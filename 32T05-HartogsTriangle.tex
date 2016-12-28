@@ -1,0 +1,78 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{HartogsTriangle}
+\pmcreated{2013-03-22 14:31:08}
+\pmmodified{2013-03-22 14:31:08}
+\pmowner{jirka}{4157}
+\pmmodifier{jirka}{4157}
+\pmtitle{Hartogs triangle}
+\pmrecord{5}{36059}
+\pmprivacy{1}
+\pmauthor{jirka}{4157}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{32T05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+A non-trivial example of domain of holomorphy that has some
+interesting 
+non-obvious properties is the {\em Hartogs triangle} which is the set
+\begin{equation*}
+\{ (z,w) \in {\mathbb{C}}^2 \mid \lvert z \rvert < \lvert w \rvert < 1 \} .
+\end{equation*}
+Since it is a Reinhardt domain it can be represented
+by plotting it on the plane $\lvert z \rvert \times \lvert w \rvert$
+as follows.
+
+\begin{center}
+\includegraphics[scale=1.0]{hartogstriangle.eps}
+\vspace*{0.1in}
+
+{\tiny Figure 1: Hartogs triangle}
+\end{center}
+
+It is obvious then where the name comes from.  To see that this is a domain of holomorphy, then given a boundary point we wish to exhibit a holomorphic function on the whole Hartogs triangle which does not extend beyond that point.  First note that on the top boundary $z$ is anything and $w = e^{i\theta}$ for some $\theta$, so
+$f(z,w) = \frac{1}{w-e^{i\theta}}$ will not extend beyond $(z,e^{i\theta})$.
+Now for the diagonal boundary this is where $\lvert z \rvert = \lvert w \rvert$,
+that is $z = e^{i\theta} w$ for some $\theta$, so 
+$f(z,w) = \frac{1}{z-e^{i\theta}w}$ will do not extend beyond $(e^{i\theta}w,w)$.
+
+One of the many properties of this domain is that if $U$ is the Hartogs
+triangle, then it is a domain of holomorphy, but if we take a sufficently
+small neighbourhood $V$ of $\bar{U}$ (the closure of $U$),
+then any function holomorphic on $V$ is holomorphic on the polydisc
+$D^2(0,1)$ (just fill in everything below the triangle in Figure 1).  So if $V$ does not include all of $D^2(0,1)$ then it is not a domain of
+holomorphy.  This is because a Reinhardt domain that contains zero (the point
+$(0,0)$) is a domain
+of holomorphy if and only if it is a logarithmically convex set and any neighbourhood of $\bar{U}$ does contain zero while $U$ itself does not.
+
+\begin{thebibliography}{9}
+\bibitem{Krantz:several}
+Steven~G.\@ Krantz.
+{\em \PMlinkescapetext{Function Theory of Several Complex Variables}},
+AMS Chelsea Publishing, Providence, Rhode Island, 1992.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

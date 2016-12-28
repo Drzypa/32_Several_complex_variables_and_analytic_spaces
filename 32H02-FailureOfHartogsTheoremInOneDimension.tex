@@ -1,0 +1,61 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{FailureOfHartogsTheoremInOneDimension}
+\pmcreated{2013-03-22 17:46:57}
+\pmmodified{2013-03-22 17:46:57}
+\pmowner{jirka}{4157}
+\pmmodifier{jirka}{4157}
+\pmtitle{failure of Hartogs' theorem in one dimension}
+\pmrecord{4}{40242}
+\pmprivacy{1}
+\pmauthor{jirka}{4157}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{32H02}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\theoremstyle{theorem}
+\newtheorem*{thm}{Theorem}
+\newtheorem*{lemma}{Lemma}
+\newtheorem*{conj}{Conjecture}
+\newtheorem*{cor}{Corollary}
+\newtheorem*{example}{Example}
+\newtheorem*{prop}{Proposition}
+\theoremstyle{definition}
+\newtheorem*{defn}{Definition}
+\theoremstyle{remark}
+\newtheorem*{rmk}{Remark}
+
+\begin{document}
+It is instructive to see an example where Hartogs' theorem fails in one dimension.
+Take $U = {\mathbb C}$ and let $K = \{0\}.$
+The function $\frac{1}{z}$ is holomorphic in $U \setminus K,$ but cannot be extended to $U.$
+
+To understand the example and failure of the theorem it is important to understand \PMlinkname{the proof}{ProofOfHartogsTheorem}.  In the proof, the way we construct an extension is that we start with a function holomorphic in $U \setminus K,$
+modify it in a neighbourhood of $K$ to be zero, hence extending as a smooth function through $K.$  Then we solve the
+\PMlinkname{$\bar{\partial}$ operator}{BarPartialOperator} inhomogeneous equation $\bar{\partial}\psi = g$ to ``correct'' our extension to be holomorphic.
+The key point is that $g$ has compact support allowing us to solve the equation and find a $\psi$
+with compact support.  This fails in dimension 1.  While we always get a solution $\psi,$ the solution can never have compact support.  Hence, if we tried the proof with $\frac{1}{z},$ the new function we obtain in the proof does not agree with $\frac{1}{z}$ on any open set and hence is not an extension.
+%%%%%
+%%%%%
+\end{document}

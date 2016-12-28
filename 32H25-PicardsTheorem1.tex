@@ -1,0 +1,48 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PicardsTheorem}
+\pmcreated{2013-03-22 13:15:23}
+\pmmodified{2013-03-22 13:15:23}
+\pmowner{Koro}{127}
+\pmmodifier{Koro}{127}
+\pmtitle{Picard's theorem}
+\pmrecord{9}{33735}
+\pmprivacy{1}
+\pmauthor{Koro}{127}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{32H25}
+\pmsynonym{great Picard theorem}{PicardsTheorem}
+\pmrelated{EssentialSingularity}
+\pmrelated{CasoratiWeierstrassTheorem}
+\pmrelated{ProofOfCasoratiWeierstrassTheorem}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $f$ be an holomorphic function with an essential singularity at $w\in \mathbb{C}$. Then there is a number $z_0\in \mathbb{C}$ such that the image of any neighborhood of $w$ by $f$ contains $\mathbb{C}-\{z_0\}$. In other words, $f$ assumes every complex value, with the possible exception of $z_0$, in any neighborhood of $w$.
+
+\emph{Remark.} Little Picard theorem follows as a corollary:
+Given a nonconstant entire function $f$, if it is a polynomial, it assumes every value in $\mathbb{C}$ as a consequence of the fundamental theorem of algebra. If $f$ is not a polynomial, then $g(z)=f(1/z)$ has an essential singularity at $0$; Picard's theorem implies that $g$ (and thus $f$) assumes every complex value, with one possible exception.
+%%%%%
+%%%%%
+\end{document}

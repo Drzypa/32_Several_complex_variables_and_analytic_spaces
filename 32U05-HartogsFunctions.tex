@@ -1,0 +1,95 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{HartogsFunctions}
+\pmcreated{2013-03-22 14:29:27}
+\pmmodified{2013-03-22 14:29:27}
+\pmowner{jirka}{4157}
+\pmmodifier{jirka}{4157}
+\pmtitle{Hartogs functions}
+\pmrecord{7}{36025}
+\pmprivacy{1}
+\pmauthor{jirka}{4157}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{32U05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\theoremstyle{theorem}
+\newtheorem*{thm}{Theorem}
+\newtheorem*{lemma}{Lemma}
+\newtheorem*{conj}{Conjecture}
+\newtheorem*{cor}{Corollary}
+\newtheorem*{example}{Example}
+\theoremstyle{definition}
+\newtheorem*{defn}{Definition}
+\begin{document}
+\begin{defn}
+Let $G \subset {\mathbb{C}}^n$ be an open set and let ${\mathcal{F}}_G$
+be the smallest class of functions on $G$ to ${\mathbb{R}} \cup \{ - \infty \}$ that contains all of the functions
+$z \mapsto \log \lvert f(z) \rvert$ where $f$ is holomorphic on $G$ and such
+that ${\mathcal{F}}_G$ is closed with respect to the following conditions:
+\begin{itemize}
+%
+\item If $\varphi_1 , \varphi_2 \in {\mathcal{F}}_G$, then
+$\varphi_1 + \varphi_2 \in {\mathcal{F}}_G$.
+%
+\item If $\varphi \in {\mathcal{F}}_G$ then
+$a \varphi_1 \in {\mathcal{F}}_G$ for all $a \geq 0$.
+%
+\item If $\{ \varphi_k \} \in {\mathcal{F}}_G$ and
+$\varphi_1 \geq \varphi_2 \geq \ldots$,
+then $\lim_{k\to\infty} \varphi_k \in {\mathcal{F}}_G$.
+%
+\item If $\{ \varphi_k \} \in {\mathcal{F}}_G$ and
+the sequence is uniformly bounded above on compact sets, then
+$\sup_k \varphi_k \in {\mathcal{F}}_G$.
+%
+\item If $\varphi \in {\mathcal{F}}_G$ and
+$\hat{\varphi}(w) := \limsup_{w \to z} \varphi(w)$,
+then $\hat{\varphi} \in {\mathcal{F}}_G$
+%
+\item If $\varphi |_U \in {\mathcal{F}}_U$ for all
+$U \subset G$ where $U$ is relatively compact (the closure
+of $U$ is compact), then $\varphi \in {\mathcal{F}}_G$.
+%
+\end{itemize}
+These functions are called the {\em Hartogs functions}.
+\end{defn}
+
+It is known that if $n=1$ then the upper semi-continuous Hartogs functions
+are precisely the subharmonic functions on $G$.
+
+\begin{thm}[H.\@ Bremerman]
+All plurisubharmonic functions are Hartogs functions if
+$G$ is a domain of holomorphy.
+\end{thm}
+
+\begin{thebibliography}{9}
+\bibitem{Krantz:several}
+Steven~G.\@ Krantz.
+{\em \PMlinkescapetext{Function Theory of Several Complex Variables}},
+AMS Chelsea Publishing, Providence, Rhode Island, 1992.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,71 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PuiseuxSeries}
+\pmcreated{2013-03-22 15:20:28}
+\pmmodified{2013-03-22 15:20:28}
+\pmowner{jirka}{4157}
+\pmmodifier{jirka}{4157}
+\pmtitle{Puiseux series}
+\pmrecord{5}{37161}
+\pmprivacy{1}
+\pmauthor{jirka}{4157}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{32B10}
+\pmsynonym{fractional power series}{PuiseuxSeries}
+\pmrelated{PuiseuxParametrization}
+\pmrelated{GeneralPower}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\theoremstyle{theorem}
+\newtheorem*{thm}{Theorem}
+\newtheorem*{lemma}{Lemma}
+\newtheorem*{conj}{Conjecture}
+\newtheorem*{cor}{Corollary}
+\newtheorem*{example}{Example}
+\newtheorem*{prop}{Proposition}
+\theoremstyle{definition}
+\newtheorem*{defn}{Definition}
+\theoremstyle{remark}
+\newtheorem*{rmk}{Remark}
+\begin{document}
+A formal series of the form
+\begin{equation*}
+\sum_{n=m}^\infty a_n z^{n/k}
+\end{equation*}
+where $m$ and $k$ are integers such that $k \geq 1$ is
+is called a {\em Puiseux series} or a {\em fractional power series}.  Note that if $k > 1$, then $z^{n/k}$ could be multivalued.  One example of the use of such a power series is the Puiseux parametrization of one-dimensional complex analytic varieties.
+
+\begin{thebibliography}{9}
+\bibitem{Chirka:CAS}
+E.\@ M.\@ Chirka.
+{\em \PMlinkescapetext{Complex Analytic Sets}}.
+Kluwer Academic Publishers, Dordrecht, The Netherlands, 1989.
+\bibitem{Dimca:singu}
+Alexandru Dimca.
+{\em \PMlinkescapetext{Topics on Real and Complex Singularities}}.
+Vieweg, Braunschweig, Germany, 1987.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

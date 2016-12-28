@@ -1,0 +1,93 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CoherentAnalyticSheaf}
+\pmcreated{2013-03-22 17:39:05}
+\pmmodified{2013-03-22 17:39:05}
+\pmowner{jirka}{4157}
+\pmmodifier{jirka}{4157}
+\pmtitle{coherent analytic sheaf}
+\pmrecord{4}{40084}
+\pmprivacy{1}
+\pmauthor{jirka}{4157}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{32C35}
+\pmdefines{locally finitely generated sheaf}
+\pmdefines{sheaf of relations}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\theoremstyle{theorem}
+\newtheorem*{thm}{Theorem}
+\newtheorem*{lemma}{Lemma}
+\newtheorem*{conj}{Conjecture}
+\newtheorem*{cor}{Corollary}
+\newtheorem*{example}{Example}
+\newtheorem*{prop}{Proposition}
+\theoremstyle{definition}
+\newtheorem*{defn}{Definition}
+\theoremstyle{remark}
+\newtheorem*{rmk}{Remark}
+
+\begin{document}
+Let $M$ be a complex manifold and $\mathcal{F}$ be an analytic sheaf.
+For $z \in M$, denote by $\mathcal{F}_z$ the stalk of $\mathcal{F}$ at $z$.
+By $\mathcal{O}$ denote the sheaf of germs of analytic functions.  For a section
+$f$ and a point $z \in M$ denote by $f_z$ the germ of $f$ at $z$.
+
+$\mathcal{F}$ is said to be \emph{locally finitely generated} if for every $z \in M$,
+there is a neighbourhood $U$ of $z$, a finite number of sections
+$f_1,\ldots,f_k \in \Gamma(U,\mathcal{F})$ such that for each $w \in U$,
+$\mathcal{F}_w$ is a finitely generated module (as an $\mathcal{O}_w$-module).
+
+Let $U$ be a neighbourhood in $M$ and
+Suppose that $f_1,\ldots,f_k$ are sections in $\Gamma(U,\mathcal{F})$.
+Let $\mathcal{R}(f_1,\ldots,f_k)$ be the subsheaf of ${\mathcal{O}}^k$
+over $U$ consisting of the germs
+\begin{equation*}
+\{ (g_1,\ldots,g_k) \in {\mathcal{O}}^k_z \mid
+   \sum_{j=1}^k g_j (f_j)_z = 0 \} .
+\end{equation*}
+$\mathcal{R}(f_1,\ldots,f_k)$ is called the \emph{sheaf of relations}.
+
+\begin{defn}
+$\mathcal{F}$ is called a \emph{coherent analytic sheaf} if $\mathcal{F}$
+is locally finitely generated and if for every open subset $U \subset M$,
+and $f_1,\ldots,f_k \in \Gamma(U,\mathcal{F})$,
+the
+sheaf $\mathcal{R}(f_1,\ldots,f_k)$ is locally finitely generated.
+\end{defn}
+
+\begin{thebibliography}{9}
+\bibitem{Hormander:several}
+Lars H\"ormander.
+{\em \PMlinkescapetext{An Introduction to Complex Analysis in Several
+Variables}},
+North-Holland Publishing Company, New York, New York, 1973.
+\bibitem{Krantz:several}
+Steven~G.\@ Krantz.
+{\em \PMlinkescapetext{Function Theory of Several Complex Variables}},
+AMS Chelsea Publishing, Providence, Rhode Island, 1992.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

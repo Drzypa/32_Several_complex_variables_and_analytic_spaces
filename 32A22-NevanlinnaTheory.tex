@@ -1,0 +1,96 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{NevanlinnaTheory}
+\pmcreated{2013-03-22 15:36:32}
+\pmmodified{2013-03-22 15:36:32}
+\pmowner{Simone}{5904}
+\pmmodifier{Simone}{5904}
+\pmtitle{Nevanlinna theory}
+\pmrecord{14}{37529}
+\pmprivacy{1}
+\pmauthor{Simone}{5904}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{32A22}
+\pmclassification{msc}{30D35}
+\pmrelated{ErnstLindelof}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Nevanlinna theory deals with quantitative aspects of entire holomorphic mappings into complex varieties. Let $\omega=i\sum_{j,k}\omega_{jk}\,dz_j\wedge d\overline z_k$ be a smooth $(1,1)$-form on a complex manifold $X$. Suppose that $\omega$ is positive definite, i.e. the Hermitian matrix $(\omega_{jk}(z))$ is positive definite at every point. Thus $\omega$ can be viewed as a Hermitian metric on the tangent bundle $T_X$.
+
+If $f\colon\mathbb C\to X$ is an entire curve, the \emph{growth indicatrix} of $f$ is the function
+$$
+T_{f,\omega}(r)=\int_{r_0}^rt_{f,\omega}(\rho)\,\frac{d\varrho}\varrho,
+$$
+where
+$$
+t_{f,\omega}(\varrho)=\int_{D(0,\varrho)}f^*\omega.
+$$
+It is clear that $t_{f,\omega}(\varrho)$ is nothing more than the area with respect to $\omega$ of the image $f(D(0,\varrho))$ of the disk in the complex line centered at $0$ and of ray $\varrho$.
+Now let $L$ be an ample holomorphic line bundle over $X$ (compact, connected). Then $L$ carries an Hermitian metric $h$ with positive curvature $\omega=\Theta_h(L)$ and so, in this case, one can suppose that our $\omega$ is in fact the curvature of this line bundle. Furthermore, it is clear that if one is merely interested in the order of growth $O(T_{f,\omega}(r))$ when $r$ goes to infinity, then this order is independent of the choice of $\omega$.
+
+Let us consider an hypersurface $H=\{\sigma=0\}\subset X$ defined by a global section of $L$: one would like to \lq\lq measure\rq\rq the intersections of the entire curve $f\colon\mathbb C\to X$ with $H$. For this purpose one looks at the holomorphic function $\sigma\circ f\colon\mathbb C\to L$ and introduces the \emph{enumerating of zeros function}
+$$
+N_{f,\sigma}(r)=\int_{r_0}^rn_{f,\sigma}(\varrho)\,\frac{d\varrho}\varrho,
+$$
+where $n_{f,\sigma}(\varrho)=$ number of zeros of $\sigma\circ f$ on $D(0,\varrho)$ counted with multiplicities. Finally one introduces the function $m_{f,\sigma}$, called \emph{proximity function}, defined by
+$$
+m_{f,\sigma}(r)=\frac 1{2\pi}\int_0^{2\pi}\log\frac 1{\|(\sigma\circ f)(re^{i\vartheta})\|_h}\,d\vartheta.
+$$
+This function is non negative, once one has normalized $\sigma$ with a constant in such a way that $\|\sigma\|_h\le 1$. Morally, $m_{f,\sigma}(r)$ is bigger and bigger when $f$ often goes near $H=\{\sigma=0\}$ on the circle of ray $r$. 
+
+The \emph{first fundamental theorem of Nevanlinna} states the following:
+
+{\bf Let $(L,h)$ be an Hermitian line bundle with curvature form $\omega=\Theta_h(L)>0$. For all section $\sigma$ of $L$ and all curve $f\colon\mathbb C\to X$ such that $f(\mathbb C)$ is not entirely contained in the hypersurface $H=\{\sigma=0\}$, one has
+$$
+m_{f,\sigma}(r)+N_{f,\sigma}(r)=T_{f,\omega}(r)+O(1).
+$$
+In particular, the order of growth of the left hand side when $r\to\infty$ does not depend on the choice of $\sigma$, but only on the growth indicatrix of $f$.}
+
+Classically, one introduces the \emph{defect} of $f$ with respect to $H=\{\sigma=0\}$, defined by
+$$
+\delta_\sigma(f)=\liminf_{r\to\infty}\frac{m_{f,\sigma}(r)}{T_{f,\omega}(r)}\in[0,1].
+$$
+In particular, the defect is equal to $1$ if $\sigma\circ f$ is never zero, and equal to $0$ if the enumerating of zeros function $N_{f,\sigma}(r)$ grows as much as possible. One of the most important results of Nevanlinna theory concerns the entire curves which map into the Riemann sphere $\mathbb P^1$ and states that the sum of defects $\sum_{a\in\mathbb P^1}\delta_a(f)$ is at most equal to $2$. One of the essential steps for the proof of this statement is an estimate of the proximity function of the logarithmic derivative of a meromorphic function. 
+
+More precisely the following \lq\lq logarithmic derivative lemma\rq\rq{} holds:
+
+{\bf Let $f\colon\mathbb C\to\mathbb P^1$ be a meromorphic function and $D^p\log f$ the $p$-th logarithmic derivative of $f$. Then, for all $\varepsilon>0$, there exists a set $E$ of finite Lebesgue measure in $\mathbb R_+$ such that
+$$
+m_{D^p\log f,\infty}(r)\le(p+1+\varepsilon)(\log r+\log_+T_{f,\omega}(r))+O(1),\quad\forall r\in\mathbb R_+\setminus E.
+$$}
+An important consequence of the logarithmic derivative lemma is what is called the \emph{second fundamental theorem of Nevanlinna} from which it follows immediately the estimate for the sum of the defects introduced above:
+
+{\bf Let $f\colon\mathbb C\to\mathbb P^1$ be a meromorphic function. Define the ramification divisor $R_f$ of $f$ as the sum $\sum e_j[w_j]$ where the $w_j$'s are the points where $f'$ is zero and the $e_j$'s are the multiplicities of zero of $f'$ at $w_j$ (where $f(w_j)=\infty$ one looks at $1/f$ instead of $f$). Then, for all finite set $\{a_j\}\subset\mathbb P^1$, there exists a subset $E\subset\mathbb R_+$ of finite Lebesgue measure such that
+$$
+N_{R_f}(r)+\sum_j m_{f,a_j}(r)\le 2T_{f,\omega}(r)+O(\log r+\log_+T_{f,\omega}(r)),\quad\forall r\in\mathbb R_+\setminus E,
+$$
+where $N_{R_f}(r)=\int_{r_0}^rn_{R_f}(\varrho)\,d\varrho/\varrho$ is the enumerating function of the ramification divisor.}
+
+\begin{thebibliography}
+{}J.-P. Demailly, \emph{Vari\'et\'es projectives hyperboliques et \'equations diff\'erentielles alg\'ebriques}. (French) $\lbrack$Hyperbolic projective varieties and algebraic differential equations$\rbrack$ Journ\'ee en l'Honneur de Henri Cartan,  3--17, SMF Journ. Annu., 1997, Soc. Math. France, Paris, 1997.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,183 @@
+<!DOCTYPE html><html>
+<head>
+<title>proof of growth of exponential function</title>
+<!--Generated on Fri Feb  9 20:31:42 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">proof of growth of exponential function</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">In this proof, we first restrict to when <math id="p1.m1" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> and <math id="p1.m2" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> are integers
+and only later lift this restricton.</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">Let <math id="p2.m1" class="ltx_Math" alttext="a&gt;0" display="inline"><mrow><mi>a</mi><mo>&gt;</mo><mn>0</mn></mrow></math> be an integer, let <math id="p2.m2" class="ltx_Math" alttext="b&gt;1" display="inline"><mrow><mi>b</mi><mo>&gt;</mo><mn>1</mn></mrow></math> be real, and let <math id="p2.m3" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> be an
+integer.</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">Consider the following inequality</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="\left(1+{1\over x}\right)^{a}\leq 1+{a\over x}\left(1+{1\over x}\right)^{a-1}" display="block"><mrow><msup><mrow><mo>(</mo><mrow><mn>1</mn><mo>+</mo><mfrac><mn>1</mn><mi>x</mi></mfrac></mrow><mo>)</mo></mrow><mi>a</mi></msup><mo>≤</mo><mrow><mn>1</mn><mo>+</mo><mrow><mfrac><mi>a</mi><mi>x</mi></mfrac><mo>⁢</mo><msup><mrow><mo>(</mo><mrow><mn>1</mn><mo>+</mo><mfrac><mn>1</mn><mi>x</mi></mfrac></mrow><mo>)</mo></mrow><mrow><mi>a</mi><mo>-</mo><mn>1</mn></mrow></msup></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">If <math id="p3.m1" class="ltx_Math" alttext="x\geq 2" display="inline"><mrow><mi>x</mi><mo>≥</mo><mn>2</mn></mrow></math>, then we have
+</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="\left(1+{1\over x}\right)^{a}\leq 1+{a\over x}\left({3\over 2}\right)^{a-1}." display="block"><mrow><mrow><msup><mrow><mo>(</mo><mrow><mn>1</mn><mo>+</mo><mfrac><mn>1</mn><mi>x</mi></mfrac></mrow><mo>)</mo></mrow><mi>a</mi></msup><mo>≤</mo><mrow><mn>1</mn><mo>+</mo><mrow><mfrac><mi>a</mi><mi>x</mi></mfrac><mo>⁢</mo><msup><mrow><mo>(</mo><mfrac><mn>3</mn><mn>2</mn></mfrac><mo>)</mo></mrow><mrow><mi>a</mi><mo>-</mo><mn>1</mn></mrow></msup></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Define <math id="p3.m2" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> to be the greater of <math id="p3.m3" class="ltx_Math" alttext="2" display="inline"><mn>2</mn></math> and <math id="p3.m4" class="ltx_Math" alttext="\lceil a(3/2)^{a-1}/(1-\sqrt{b})\rceil" display="inline"><mrow><mo stretchy="false">⌈</mo><mrow><mrow><mi>a</mi><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mn>3</mn><mo>/</mo><mn>2</mn></mrow><mo stretchy="false">)</mo></mrow><mrow><mi>a</mi><mo>-</mo><mn>1</mn></mrow></msup></mrow><mo>/</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><msqrt><mi>b</mi></msqrt></mrow><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">⌉</mo></mrow></math>; when <math id="p3.m5" class="ltx_Math" alttext="x&gt;X" display="inline"><mrow><mi>x</mi><mo>&gt;</mo><mi>X</mi></mrow></math>, we have</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="\left(1+{1\over x}\right)^{a}\leq\sqrt{b}." display="block"><mrow><mrow><msup><mrow><mo>(</mo><mrow><mn>1</mn><mo>+</mo><mfrac><mn>1</mn><mi>x</mi></mfrac></mrow><mo>)</mo></mrow><mi>a</mi></msup><mo>≤</mo><msqrt><mi>b</mi></msqrt></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">Rewrite <math id="p4.m1" class="ltx_Math" alttext="x^{a}/b^{x}" display="inline"><mrow><msup><mi>x</mi><mi>a</mi></msup><mo>/</mo><msup><mi>b</mi><mi>x</mi></msup></mrow></math> as follows when <math id="p4.m2" class="ltx_Math" alttext="x&gt;X" display="inline"><mrow><mi>x</mi><mo>&gt;</mo><mi>X</mi></mrow></math>:</p>
+<table id="S0.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex4.m1" class="ltx_Math" alttext="{x^{a}\over b^{x}}={X^{a}\over b^{X}}\prod_{n=X}^{x}\left(1+{1\over n}\right)^%
+{a}{1\over b}" display="block"><mrow><mfrac><msup><mi>x</mi><mi>a</mi></msup><msup><mi>b</mi><mi>x</mi></msup></mfrac><mo>=</mo><mrow><mfrac><msup><mi>X</mi><mi>a</mi></msup><msup><mi>b</mi><mi>X</mi></msup></mfrac><mo>⁢</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∏</mo><mrow><mi>n</mi><mo>=</mo><mi>X</mi></mrow><mi>x</mi></munderover><mrow><msup><mrow><mo>(</mo><mrow><mn>1</mn><mo>+</mo><mfrac><mn>1</mn><mi>n</mi></mfrac></mrow><mo>)</mo></mrow><mi>a</mi></msup><mo>⁢</mo><mfrac><mn>1</mn><mi>b</mi></mfrac></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">By the inequality established above, each term in the product will be
+bounded by <math id="p4.m3" class="ltx_Math" alttext="1/\sqrt{b}" display="inline"><mrow><mn>1</mn><mo>/</mo><msqrt><mi>b</mi></msqrt></mrow></math>, hence</p>
+<table id="S0.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex5.m1" class="ltx_Math" alttext="{x^{a}\over b^{x}}\leq{X^{a}\over b^{X}}{1\over(\sqrt{b})^{x-X}}" display="block"><mrow><mfrac><msup><mi>x</mi><mi>a</mi></msup><msup><mi>b</mi><mi>x</mi></msup></mfrac><mo>≤</mo><mrow><mfrac><msup><mi>X</mi><mi>a</mi></msup><msup><mi>b</mi><mi>X</mi></msup></mfrac><mo>⁢</mo><mfrac><mn>1</mn><msup><mrow><mo stretchy="false">(</mo><msqrt><mi>b</mi></msqrt><mo stretchy="false">)</mo></mrow><mrow><mi>x</mi><mo>-</mo><mi>X</mi></mrow></msup></mfrac></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Since <math id="p4.m4" class="ltx_Math" alttext="b&gt;1" display="inline"><mrow><mi>b</mi><mo>&gt;</mo><mn>1</mn></mrow></math>, it is also the case that <math id="p4.m5" class="ltx_Math" alttext="\sqrt{b}&gt;1" display="inline"><mrow><msqrt><mi>b</mi></msqrt><mo>&gt;</mo><mn>1</mn></mrow></math>, hence we have
+the inequality</p>
+<table id="S0.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex6.m1" class="ltx_Math" alttext="(\sqrt{b})^{n}\geq 1+n(\sqrt{b}-1)" display="block"><mrow><msup><mrow><mo stretchy="false">(</mo><msqrt><mi>b</mi></msqrt><mo stretchy="false">)</mo></mrow><mi>n</mi></msup><mo>≥</mo><mrow><mn>1</mn><mo>+</mo><mrow><mi>n</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msqrt><mi>b</mi></msqrt><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Combining the last two inequalities yields the following:</p>
+<table id="S0.Ex7" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex7.m1" class="ltx_Math" alttext="{x^{a}\over b^{x}}\leq{X^{a}\over b^{X}}\leq{1\over 1+(x-X)(\sqrt{b}-1)}" display="block"><mrow><mfrac><msup><mi>x</mi><mi>a</mi></msup><msup><mi>b</mi><mi>x</mi></msup></mfrac><mo>≤</mo><mfrac><msup><mi>X</mi><mi>a</mi></msup><msup><mi>b</mi><mi>X</mi></msup></mfrac><mo>≤</mo><mfrac><mn>1</mn><mrow><mn>1</mn><mo>+</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>-</mo><mi>X</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msqrt><mi>b</mi></msqrt><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mfrac></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">From this, it follows that <math id="p4.m6" class="ltx_Math" alttext="\lim_{x\to\infty}x^{a}/b^{x}=0" display="inline"><mrow><mrow><msub><mo>lim</mo><mrow><mi>x</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></msub><mo>⁡</mo><mrow><msup><mi>x</mi><mi>a</mi></msup><mo>/</mo><msup><mi>b</mi><mi>x</mi></msup></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math> when
+<math id="p4.m7" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> and <math id="p4.m8" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> are integers.</p>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">Now we lift the restriction that <math id="p5.m1" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> be an integer. Since the power
+function is increasing, <math id="p5.m2" class="ltx_Math" alttext="x^{a}/b^{x}\leq x^{\lceil a\rceil}/b^{x}" display="inline"><mrow><mrow><msup><mi>x</mi><mi>a</mi></msup><mo>/</mo><msup><mi>b</mi><mi>x</mi></msup></mrow><mo>≤</mo><mrow><msup><mi>x</mi><mrow><mo stretchy="false">⌈</mo><mi>a</mi><mo stretchy="false">⌉</mo></mrow></msup><mo>/</mo><msup><mi>b</mi><mi>x</mi></msup></mrow></mrow></math>, so we have <math id="p5.m3" class="ltx_Math" alttext="\lim_{x\to\infty}x^{a}/b^{x}=0" display="inline"><mrow><mrow><msub><mo>lim</mo><mrow><mi>x</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></msub><mo>⁡</mo><mrow><msup><mi>x</mi><mi>a</mi></msup><mo>/</mo><msup><mi>b</mi><mi>x</mi></msup></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math> for real values
+of <math id="p5.m4" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> as well.</p>
+</div>
+<div id="p6" class="ltx_para">
+<p class="ltx_p">To lift the restriction on <math id="p6.m1" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>, let us write <math id="p6.m2" class="ltx_Math" alttext="x=x_{1}+x_{2}" display="inline"><mrow><mi>x</mi><mo>=</mo><mrow><msub><mi>x</mi><mn>1</mn></msub><mo>+</mo><msub><mi>x</mi><mn>2</mn></msub></mrow></mrow></math> where
+<math id="p6.m3" class="ltx_Math" alttext="x_{1}" display="inline"><msub><mi>x</mi><mn>1</mn></msub></math> is an integer and <math id="p6.m4" class="ltx_Math" alttext="0\leq x_{2}&lt;1" display="inline"><mrow><mn>0</mn><mo>≤</mo><msub><mi>x</mi><mn>2</mn></msub><mo>&lt;</mo><mn>1</mn></mrow></math>. Then we have</p>
+<table id="S0.Ex8" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex8.m1" class="ltx_Math" alttext="{x^{a}\over b^{x}}={x_{1}^{a}\over b^{x_{1}}}\left({x_{1}+x_{2}\over x_{1}}%
+\right)^{a}b^{-x_{2}}" display="block"><mrow><mfrac><msup><mi>x</mi><mi>a</mi></msup><msup><mi>b</mi><mi>x</mi></msup></mfrac><mo>=</mo><mrow><mfrac><msubsup><mi>x</mi><mn>1</mn><mi>a</mi></msubsup><msup><mi>b</mi><msub><mi>x</mi><mn>1</mn></msub></msup></mfrac><mo>⁢</mo><msup><mrow><mo>(</mo><mfrac><mrow><msub><mi>x</mi><mn>1</mn></msub><mo>+</mo><msub><mi>x</mi><mn>2</mn></msub></mrow><msub><mi>x</mi><mn>1</mn></msub></mfrac><mo>)</mo></mrow><mi>a</mi></msup><mo>⁢</mo><msup><mi>b</mi><mrow><mo>-</mo><msub><mi>x</mi><mn>2</mn></msub></mrow></msup></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">If <math id="p6.m5" class="ltx_Math" alttext="x&gt;2" display="inline"><mrow><mi>x</mi><mo>&gt;</mo><mn>2</mn></mrow></math>, then <math id="p6.m6" class="ltx_Math" alttext="(x_{1}+x_{2})/x_{2}&lt;1.5" display="inline"><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><msub><mi>x</mi><mn>1</mn></msub><mo>+</mo><msub><mi>x</mi><mn>2</mn></msub></mrow><mo stretchy="false">)</mo></mrow><mo>/</mo><msub><mi>x</mi><mn>2</mn></msub></mrow><mo>&lt;</mo><mn>1.5</mn></mrow></math>. Since <math id="p6.m7" class="ltx_Math" alttext="x_{2}\geq 0,b^{-x_{2}}\leq 1" display="inline"><mrow><mrow><msub><mi>x</mi><mn>2</mn></msub><mo>≥</mo><mn>0</mn></mrow><mo>,</mo><mrow><msup><mi>b</mi><mrow><mo>-</mo><msub><mi>x</mi><mn>2</mn></msub></mrow></msup><mo>≤</mo><mn>1</mn></mrow></mrow></math>. Hence, for all real <math id="p6.m8" class="ltx_Math" alttext="x&gt;2" display="inline"><mrow><mi>x</mi><mo>&gt;</mo><mn>2</mn></mrow></math>, we have</p>
+<table id="S0.Ex9" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex9.m1" class="ltx_Math" alttext="{x^{a}\over b^{x}}\leq 1.5^{a}{x_{1}^{a}\over b^{x_{1}}}" display="block"><mrow><mfrac><msup><mi>x</mi><mi>a</mi></msup><msup><mi>b</mi><mi>x</mi></msup></mfrac><mo>≤</mo><mrow><msup><mn>1.5</mn><mi>a</mi></msup><mo>⁢</mo><mfrac><msubsup><mi>x</mi><mn>1</mn><mi>a</mi></msubsup><msup><mi>b</mi><msub><mi>x</mi><mn>1</mn></msub></msup></mfrac></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">From this inequality, it
+follows that <math id="p6.m9" class="ltx_Math" alttext="\lim_{x\to\infty}x^{a}/b^{x}=0" display="inline"><mrow><mrow><msub><mo>lim</mo><mrow><mi>x</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></msub><mo>⁡</mo><mrow><msup><mi>x</mi><mi>a</mi></msup><mo>/</mo><msup><mi>b</mi><mi>x</mi></msup></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math> for real values of
+<math id="p6.m10" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> as well.
+</p>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">proof of growth of exponential function</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">ProofOfGrowthOfExponentialFunction</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:48:36</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:48:36</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">rspuzio (6075)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">rspuzio (6075)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">11</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">rspuzio (6075)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Proof</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">msc 32A05</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 20:31:42 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>
